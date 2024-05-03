@@ -454,6 +454,290 @@ get_header();
         </div>
       </div>
     </section>
+
+    <section class="prices">
+      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+        <h3 class="mb-8 font-bold text-4xl text-center">Ile to kosztuje? </h3>
+        <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
+          <p>
+            Otrzymasz dostęp do wszystkich materiałów NIE za 1000 zł, ani nawet za 500 zł, ale za jedyne…
+          </p>
+          <div class="price text-green-800 text-center text-4xl font-bold">
+            <p>Cena promocyjna: 147 zł</p>
+          </div>
+          <p>
+            Jednorazowa inwestycja
+          </p>
+          <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+            <a href="#">..Dodaj do koszyka (147 zł)..</a>
+          </button>
+        </div>
+
+        <h3 class="mb-8 font-bold text-4xl text-center">Ile to kosztuje? </h3>
+        <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
+          <p>
+            Otrzymasz dostęp do wszystkich materiałów NIE za 1000 zł, ani nawet za 500 zł, ale za jedyne…
+          </p>
+          <p>
+            Zresztą jeśli za niską cenę przekonasz się, jak wiele może dać Ci to tanie narzędzie, to być może dużo chętniej sięgniesz po moje droższe kursy i programy 😉
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bonuses">
+      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+        <div class="title mb-10 text-center">
+          <h3 class="mb-2 font-semibold text-3xl">Ale to nie wszystko!</h3>
+          <p class="subtitle font-bold text-[34px] leading-10">Otrzymasz też 3 bonusy o łącznej wartości 341 zł!</p>
+        </div>
+
+        <ul class="bonuses-tiles text-xl [&>li]:mb-20">
+          <li class="flex gap-10 basis">
+            <div class="basis-2/3">
+              <div class="product-desc mb-5">
+                <p class="font-bold mb-2">
+                  🎁 Skarbiec materiałów wspierających.
+                </p>
+                <p class="desc">
+                  Liczne checklisty, przydatne linki, ćwiczenia, dzięki którym łatwo określisz swoje wartości i preferencje, które chcesz zweryfikować w tabelce.
+                </p>
+              </div>
+              <div class="product-price font-bold">
+                <p>Wartość: <span class="text-red-500">47 zł</span></p>
+                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+              </div>
+            </div>
+            <div class="about-img basis-1/3">
+              <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/bonus1.png'; ?>" alt="">
+            </div>
+          </li>
+          <li class="flex gap-10 basis">
+            <div class="basis-2/3">
+              <div class="product-desc mb-5">
+                <p class="font-bold mb-2">
+                  🎁 Roczny dostęp do społeczności (nazwa społeczności),
+                </p>
+                <p class="desc">
+                  w której masz możliwość zadawania pytań, dzielenia się własnymi przemyśleniami i wynikami. Udział w grupie wzmocni Twoją systematyczność i zmotywuje Cię do działania. W dodatku poznasz ciekawych ludzi podobnych do Ciebie!
+                </p>
+              </div>
+              <div class="product-price font-bold">
+                <p>Wartość: <span class="text-red-500">197 zł</span></p>
+                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+              </div>
+            </div>
+            <div class="about-img basis-1/3">
+              <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/bonus1.png'; ?>" alt="">
+            </div>
+          </li>
+          <li class="flex gap-10 basis">
+            <div class="basis-2/3">
+              <div class="product-desc mb-5">
+                <p class="font-bold mb-2">
+                  🎁 Poradnik w formie PDF „Trzy filary”,
+                </p>
+                <p class="desc">
+                  dzięki któremu wzmocnisz swoją motywację, do realizacji tego, co ustalisz jako swoje priorytety.
+                </p>
+              </div>
+              <div class="product-price font-bold">
+                <p>Wartość: <span class="text-red-500">97 zł</span></p>
+                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+              </div>
+            </div>
+            <div class="about-img basis-1/3">
+              <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/bonus2.png'; ?>" alt="">
+            </div>
+          </li>
+        </ul>
+        <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+          <a href="#">..Odbieram „Ścieżki Kariery” razem z bonusami!..</a>
+        </button>
+      </div>
+    </section>
+
+    <section class="about-swistak">
+      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+        <h3 class="mb-8 font-bold text-4xl text-center">Kto za tym stoi i czy mogę mu zaufać?</h3>
+        <div class="2col flex basis gap-10">
+          <div class="desc basis-3/4 mx-auto mb-12 text-left text-lg font-normal [&>p]:mb-5">
+            <p>Cześć, poznajmy się! Nazywam się Bartłomiej „Świstak” Piotrowski.</p>
+            <p>Jestem konsultantem strategii w biznesie, prelegentem, mentorem.</p>
+            <p>Na co dzień pracuję na takich uczelniach jak Uniwersytet Jagielloński w Krakowie i ASBIRO. Jako trener przepracowałem dotychczas ponad 6300 h.</p>
+            <p>Jeden z moich najważniejszych wniosków?</p>
+            <p class="italic">Odkryłem, że zbyt wiele ambitnych osób robi za dużo rzeczy w życiu. <br>Przez to idą wolniej, a nawet stoją w miejscu, marnując swój potencjał.</p>
+            <p>Pomysł na narzędzie Twoje Ścieżki Kariery wpadł mi do głowy podczas rozmowy z moim kolegą. Miałem wtedy zdecydowanie za dużo na głowie - mój kalendarz przypominał grafik Elona Muska - był wypchany po brzegi różnymi aktywnościami. Kolega, widząc moje zmęczenie, zapytał mnie:</p>
+            <p class="italic">Powiedz Bartku - robisz z klientami różne tabelki w Excelu, a ze sobą zrobiłeś?</p>
+            <p>Wtedy dotarło do mnie, że pomimo robienia tabelek dla innych, ja sam takiej nie miałem! Więc stworzyłem dla siebie tabelkę do ustalenia priorytetów. Stopniowo ją ulepszałem, aż wreszcie postanowiłem ją przetestować na konsultacjach JEDEN na JEDEN. <span class="font-bold">Rezultaty?</span></p>
+          </div>
+          <div class="img basis-1/4">
+            <img class="mb-5" src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/swistak.png'; ?>" alt="">
+            <p class="img-desc text-lg italic">„Przestań robić wszystko– zacznij wybierać mądrze!”</p>
+          </div>
+        </div>
+        <div class="opinions">
+          <h3 class="mb-24 font-bold text-4xl text-center">Oto garść opinii od moich zadowolonych klientek i klientów (łącznie otrzymałem ponad 216+ pozytywnych rekomendacji na LinkedIn):</h3>
+          <div class="swiper mb-20">
+            <div class="swiper-wrapper flex gap-8">
+              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+                <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
+                  <div class="opinion-author-image mx-auto max-w-[150px] relative">
+                    <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                      <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
+                        <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-content text-center">
+                  <p class="mb-5 font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque fugiat quia repudiandae pariatur, optio sit ab laudantium doloribus voluptatem minima atque! Maxime similique laborum quasi.</p>
+                  <p class="author font-semibold text-lg">Harriet Clarkson</p>
+                </div>
+              </div>
+              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+                <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
+                  <div class="opinion-author-image mx-auto max-w-[150px] relative">
+                    <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                      <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
+                        <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-content text-center">
+                  <p class="mb-5 font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque fugiat quia repudiandae pariatur, optio sit ab laudantium doloribus voluptatem minima atque! Maxime similique laborum quasi.</p>
+                  <p class="author font-semibold text-lg">Harriet Clarkson</p>
+                </div>
+              </div>
+              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+                <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
+                  <div class="opinion-author-image mx-auto max-w-[150px] relative">
+                    <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                      <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
+                        <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-content text-center">
+                  <p class="mb-5 font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque fugiat quia repudiandae pariatur, optio sit ab laudantium doloribus voluptatem minima atque! Maxime similique laborum quasi.</p>
+                  <p class="author font-semibold text-lg">Harriet Clarkson</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-swistak">
+      <div class="container mx-auto px-5 md:px-0 pb-20">
+        <div class="title text-center">
+          <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
+          <p class="subtitle mb-8 font-bold text-[34px] leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
+        </div>
+        <div class="swiper mb-20">
+          <div class="swiper-wrapper flex gap-8">
+            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+              <p>1) Zamykasz tę stronę i zapominasz o tym, co Ci zaproponowałem.</p>
+              <p>Jeśli czujesz, że to narzędzie nie jest dla Ciebie, to może po prostu jesteś w dobrym miejscu swojego życia.</p>
+              <p>Cieszę się i gratuluję! Wtedy pewnie lepiej, abyś wydał ten pieniądze na jakąś przyjemność dla siebie lub bliskich.</p>
+              <p class="font-bold">Jeśli jednak czujesz, że Twoja sytuacja wymaga zmiany, to zostają Ci jeszcze 2 ścieżki ➡️
+              </p>
+            </div>
+            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+              <p>2) Ustalasz priorytety samodzielnie.</p>
+              <p>Jeśli masz w sobie determinację, to z pewnością kiedyś osiągniesz swój cel, ale pomyśl – ile to pochłonie Twojego czasu i energii?</p>
+            </div>
+            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+              <p>3) Korzystasz z gotowca</p>
+              <p>Weź moje gotowe narzędzie, by zyskać więcej pewności: na czym się skupić, i z czego zrezygnować.</p>
+              <p>Skorzystaj ze <span class="font-bold">Ścieżek Kariery</span>, gdzie na talerzu otrzymasz całą esencję: wszystko, czego potrzebujesz, by ruszyć z miejsca w stronę spełnienia zawodowego. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="whats-next">
+      <div class="container max-w-[750px] mx-auto px-5 md:px-0 pb-20">
+        <div class="title text-center mb-8">
+          <h3 class="mb-5 font-semibold text-3xl">Co dalej?</h3>
+          <div class="desc [&>p]:text-2xl">
+            <p class="subtitle mb-8">Jeśli chcesz wypróbować <span class="font-bold">Ścieżki Kariery</span> bez ryzyka, to kliknij teraz w <span class="text-green-700 font-bold">zielony przycisk</span> poniżej.</p>
+            <p>Przejdziesz do bezpiecznej strony, z której możesz opłacić swoje zamówienie. <br>Po tym od razu przyjdzie do Ciebie e-mail powitalny z dostępem do wszystkich materiałów.
+            </p>
+          </div>
+        </div>
+        <div class="cta text-center font-bold text-3xl border-[2px] border-purple-900 p-10">
+          <p>Odbierz teraz dostęp do narzędzia <span class="text-[#b45f05]">Twoje Ścieżki Kariery:</span> arkusza w Excelu + <span class="text-red-500">10</span> nagrań wideo, które pomogą Ci określić co jest ważne, a co lepiej sobie odpuścić.</p>
+        </div>
+        <div class="arrow-down mx-auto w-fit text-[60px]">&#8681;</div>
+        <div class="arrow-down mx-auto w-fit text-[60px] rotate-90">&#x27A4;</div>
+        <div class="cta2 text-center font-bold text-2xl border-[2px] border-purple-900 p-10">
+          <p class="mb-5">Otrzymasz dostęp na zawsze do platformy online, zawierającej: </p>
+          <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/laptop2.png'; ?>" alt="">
+          <ul class="my-10 text-left [&>li]:mb-2">
+            <li>✔️ Arkusz w Excelu i Google Sheets do samodzielnego wypełnienia.</li>
+            <li>✔️ <span class="text-red-500">10</span> krótkich i treściwych nagrań wideo </li>
+            <li>✔️ Asysta e-mailowa dla większej motywacji</li>
+            <li>🎁Bonus 1: Skarbiec materiałów wspierających</li>
+            <li>🎁Bonus 2: Roczny dostęp do społeczności [nazwa społeczności]</li>
+            <li>🎁Bonus 3: Poradnik w formie PDF „Trzy filary”</li>
+          </ul>
+          <p class="mb-8">🚗 Plus! Otrzymujesz aż 90 dni na „jazdę próbną” bez ryzyka</p>
+          <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+            <a href="#">Odbierz dostęp teraz</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-benefits">
+      <div class="container mx-auto px-5 md:px-0 pb-20">
+        <div class="2col mb-10 border-[2px] border-purple-900 p-6 flex basis justify-center items-center text-center">
+          <div class="col basis-1/2 text-xl">
+            <p class="font-bold">🛡️ Opłać zamówienie bezpiecznie </p>
+            <p>Wszystkie płatności zabezpieczone z [Wpisz nazwę systemu płatności np. Stripe]</p>
+          </div>
+          <div class="col basis-1/2 text-xl">
+            <p class="font-bold">⭐ 90-dniowa gwarancja satysfakcji</p>
+            <p>Albo Ci się spodoba, albo otrzymasz pieniądze z powrotem.
+            </p>
+          </div>
+        </div>
+        <p class="mx-auto w-fit text-xl">⭕ Potrzebujesz pomocy w złożeniu zamówienia? Napisz do mnie na [tutaj e-mail do wsparcia technicznego ]</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+        <div class="title mb-10 text-center">
+          <h3 class="mb-2 font-semibold text-3xl">Pytania i odpowiedzi</h3>
+          <p class="subtitle font-bold text-[34px] leading-10">„Kiedy otrzymam dostęp?” <br>
+            oraz kilka innych pytań, które miały osoby podobne do Ciebie!
+          </p>
+        </div>
+        <div class="questions-container">
+          <div class="question-container text-2xl">
+            <div class="question mb-5">
+              <h4 class="font-bold">🤔 Kiedy i w jakiej formie otrzymam dostęp do narzędzia <span class="text-purple-900">Twoje Ścieżki Kariery?</span>T</h4>
+            </div>
+            <div class="answer">
+              <p>Gdy tylko Twoja płatność zostanie zaksięgowana, od razu automatycznie przyjdzie do Ciebie e-mail z potwierdzeniem i linkiem do wszystkich materiałów: arkusza w Excelu, nagrań wideo i bonusów.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
   </main>
 </div>
 
