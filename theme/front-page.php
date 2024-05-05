@@ -14,7 +14,7 @@ get_header();
     <section class="hero">
       <div class="absolute inset-0 top-18 md:top-24 overflow-hidden -z-10">
         <svg class="scale-[5] md:scale-105" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 1366 579" fill="none" preserveAspectRatio="none slice">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 -8H1366C1366 -8 1366 412.536 1366 487.199C900.5 440.228 568.242 779.522 0 387.76C0 293.296 0 -8 0 -8Z" style="stroke: #f5f2f8; stroke-width:20px;" fill="url(#paint0_linear)" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 -8H1366C1366 -8 1366 412.536 1366 487.199C900.5 440.228 568.242 779.522 0 387.76C0 293.296 0 -8 0 -8Z" style="stroke: #f5f2f8; stroke-width:20px;" fill="#00b3a7" />
           <defs>
             <linearGradient id="paint0_linear" x1="27.0492" y1="15.2472" x2="27.0492" y2="579" gradientUnits="userSpaceOnUse">
               <stop stop-color="#3E319A" />
@@ -35,21 +35,21 @@ get_header();
     <section class="introduction">
       <div class="container px-5 md:px-0 py-20">
         <div class="text-content mx-auto mb-16 max-w-[700px]">
-          <p class="mb-8 text-center text-3xl font-bold leading-10">Czujesz, że marnujesz swój potencjał, bo robisz <span class="text-purple-900 font-bold">ZA DUŻO rzeczy naraz</span>, ale nie wiesz, z których zrezygnować?</p>
+          <p class="mb-8 text-center text-3xl font-bold leading-10">Czujesz, że marnujesz swój potencjał, bo robisz <span class="text-primary font-bold">ZA DUŻO rzeczy naraz</span>, ale nie wiesz, z których zrezygnować?</p>
           <p class="text-lg text-center">Skorzystaj ze sprawdzonej tabelki w Excelu, która pokaże Ci czarno na białym, co lepiej sobie odpuścić, a na czym się skupić, by w pełni wykorzystać Twoje talenty.</p>
         </div>
-        <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#">Odbierz dostęp teraz</a>
         </button>
-        <a href="#more" class="mx-auto block w-fit text-lg hover:text-purple-900 transition duration-200">..Dowiedz się więcej..</a>
+        <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
 
-    <section class="maybe-swiper">
-      <div class="container px-5 md:px-0 pb-20">
-        <div class="swiper">
-          <div class="swiper-wrapper flex gap-8">
-            <div class="swiper-slide w-full border border-purple-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+    <section class="maybe-swiper mb-20 overflow-hidden">
+      <div class="max-w-full w-full md:container mx-auto">
+        <div class="swiper px-5 max-w-full" data-js="swiper-tiles-mobile">
+          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+            <div class="swiper-slide w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
               <div class="icon mb-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 48 48" version="1" enable-background="new 0 0 48 48">
                   <circle fill="#4CAF50" cx="24" cy="24" r="21" />
@@ -60,7 +60,7 @@ get_header();
                 <p>✅ Przetestowane przez ponad 200 osób na konsultacjach 1 na 1.</p>
               </div>
             </div>
-            <div class="swiper-slide w-full border border-purple-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+            <div class="swiper-slide w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
               <div class="icon mb-5">
                 <span class="text-[100px]">🛡️</span>
               </div>
@@ -69,7 +69,7 @@ get_header();
                 <p>Jeśli Ci się nie spodoba, możesz zrobić zwrot do 90 dni bez podawania powodu. A my oddamy Ci pieniądze.</p>
               </div>
             </div>
-            <div class="swiper-slide w-full border border-purple-900 rounded-2xl p-10 flex flex-col items-center justify-center">
+            <div class="swiper-slide w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
               <div class="icon mb-5">
                 <span class="text-[100px]">⭐</span>
               </div>
@@ -82,10 +82,10 @@ get_header();
       </div>
     </section>
 
-    <section class="about-author bg-purple-900 overflow-hidden">
-      <div class="container px-5 md:px-0 py-20 flex gap-28 justify-center">
+    <section class="about-author bg-primary overflow-hidden">
+      <div class="container px-5 md:px-0 py-20 flex flex-col-reverse md:flex-row gap-28 justify-center">
         <div class="about-text text-white max-w-[450px]">
-          <p class="text-2xl mb-12">O autorze</p>
+          <p class="text-2xl mb-5 md:mb-12">O autorze</p>
           <p class="text-lg leading-8">Cześć! Nazywam się Bartłomiej „Świstak” Piotrowski. Jestem konsultantem strategii w biznesie, prelegentem, mentorem. Na co dzień pracuję na takich uczelniach jak Uniwersytet Jagielloński w Krakowie i ASBIRO. Jako konsultant przepracowałem dotychczas ponad 6300 h.</p>
         </div>
         <div class="about-image">
@@ -127,24 +127,24 @@ get_header();
       <div class="container px-5 md:px-0 pb-20">
         <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center">Ponad 200 uczestników konsultacji 1 na 1 przetestowało już tę metodę</h3>
         <div class="tiles-container mx-auto max-w-[850px] flex flex-col gap-24">
-          <div class="opinion-tile p-12 rounded-md flex gap-10 bg-[#ddccf340] shadow-[24px_24px_0px_0px_rgba(230,219,245,1)]">
+          <div class="opinion-tile p-5 md:p-12 py-8 md:py-auto rounded-md flex flex-col md:flex-row gap-10 bg-[#00b3a71a] shadow-[12px_12px_0px_0px_rgba(0,179,167,0.3)] md:shadow-[24px_24px_0px_0px_rgba(0,179,167,0.3)]">
             <img class="rounded-md" src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
             <div class="opinion-text">
               <p class="mb-5 text-2xl font-semibold">"Lorem ipsum dolor sit amet consectetur adipisicing elit".</p>
               <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur, autem quisquam aliquid rem ipsam accusamus a aliquam commodi eum quis, molestiae nisi nostrum fugit explicabo natus. Quos, rerum facere.</p>
               <p class="font-semibold text-lg leading-5">Jeannie Chow</p>
-              <p class="text-gray-400 leading-5">Retired</p>
-              <p class="text-gray-400 leading-5">Edmonton Canada</p>
+              <p class="text-gray-400 leading-5 font-light">Retired</p>
+              <p class="text-gray-400 leading-5 font-light">Edmonton Canada</p>
             </div>
           </div>
-          <div class="opinion-tile p-12 rounded-md flex gap-10 bg-[#ddccf340] shadow-[24px_24px_0px_0px_rgba(230,219,245,1)]">
+          <div class="opinion-tile p-5 md:p-12 py-8 md:py-auto rounded-md flex flex-col md:flex-row gap-10 bg-[#00b3a71a]  shadow-[12px_12px_0px_0px_rgba(0,179,167,0.3)] md:shadow-[24px_24px_0px_0px_rgba(0,179,167,0.3)]">
             <img class="rounded-md" src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion2.png'; ?>" alt="">
             <div class="opinion-text">
               <p class="mb-5 text-2xl font-semibold">"Lorem ipsum dolor sit amet consectetur adipisicing elit".</p>
               <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur, autem quisquam aliquid rem ipsam accusamus a aliquam commodi eum quis, molestiae nisi nostrum fugit explicabo natus. Quos, rerum facere.</p>
               <p class="font-semibold text-lg leading-5">Jeannie Chow</p>
-              <p class="text-gray-400 leading-5">Retired</p>
-              <p class="text-gray-400 leading-5">Edmonton Canada</p>
+              <p class="text-gray-400 leading-5 font-light">Retired</p>
+              <p class="text-gray-400 leading-5 font-light">Edmonton Canada</p>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@ get_header();
 
     <section class="about-product">
       <div class="container max-w-[850px] px-5 md:px-0 py-20 text-left text-2xl">
-        <h3 class="mb-4 font-bold text-4xl text-center">Czym dokładnie jest narzędzie <span class="text-[#b45f05]">Twoje Ścieżki Kariery</span> i jak to działa?</h3>
+        <h3 class="mb-4 font-bold text-4xl text-center">Czym dokładnie jest narzędzie <span class="text-primary">Twoje Ścieżki Kariery</span> i jak to działa?</h3>
 
         <div class="about-desc mb-8">
           <div class="tool-image mb-5">
@@ -198,10 +198,10 @@ get_header();
         </div>
 
         <ul class="about-steps text-xl [&>li]:mb-8">
-          <li class="flex gap-10 basis">
+          <li class="md:flex gap-10 basis mb-8">
             <div class="desc basis-2/3">
               <p class="font-bold mb-5">
-                <span class="text-purple-900 text-3xl">Krok 1:</span> Wpisujesz ważne dla Ciebie projekty, obowiązki, zadania lub aktywności, na które obecnie przeznaczasz czas i energię.
+                <span class="text-primary text-3xl">Krok 1:</span> Wpisujesz ważne dla Ciebie projekty, obowiązki, zadania lub aktywności, na które obecnie przeznaczasz czas i energię.
               </p>
               <p>
                 Możesz śmiało podejść elastycznie i wpisać tu wszelkie obszary: działania zawodowe, wolontaryjne i prywatne. Bez limitów.
@@ -211,10 +211,10 @@ get_header();
               <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/step1.png'; ?>" alt="">
             </div>
           </li>
-          <li class="flex gap-10">
+          <li class="md:flex gap-10 basis mb-8">
             <div class="desc basis-2/3">
               <p class="font-bold mb-5">
-                <span class="block text-3xl text-purple-900">Krok 2: </span>Określasz ważność każdej aktywności, odpowiadając na 35 pytań.
+                <span class="block text-3xl text-primary">Krok 2: </span>Określasz ważność każdej aktywności, odpowiadając na 35 pytań.
               </p>
               <p>
                 Dzięki temu łatwo porównasz i ocenisz znaczenie wszystkich podejmowanych działań.
@@ -224,17 +224,17 @@ get_header();
               <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/step2.png'; ?>" alt="">
             </div>
           </li>
-          <li class="flex gap-10">
+          <li class="md:flex gap-10 basis mb-8">
             <div class="desc basis-2/3">
               <div class="title font-bold mb-5 flex gap-5 items-start">
-                <p class="block min-w-fit text-purple-900 text-3xl">Krok 3: </p>
+                <p class="block min-w-fit text-primary text-3xl">Krok 3: </p>
                 <div>
                   <p class="mb-2"> Otrzymujesz wizualno-cyfrowy wynik, który łatwo zrozumiesz.</p>
                   <p class="font-normal"> Zobaczysz cyfry i zielone pola, które powiedzą Ci, jakie aktywności warto porzucić, bo tylko Cię spowalniają, a na czym się skupić - gdzie lepiej inwestować swój czas i energię.</p>
                 </div>
               </div>
             </div>
-            <div class="about-img basis-1/3">
+            <div class="about-img basis-1/3 flex items-center justify-center">
               <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/step3.png'; ?>" alt="">
             </div>
           </li>
@@ -266,14 +266,14 @@ get_header();
           <li><span class="font-bold">✅ Asysta e-mailowa</span> - każda z <span class="font-bold text-red-600">10</span> nagrań video jest zapowiadana mailem. Dzięki temu unikniesz odkładania działania na później i zyskasz dodatkowy zastrzyk motywacji do korzystania z arkusza.
           </li>
         </ul>
-        <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#">Odbierz dostęp teraz</a>
         </button>
       </div>
     </section>
 
     <section class="why">
-      <div class="container max-w-[850px] mb-10 px-5 md:px-0 py-12 bg-[#c9daf8] border-[2px] border-gray-600">
+      <div class="container max-w-[850px] mb-10 px-5 md:px-0 py-12 bg-[#00b3a71a] md:border-[2px] md:border-gray-300 rounded-xl">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl">Co Ci to wszystko da?</h3>
           <p class="subtitle mb-8 font-bold text-[34px] leading-10">
@@ -311,17 +311,17 @@ get_header();
       </div>
     </section>
 
-    <section class="career-path-opinions-maybe-swiper">
-      <div class="container mx-auto px-5 md:px-0 py-20">
-        <h3 class="mb-24 font-bold text-4xl text-center">Osoby, które już skorzystały ze <span class="text-[#b45f05]">Ścieżek Kariery </span>mówią</h3>
+    <section class="career-path-opinions-maybe-swiper mb-20 overflow-hidden">
+      <div class="max-w-full px-5 w-full md:container mx-auto">
+        <h3 class="mb-24 font-bold text-4xl text-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
 
-        <div class="swiper mb-20">
-          <div class="swiper-wrapper flex gap-8">
-            <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+        <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile">
+          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
               <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                 <div class="opinion-author-image mx-auto max-w-[150px] relative">
                   <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                     <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                       <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                     </svg>
@@ -333,11 +333,11 @@ get_header();
                 <p class="author font-semibold text-lg">Harriet Clarkson</p>
               </div>
             </div>
-            <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
               <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                 <div class="opinion-author-image mx-auto max-w-[150px] relative">
                   <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                     <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                       <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                     </svg>
@@ -349,11 +349,11 @@ get_header();
                 <p class="author font-semibold text-lg">Harriet Clarkson</p>
               </div>
             </div>
-            <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
               <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                 <div class="opinion-author-image mx-auto max-w-[150px] relative">
                   <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                  <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                     <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                       <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                     </svg>
@@ -368,7 +368,7 @@ get_header();
           </div>
         </div>
 
-        <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#">..Odbieram dostęp teraz..</a>
         </button>
       </div>
@@ -401,7 +401,7 @@ get_header();
             ✅ Chcesz dowiedzieć się, co w Twoim życiu prywatnym lub zawodowym jest najważniejsze.
           </li>
         </ul>
-        <button class="mx-auto mb-10 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+        <button class="mx-auto mb-10 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#">..Tak, to o mnie! Daj mi dostęp..</a>
         </button>
 
@@ -448,7 +448,7 @@ get_header();
             W ten sposób cofniesz całą transakcję – dostaniesz z powrotem każdą zapłaconą złotówkę bez zadawania pytań z mojej strony, bez obrażania się i bez wpisywania Cię na czarną listę.
             Po prostu. Tak jak kupujesz buty, rozmyślasz się i je oddajesz.
           </p>
-          <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
             <a href="#">Rozumiem, że mam 90 dni na przetestowanie - chcę spróbować!</a>
           </button>
         </div>
@@ -465,10 +465,10 @@ get_header();
           <div class="price text-green-800 text-center text-4xl font-bold">
             <p>Cena promocyjna: 147 zł</p>
           </div>
-          <p>
+          <p class="text-center">
             Jednorazowa inwestycja
           </p>
-          <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
             <a href="#">..Dodaj do koszyka (147 zł)..</a>
           </button>
         </div>
@@ -493,7 +493,7 @@ get_header();
         </div>
 
         <ul class="bonuses-tiles text-xl [&>li]:mb-20">
-          <li class="flex gap-10 basis">
+          <li class="flex flex-col-reverse md:flex-row gap-10 basis">
             <div class="basis-2/3">
               <div class="product-desc mb-5">
                 <p class="font-bold mb-2">
@@ -505,14 +505,14 @@ get_header();
               </div>
               <div class="product-price font-bold">
                 <p>Wartość: <span class="text-red-500">47 zł</span></p>
-                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+                <p>Z narzędziem <span class="text-primary">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
               </div>
             </div>
             <div class="about-img basis-1/3">
               <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/bonus1.png'; ?>" alt="">
             </div>
           </li>
-          <li class="flex gap-10 basis">
+          <li class="flex flex-col-reverse md:flex-row md:flex gap-10 basis">
             <div class="basis-2/3">
               <div class="product-desc mb-5">
                 <p class="font-bold mb-2">
@@ -524,14 +524,14 @@ get_header();
               </div>
               <div class="product-price font-bold">
                 <p>Wartość: <span class="text-red-500">197 zł</span></p>
-                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+                <p>Z narzędziem <span class="text-primary">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
               </div>
             </div>
             <div class="about-img basis-1/3">
               <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/bonus1.png'; ?>" alt="">
             </div>
           </li>
-          <li class="flex gap-10 basis">
+          <li class="flex flex-col-reverse md:flex-row md:flex gap-10 basis">
             <div class="basis-2/3">
               <div class="product-desc mb-5">
                 <p class="font-bold mb-2">
@@ -543,7 +543,7 @@ get_header();
               </div>
               <div class="product-price font-bold">
                 <p>Wartość: <span class="text-red-500">97 zł</span></p>
-                <p>Z narzędziem <span class="text-purple-900">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
+                <p>Z narzędziem <span class="text-primary">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
               </div>
             </div>
             <div class="about-img basis-1/3">
@@ -551,7 +551,7 @@ get_header();
             </div>
           </li>
         </ul>
-        <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#">..Odbieram „Ścieżki Kariery” razem z bonusami!..</a>
         </button>
       </div>
@@ -560,7 +560,7 @@ get_header();
     <section class="about-swistak">
       <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
         <h3 class="mb-8 font-bold text-4xl text-center">Kto za tym stoi i czy mogę mu zaufać?</h3>
-        <div class="2col flex basis gap-10">
+        <div class="2col flex flex-col-reverse md:flex-row basis gap-10">
           <div class="desc basis-3/4 mx-auto mb-12 text-left text-lg font-normal [&>p]:mb-5">
             <p>Cześć, poznajmy się! Nazywam się Bartłomiej „Świstak” Piotrowski.</p>
             <p>Jestem konsultantem strategii w biznesie, prelegentem, mentorem.</p>
@@ -576,15 +576,15 @@ get_header();
             <p class="img-desc text-lg italic">„Przestań robić wszystko– zacznij wybierać mądrze!”</p>
           </div>
         </div>
-        <div class="opinions">
+        <div class="about-swistak-opinions max-w-full px-5 w-full md:container mx-auto overflow-x-hidden">
           <h3 class="mb-24 font-bold text-4xl text-center">Oto garść opinii od moich zadowolonych klientek i klientów (łącznie otrzymałem ponad 216+ pozytywnych rekomendacji na LinkedIn):</h3>
-          <div class="swiper mb-20">
-            <div class="swiper-wrapper flex gap-8">
-              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+          <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile">
+            <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+              <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary relative transition duration-300">
                 <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                   <div class="opinion-author-image mx-auto max-w-[150px] relative">
                     <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                       <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                         <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                       </svg>
@@ -596,11 +596,11 @@ get_header();
                   <p class="author font-semibold text-lg">Harriet Clarkson</p>
                 </div>
               </div>
-              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+              <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary relative transition duration-300">
                 <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                   <div class="opinion-author-image mx-auto max-w-[150px] relative">
                     <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                       <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                         <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                       </svg>
@@ -612,11 +612,11 @@ get_header();
                   <p class="author font-semibold text-lg">Harriet Clarkson</p>
                 </div>
               </div>
-              <div class="swiper-slide w-full rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 relative">
+              <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary relative transition duration-300">
                 <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                   <div class="opinion-author-image mx-auto max-w-[150px] relative">
                     <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/opinion1.png'; ?>" alt="">
-                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-orange-400 flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
+                    <div class="w-[50px] h-[50px] p-3 rounded-full bg-primary flex items-center justify-center z-10 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%]">
                       <svg class="w-full rotate-180" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 379.51" fill="white">
                         <path d="M299.73 345.54c81.25-22.55 134.13-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160.01-60.55C243.33-10.34 430.24-36.22 485.56 46.34c12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.6 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77zm-267.78 0c81.25-22.55 134.14-69.68 147.28-151.7 3.58-22.31-1.42-5.46-16.55 5.86-49.4 36.97-146.53 23.88-160-60.55-27.14-149.49 159.78-175.37 215.1-92.81 12.87 19.19 21.39 41.59 24.46 66.19 13.33 106.99-41.5 202.28-137.82 247.04-17.82 8.28-36.59 14.76-56.81 19.52-10.12 2.04-17.47-3.46-20.86-12.78-2.87-7.95-3.85-16.72 5.2-20.77z" />
                       </svg>
@@ -634,26 +634,26 @@ get_header();
       </div>
     </section>
 
-    <section class="about-swistak">
+    <section class="about-swistak overflow-hidden">
       <div class="container mx-auto px-5 md:px-0 pb-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
           <p class="subtitle mb-8 font-bold text-[34px] leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
         </div>
-        <div class="swiper mb-20">
-          <div class="swiper-wrapper flex gap-8">
-            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+        <div class="swiper max-w-full mb-20 overflow-visible" data-js="swiper-tiles-mobile">
+          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary transition duration-300 relative [&>p]:mb-5">
               <p>1) Zamykasz tę stronę i zapominasz o tym, co Ci zaproponowałem.</p>
               <p>Jeśli czujesz, że to narzędzie nie jest dla Ciebie, to może po prostu jesteś w dobrym miejscu swojego życia.</p>
               <p>Cieszę się i gratuluję! Wtedy pewnie lepiej, abyś wydał ten pieniądze na jakąś przyjemność dla siebie lub bliskich.</p>
               <p class="font-bold">Jeśli jednak czujesz, że Twoja sytuacja wymaga zmiany, to zostają Ci jeszcze 2 ścieżki ➡️
               </p>
             </div>
-            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-md border-[1px] border-gray-200 hover:border-primary transition duration-300 relative [&>p]:mb-5">
               <p>2) Ustalasz priorytety samodzielnie.</p>
               <p>Jeśli masz w sobie determinację, to z pewnością kiedyś osiągniesz swój cel, ale pomyśl – ile to pochłonie Twojego czasu i energii?</p>
             </div>
-            <div class="swiper-slide w-full rounded-2xl p-10 shadow-xl border-[1px] border-gray-200 relative [&>p]:mb-5">
+            <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-md border-[1px] border-gray-200 hover:border-primary transition duration-300 relative [&>p]:mb-5">
               <p>3) Korzystasz z gotowca</p>
               <p>Weź moje gotowe narzędzie, by zyskać więcej pewności: na czym się skupić, i z czego zrezygnować.</p>
               <p>Skorzystaj ze <span class="font-bold">Ścieżek Kariery</span>, gdzie na talerzu otrzymasz całą esencję: wszystko, czego potrzebujesz, by ruszyć z miejsca w stronę spełnienia zawodowego. </p>
@@ -669,17 +669,17 @@ get_header();
         <div class="title text-center mb-8">
           <h3 class="mb-5 font-semibold text-3xl">Co dalej?</h3>
           <div class="desc [&>p]:text-2xl">
-            <p class="subtitle mb-8">Jeśli chcesz wypróbować <span class="font-bold">Ścieżki Kariery</span> bez ryzyka, to kliknij teraz w <span class="text-green-700 font-bold">zielony przycisk</span> poniżej.</p>
+            <p class="subtitle mb-8">Jeśli chcesz wypróbować <span class="font-bold">Ścieżki Kariery</span> bez ryzyka, to kliknij teraz w <span class="text-primary font-bold">zielony przycisk</span> poniżej.</p>
             <p>Przejdziesz do bezpiecznej strony, z której możesz opłacić swoje zamówienie. <br>Po tym od razu przyjdzie do Ciebie e-mail powitalny z dostępem do wszystkich materiałów.
             </p>
           </div>
         </div>
-        <div class="cta text-center font-bold text-3xl border-[2px] border-purple-900 p-10">
-          <p>Odbierz teraz dostęp do narzędzia <span class="text-[#b45f05]">Twoje Ścieżki Kariery:</span> arkusza w Excelu + <span class="text-red-500">10</span> nagrań wideo, które pomogą Ci określić co jest ważne, a co lepiej sobie odpuścić.</p>
+        <div class="cta p-10 text-center font-bold text-3xl border-[2px] border-primary rounded-xl">
+          <p>Odbierz teraz dostęp do narzędzia <span class="text-primary">Twoje Ścieżki Kariery:</span> arkusza w Excelu + <span class="text-red-500">10</span> nagrań wideo, które pomogą Ci określić co jest ważne, a co lepiej sobie odpuścić.</p>
         </div>
-        <div class="arrow-down mx-auto w-fit text-[60px]">&#8681;</div>
-        <div class="arrow-down mx-auto w-fit text-[60px] rotate-90">&#x27A4;</div>
-        <div class="cta2 text-center font-bold text-2xl border-[2px] border-purple-900 p-10">
+        <div class="arrow-down mx-auto w-fit text-[60px] text-primary">&#8681;</div>
+        <div class="arrow-down mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
+        <div class="cta2 p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
           <p class="mb-5">Otrzymasz dostęp na zawsze do platformy online, zawierającej: </p>
           <img src="<?php echo home_url() .  '/wp-content/themes/swistak-kurs/theme/assets/img/laptop2.png'; ?>" alt="">
           <ul class="my-10 text-left [&>li]:mb-2">
@@ -691,7 +691,7 @@ get_header();
             <li>🎁Bonus 3: Poradnik w formie PDF „Trzy filary”</li>
           </ul>
           <p class="mb-8">🚗 Plus! Otrzymujesz aż 90 dni na „jazdę próbną” bez ryzyka</p>
-          <button class="mx-auto mb-5 block w-fit bg-green-800 px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-green-700 transition duration-200">
+          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
             <a href="#">Odbierz dostęp teraz</a>
           </button>
         </div>
@@ -700,8 +700,8 @@ get_header();
 
     <section class="order-benefits">
       <div class="container mx-auto px-5 md:px-0 pb-20">
-        <div class="2col mb-10 border-[2px] border-purple-900 p-6 flex basis justify-center items-center text-center">
-          <div class="col basis-1/2 text-xl">
+        <div class="2col mb-10 rounded-xl border-[2px] border-primary p-6 md:flex basis justify-center items-center text-center">
+          <div class="col mb-8 basis-1/2 text-xl">
             <p class="font-bold">🛡️ Opłać zamówienie bezpiecznie </p>
             <p>Wszystkie płatności zabezpieczone z [Wpisz nazwę systemu płatności np. Stripe]</p>
           </div>
@@ -716,20 +716,39 @@ get_header();
     </section>
 
     <section class="faq">
-      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+      <div class="container mx-auto px-5 md:px-0 pb-20">
         <div class="title mb-10 text-center">
           <h3 class="mb-2 font-semibold text-3xl">Pytania i odpowiedzi</h3>
           <p class="subtitle font-bold text-[34px] leading-10">„Kiedy otrzymam dostęp?” <br>
             oraz kilka innych pytań, które miały osoby podobne do Ciebie!
           </p>
         </div>
-        <div class="questions-container">
-          <div class="question-container text-2xl">
-            <div class="question mb-5">
-              <h4 class="font-bold">🤔 Kiedy i w jakiej formie otrzymam dostęp do narzędzia <span class="text-purple-900">Twoje Ścieżki Kariery?</span>T</h4>
+        <div class="questions-container [&>.question-container]:mb-4">
+          <div class="question-container text-xl md:text-2xl px-5 md:px-8 py-5 border-[2px] border-primary rounded-xl" data-js="dropdown">
+            <div class="question cursor-pointer group flex justify-between items-center" aria-expanded="false" data-js="dropdown-toggle">
+              <h4 class="font-semibold leading-7 group-hover:text-primary transition-all duration-300">🤔 Kiedy i w jakiej formie otrzymam dostęp do narzędzia Twoje Ścieżki Kariery?</h4>
+              <div class="faq-arrow rotate-90 group-aria-expanded:rotate-[270deg] transition duration-300">
+                <span class="group-hover:text-primary text-3xl">&#x27A4;</span>
+              </div>
             </div>
-            <div class="answer">
-              <p>Gdy tylko Twoja płatność zostanie zaksięgowana, od razu automatycznie przyjdzie do Ciebie e-mail z potwierdzeniem i linkiem do wszystkich materiałów: arkusza w Excelu, nagrań wideo i bonusów.</p>
+            <div class="answer overflow-hidden h-0 text-lg md:text-xl transition-all duration-300 font-light" data-js="dropdown-container">
+              <div class="py-5">
+                <p class="mb-5">Gdy tylko Twoja płatność zostanie zaksięgowana, od razu automatycznie przyjdzie do Ciebie e-mail z potwierdzeniem i linkiem do wszystkich materiałów: arkusza w Excelu, nagrań wideo i bonusów.</p>
+                <p>Narzędzie „Twoje Ścieżki Kariery” jest <span class="font-semibold">w formie arkusza Excel oraz Google Sheets</span> (bezpłatny odpowiednik Excela) oraz nagrań wideo, które już czekają na Ciebie na platformie. Jedyne czego potrzebujesz to bezpłatnego konta Google, by skopiować tam arkusz i móc z niego korzystać.</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-container text-xl md:text-2xl px-5 md:px-8 py-5 border-[2px] border-primary rounded-xl" data-js="dropdown">
+            <div class="question cursor-pointer group flex justify-between items-center" aria-expanded="false" data-js="dropdown-toggle">
+              <h4 class="font-semibold leading-7 group-hover:text-primary transition-all duration-300">🤔 Czy są jakieś dodatkowe koszty, o których powinienem wiedzieć?</h4>
+              <div class="faq-arrow rotate-90 group-aria-expanded:rotate-[270deg] transition duration-300">
+                <span class="group-hover:text-primary text-3xl">&#x27A4;</span>
+              </div>
+            </div>
+            <div class="answer overflow-hidden h-0 text-lg md:text-xl transition-all duration-300 font-light" data-js="dropdown-container">
+              <div class="py-5">
+                <p class="mb-5">Nie - wszystkie koszty - przesyłka elektroniczna, hosting stron, platforma, podatek, prowizja banku i systemu do obsługi płatności (nazwa systemu płatności), po prostu wszystko uwzględniłem w cenie. Za bezterminowy dostęp do <span class="font-semibold">Ścieżek Kariery</span> oraz przyszłych aktualizacji inwestujesz tylko tyle i dokładnie tyle, ile widzisz na tej stronie (147 zł).</p>
+              </div>
             </div>
           </div>
         </div>

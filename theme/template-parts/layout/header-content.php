@@ -31,15 +31,14 @@
 				<?php file_get_contents(get_stylesheet_directory_uri() . '/assets/img/logo.svg'); ?>
 			</a>
 		</div>
-		<button class="menu-btn md:hidden z-20" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_html_e('Primary Menu', 'smoothh'); ?>" data-js="nav-toggle">
-			<div class="ks-menu-toggler__line w-9 h-[2px] bg-purple-900 mb-[6px]"></div>
-			<div class="ks-menu-toggler__line w-9 h-[2px] bg-purple-900 mb-[6px]"></div>
-			<div class="ks-menu-toggler__line w-9 h-[2px] bg-purple-900"></div>
+		<button class="menu-btn w-[35px] h-[31px] md:hidden z-20" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_html_e('Primary Menu', 'swistak-kurs'); ?>" data-js="nav-toggle">
+			<div class="ks-menu-toggler__line w-[35px] h-[3px] rounded-full bg-primary origin-left transition duration-300 mb-[9px]"></div>
+			<div class="ks-menu-toggler__line w-[35px] h-[3px] rounded-full bg-primary origin-left transition duration-300 mb-[9px]"></div>
+			<div class="ks-menu-toggler__line w-[35px] h-[3px] rounded-full bg-primary origin-left transition duration-300"></div>
 		</button>
 
-		<div id="site-navigation" class="absolute md:static inset-x-0 top-full h-0 md:h-auto overflow-hidden bg-white shadow-none transition-all duration-500" data-js="nav-container">
-			<nav class="container flex flex-col md:flex-row md:items-center gap-4 text-lg" aria-label="<?php esc_attr_e('Main Navigation', 'swistak-kurs'); ?>">
-
+		<div id="site-navigation" class="absolute nav-primary md:static inset-x-0 top-full opacity-0 md:opacity-100 h-0 md:h-auto overflow-hidden bg-white shadow-none transition-all duration-500" data-js="nav-container">
+			<nav class="container flex flex-col md:flex-row md:items-center gap-4 md:gap-10 text-lg" aria-label="<?php esc_attr_e('Main Navigation', 'swistak-kurs'); ?>">
 				<?php
 				wp_nav_menu(
 					array(

@@ -13,6 +13,5 @@
 
 .entry-header,
 .entry-content {
-  padding-left: 2rem;
-  padding-right: 2rem
+	@apply px-8;
 }
