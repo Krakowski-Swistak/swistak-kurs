@@ -151,6 +151,7 @@ function swistak_kurs_scripts()
 {
 	wp_enqueue_style('swistak-kurs-style', get_stylesheet_uri(), array(), SWISTAK_KURS_VERSION);
 	wp_enqueue_script('swistak-kurs-script', get_template_directory_uri() . '/js/script.min.js', array(), SWISTAK_KURS_VERSION, true);
+	wp_enqueue_script('swistak-kurs-script2', get_theme_root_uri() . '/swistak-kurs/javascript/script.js', array(), SWISTAK_KURS_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
