@@ -81,7 +81,7 @@ get_header();
         </div>
         <div class="about-image">
           <?php $about_author_img = get_field('about_author_img'); ?>
-          <img class="scale-[1.4]" src="<?php echo esc_html($about_author_img['url']); ?>" alt="<?php echo esc_html($about_author_img['title']); ?>">
+          <img class="scale-[1.4]" src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>">
         </div>
       </div>
     </section>
@@ -94,7 +94,7 @@ get_header();
         </div>
         <div class="excel-table-tile mx-auto mb-16 max-w-[700px]">
           <p class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('image_title'); ?></p>
-          <img src="<?php echo esc_html(get_field('screenshot')['url']); ?>" alt="<?php echo esc_html(get_field('screenshot')['title']); ?>">
+          <img src="<?php echo (get_field('screenshot')) ? esc_html(get_field('screenshot')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('screenshot')['title']); ?>">
           <div class="desc mt-10 text-lg">
             <?php the_field('desc') ?>
           </div>
@@ -175,7 +175,7 @@ get_header();
 
         <div class="about-desc mb-8">
           <div class="tool-image mb-5">
-            <img src="<?php echo esc_html(get_field('about_product_img')['url']); ?>" alt="<?php echo esc_html(get_field('about_product_img')['title']); ?>">
+            <img src="<?php echo (get_field('about_product_img')) ? esc_html(get_field('about_product_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('about_product_img')['title']); ?>">
           </div>
           <?php the_field('about_product_desc'); ?>
           <!-- <p class="mb-8 font-bold">To narzędzie, które łączy prosty, ale niezwykły arkusz w Excelu z <span class="text-red-600 bg-yellow-100">10</span> krótkimi nagraniami wideo, na których pokażę Ci, jak ją wykorzystać.</p>
@@ -267,7 +267,7 @@ get_header();
           <div class="subtitle text-2xl leading-10"><?php the_field('see_more_desc'); ?></div>
         </div>
         <div class="laptop-image mb-8">
-          <img src="<?php echo esc_html(get_field('see_more_screenshot')['url']); ?>" alt="<?php echo esc_html(get_field('see_more_screenshot')['title']); ?>">
+          <img src="<?php echo (get_field('see_more_screenshot')) ? esc_html(get_field('see_more_screenshot')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('see_more_screenshot')['title']); ?>">
         </div>
         <p class="subtitle text-2xl leading-10 text-center"><?php the_field('see_more_img_desc'); ?></p>
       </div>
@@ -445,7 +445,7 @@ get_header();
             <?php the_field('about_swistak_text'); ?>
           </div>
           <div class="img basis-1/4">
-            <img src="<?php echo esc_html(get_field('about_swistak_img')['url']); ?>" alt="<?php echo esc_html(get_field('about_swistak_img')['title']); ?>">
+            <img src="<?php echo (get_field('about_swistak_img')) ? esc_html(get_field('about_swistak_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('about_swistak_img')['title']); ?>">
             <p class="img-desc text-lg italic">„Przestań robić wszystko– zacznij wybierać mądrze!”</p>
           </div>
         </div>
@@ -528,7 +528,7 @@ get_header();
         <div class="arrow-down mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
         <div class="cta2 p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
           <p class="mb-5"><?php the_field('whats_next_cta2_title'); ?></p>
-          <img src="<?php echo esc_html(get_field('whats_next_cta2_img')['url']); ?>" alt="<?php echo esc_html(get_field('whats_next_cta2_img')['title']); ?>">
+          <img src="<?php echo (get_field('whats_next_cta2_img')) ? esc_html(get_field('whats_next_cta2_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('whats_next_cta2_img')['title']); ?>">
           <div class="my-10 text-left">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
