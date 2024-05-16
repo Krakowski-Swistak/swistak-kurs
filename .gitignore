@@ -6,9 +6,6 @@
 *.min.js
 
 # Ignore generated CSS files:
-style.css
-style-editor.css
-style-editor-extra.css
 
 # Ignore the generated zip file:
 swistak-kurs.zip
