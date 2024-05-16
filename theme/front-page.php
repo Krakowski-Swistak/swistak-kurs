@@ -422,7 +422,7 @@ get_header();
                   </div>
                 </div>
                 <div class="about-img basis-1/3">
-                  <img src="<?php echo esc_html($bonuses_list_item_img['url']); ?>" alt="<?php echo esc_html($bonuses_list_item_img['title']); ?>">
+                  <img src="<?php echo ($bonuses_list_item_img) ? esc_html($bonuses_list_item_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html($bonuses_list_item_img['title']); ?>">
                 </div>
               </li>
           <?php
@@ -529,7 +529,7 @@ get_header();
         <div class="cta2 p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
           <p class="mb-5"><?php the_field('whats_next_cta2_title'); ?></p>
           <img src="<?php echo (get_field('whats_next_cta2_img')) ? esc_html(get_field('whats_next_cta2_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('whats_next_cta2_img')['title']); ?>">
-          <div class="my-10 text-left">
+          <div class="my-10 text-left text-[24px]">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
 
