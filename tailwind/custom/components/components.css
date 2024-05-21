@@ -90,3 +90,39 @@ html {
 .nav-primary.toggled {
 	@apply !h-screen opacity-100;
 }
+
+.ks-decoration__line {
+	background: #00b3a7;
+	-webkit-transform-origin: 50%;
+	-ms-transform-origin: 50%;
+	transform-origin: 50%;
+	display: inline-block;
+}
+.ks-decoration__line--small {
+	margin-right: -11px;
+	height: 4px;
+	width: 14px;
+}
+.ks-decoration__line--big {
+	margin-right: -9px;
+	height: 6px;
+	width: 21px;
+}
+.ks-decoration__wave {
+	position: absolute;
+}
+.ks-decoration__wave--small {
+	bottom: -30px;
+}
+.ks-decoration__wave--big {
+	bottom: -20px;
+}
+.ks-decoration--left .ks-decoration__wave--big {
+	left: 0;
+}
+.ks-decoration--center .ks-decoration__wave--small {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}

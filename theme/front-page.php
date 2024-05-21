@@ -12,19 +12,8 @@ get_header();
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
     <section class="hero">
-      <div class="absolute inset-0 top-18 md:top-24 overflow-hidden -z-10">
-        <svg class="scale-[5] md:scale-105" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 1366 579" fill="none" preserveAspectRatio="none slice">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 -8H1366C1366 -8 1366 412.536 1366 487.199C900.5 440.228 568.242 779.522 0 387.76C0 293.296 0 -8 0 -8Z" style="stroke: #f5f2f8; stroke-width:20px;" fill="#00b3a7" />
-          <defs>
-            <linearGradient id="paint0_linear" x1="27.0492" y1="15.2472" x2="27.0492" y2="579" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3E319A" />
-              <stop offset="1" stop-color="#63279C" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="relative mx-auto h-[450px] md:h-[600px] max-w-[850px] flex flex-col items-center justify-center z-10">
-        <div class="relative -mt-6 md:-mt-24 z-0 flex flex-col items-center justify-center container">
+      <div class="mx-auto h-[450px] md:h-[600px] max-w-full bg-primary flex flex-col items-center justify-center">
+        <div class="container max-w-[940px] flex flex-col items-center justify-center">
           <h1 class="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold text-white tracking-wide	!leading-[50px] md:!leading-[70px]">
             <?php the_field('hero_text'); ?>
           </h1>
@@ -35,7 +24,20 @@ get_header();
     <section class="introduction">
       <div class="container px-5 md:px-0 py-20">
         <div class="text-content mx-auto mb-16 max-w-[700px]">
-          <h3 class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('title_above_tiles'); ?></h3>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('title_above_tiles'); ?></h3>
+          </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
         <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
@@ -75,13 +77,13 @@ get_header();
 
     <section class="about-author bg-primary overflow-hidden">
       <div class="container px-5 md:px-0 py-20 flex flex-col-reverse md:flex-row gap-28 justify-center">
-        <div class="about-text text-white max-w-[450px]">
-          <p class="text-2xl mb-5 md:mb-12"><?php the_field('about_author_title'); ?></p>
-          <p class="text-lg leading-8"><?php the_field('about_author_desc'); ?></p>
-        </div>
-        <div class="about-image">
+        <div class="about-image rounded-xl overflow-hidden">
           <?php $about_author_img = get_field('about_author_img'); ?>
-          <img class="scale-[1.4]" src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>">
+          <img src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>">
+        </div>
+        <div class="about-text text-white max-w-[450px]">
+          <h3 class="mb-8 text-3xl font-bold leading-10"><?php the_field('about_author_title'); ?></h3>
+          <p class="text-lg leading-8"><?php the_field('about_author_desc'); ?></p>
         </div>
       </div>
     </section>
@@ -89,7 +91,20 @@ get_header();
     <section class="attention">
       <div class="container px-5 md:px-0 py-20">
         <div class="text-content mx-auto mb-16 max-w-[700px]">
-          <p class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('attention_title'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('attention_title'); ?></h3>
+          </div>
           <div class="text-lg text-left mb-5"><?php the_field('attention_desc'); ?></div>
         </div>
         <div class="excel-table-tile mx-auto mb-16 max-w-[700px]">
@@ -104,7 +119,20 @@ get_header();
 
     <section class="opinions">
       <div class="container px-5 md:px-0 pb-20">
-        <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center"><?php the_field('title') ?></h3>
+        <div class="title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center"><?php the_field('title') ?></h3>
+        </div>
         <div class="tiles-container mx-auto max-w-[850px] flex flex-col gap-24">
           <?php
           if (have_rows('opinions')) :
@@ -135,43 +163,82 @@ get_header();
     </section>
 
     <section class="text-section">
-      <div class="container max-w-[850px] px-5 md:px-0 py-20 font-bold text-center text-2xl">
-        <?php echo esc_html(the_field('text_content')); ?>
-        <!-- <p class="mb-10 mx-auto text-3xl">..Też tak chcę!..</p>
-        <p class="text-xl">Brzmi znajomo?</p>
-        <p class="mb-10 text-3xl">"Robię za dużo na raz... i to mnie przytłacza."</p>
-        <p class="">Przez to:</p>
-        <ul class="my-10 leading-10 [&>li]:mb-8">
-          <li>❌ idziesz wolniej od innych, albo w ogóle stoisz w miejscu, marnując swój potencjał,</li>
-          <li>❌ brakuje Ci wolnego czasu na odpoczynek, dla rodziny i na hobby,</li>
-          <li>❌ czujesz się zmęczony i przytłoczony ilością zadań na swojej liście rzeczy do zrobienia. </li>
-        </ul>
-        <div class="desc mx-auto mb-16 text-left font-normal [&>p]:mb-8">
-          <p>Wkurza Cię to, że nie możesz odpuścić tych mniej ważnych rzeczy, choć wiesz, że Cię hamują.</p>
-          <p>Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
-          <p>Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
-          <p>Nie masz pewności, co warto dalej robić, a co lepiej sobie odpuścić.</p>
-          <p class="font-bold">A gdyby tak istniało proste w użyciu narzędzie, które da Ci taką pewność?
-          </p>
+      <div class="py-20 font-bold text-center text-2xl">
+        <div class="container max-w-[850px] px-5 md:px-0 title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center">..Tez tak chcę!..</h3>
         </div>
-        <h3 class="font-bold text-3xl mb-5">Wyobraź sobie inny scenariusz </h3>
-        <div class="desc2 font-normal text-left [&>p]:mb-8">
-          <p>Wyobraź sobie, że przestałeś robić wszystko, a skupiłeś się na mniejszej liczbie rzeczy. Ale tych ,<span class="font-bold">najważniejszych</span>, które są bardziej spójne z Twoimi talentami.</p>
-          <p>Wycofałeś się z aktywności, które tylko zajmowały Twój czas, ale były zapychaczami. Teraz widzisz większe postępy w najważniejszych dla siebie obszarach. <span class="font-bold">Jesteś wreszcie spokojny, bo wiesz, które rzeczy:</span></p>
-          <ul class="mb-8">
-            <li>✔️ zapewnią Ci stabilność i bezpieczeństwo </li>
-            <li>✔️ pomogą Ci zrealizować w pełni Twój potencjał</li>
-          </ul>
-          <p>Zamiast stresu i chaosu masz klarowność i spokój, bo wiele spraw Ci się wyjaśniło. Zyskałeś kilka dodatkowych godzin wolnego czasu w tygodniu, które możesz przeznaczać na odpoczynek, dla rodziny i przyjaciół lub na hobby.</p>
-          <h4 class="mb-5 font-bold">Czy taki scenariusz jest w ogóle osiągalny?</h4>
-          <p>Tak! Choć większość osób nie wierzy, że w jej realizacji pomoże Ci jedna tabelka w Excelu.</p>
-        </div> -->
+
+        <div class="negaives-row py-14 mb-20 bg-[#F7F7F7]">
+          <div class="container max-w-[850px] px-5 md:px-0">
+            <p class="text-xl">Brzmi znajomo?</p>
+            <p class="mb-10 text-3xl">"Robię za dużo na raz... i to mnie przytłacza."</p>
+            <p class="">Przez to:</p>
+            <ul class="my-10 leading-10 [&>li]:mb-8">
+              <li>❌ idziesz wolniej od innych, albo w ogóle stoisz w miejscu, marnując swój potencjał,</li>
+              <li>❌ brakuje Ci wolnego czasu na odpoczynek, dla rodziny i na hobby,</li>
+              <li>❌ czujesz się zmęczony i przytłoczony ilością zadań na swojej liście rzeczy do zrobienia. </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="desc mx-auto mb-16 text-left font-normal [&>p]:mb-8">
+          <div class="container max-w-[850px] px-5 md:px-0 text-center">
+            <p class="mb-10">Wkurza Cię to, że nie możesz odpuścić tych mniej ważnych rzeczy, choć wiesz, że Cię hamują.</p>
+            <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
+            <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
+            <p>Nie masz pewności, co warto dalej robić, a co lepiej sobie odpuścić.</p>
+            <p class="font-bold">A gdyby tak istniało proste w użyciu narzędzie, które da Ci taką pewność?
+            </p>
+          </div>
+        </div>
+
+        <div class="positives-row py-14 bg-[#F7F7F7]">
+          <div class="container max-w-[850px] px-5 md:px-0 text-center">
+            <h3 class="font-bold text-3xl mb-5">Wyobraź sobie inny scenariusz </h3>
+            <div class="desc2 font-normal text-left [&>p]:mb-8">
+              <p>Wyobraź sobie, że przestałeś robić wszystko, a skupiłeś się na mniejszej liczbie rzeczy. Ale tych ,<span class="font-bold">najważniejszych</span>, które są bardziej spójne z Twoimi talentami.</p>
+              <p>Wycofałeś się z aktywności, które tylko zajmowały Twój czas, ale były zapychaczami. Teraz widzisz większe postępy w najważniejszych dla siebie obszarach. <span class="font-bold">Jesteś wreszcie spokojny, bo wiesz, które rzeczy:</span></p>
+              <ul class="mb-8">
+                <li>✔️ zapewnią Ci stabilność i bezpieczeństwo </li>
+                <li>✔️ pomogą Ci zrealizować w pełni Twój potencjał</li>
+              </ul>
+              <p>Zamiast stresu i chaosu masz klarowność i spokój, bo wiele spraw Ci się wyjaśniło. Zyskałeś kilka dodatkowych godzin wolnego czasu w tygodniu, które możesz przeznaczać na odpoczynek, dla rodziny i przyjaciół lub na hobby.</p>
+              <h4 class="mb-5 font-bold">Czy taki scenariusz jest w ogóle osiągalny?</h4>
+              <p>Tak! Choć większość osób nie wierzy, że w jej realizacji pomoże Ci jedna tabelka w Excelu.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <section id="zawartosc" class="about-product">
       <div class="container max-w-[850px] px-5 md:px-0 py-20 text-left text-2xl">
-        <h3 class="mb-4 font-bold text-4xl text-center"><?php the_field('about_product_title'); ?></h3>
+        <div class="title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-4 font-bold text-4xl text-center"><?php the_field('about_product_title'); ?></h3>
+        </div>
 
         <div class="about-desc mb-8">
           <div class="tool-image mb-5">
@@ -214,7 +281,20 @@ get_header();
     <section class="about-specifics">
       <div class="container max-w-[850px] px-5 md:px-0 py-20">
         <div class="title text-center">
-          <h3 class="font-semibold text-3xl"><?php the_field('about_secifics_title'); ?></h3>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="font-semibold text-3xl"><?php the_field('about_secifics_title'); ?></h3>
+          </div>
           <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('about_secifics_subtitle'); ?></p>
           <p class="subtitle2 font-semibold text-3xl"><?php the_field('about_secifics_subtitle2'); ?></p>
         </div>
@@ -240,7 +320,20 @@ get_header();
     <section class="why">
       <div class="container max-w-[850px] mb-10 px-5 md:px-0 py-12 bg-[#00b3a71a] md:border-[2px] md:border-gray-300 rounded-xl">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('why_title'); ?></h3>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="mb-2 font-semibold text-3xl"><?php the_field('why_title'); ?></h3>
+          </div>
           <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('why_subtitle'); ?></p>
         </div>
         <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
@@ -263,7 +356,20 @@ get_header();
       <div class="container max-w-[850px] px-5 md:px-0 py-20">
         <div class="title mb-5 text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('see_more_title'); ?></h3>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('see_more_subtitle'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('see_more_subtitle'); ?></p>
+          </div>
           <div class="subtitle text-2xl leading-10"><?php the_field('see_more_desc'); ?></div>
         </div>
         <div class="laptop-image mb-8">
@@ -320,7 +426,20 @@ get_header();
       <div class="container mx-auto px-5 md:px-0 py-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('will_it_work_title'); ?></h3>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('will_it_work_subtitle'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('will_it_work_subtitle'); ?></p>
+          </div>
         </div>
         <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
           <?php
@@ -360,7 +479,20 @@ get_header();
       <div class="container max-w-[850px] mx-auto px-5 md:px-0 py-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('guarantee_title'); ?></h3>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('guarantee_subtitle'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('guarantee_subtitle'); ?></p>
+          </div>
         </div>
         <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
@@ -398,7 +530,20 @@ get_header();
       <div class="container max-w-[850px] mx-auto px-5 md:px-0 py-20">
         <div class="title mb-10 text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('bonuses_title'); ?></h3>
-          <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('bonuses_subtitle'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('bonuses_subtitle'); ?></p>
+          </div>
         </div>
 
         <ul class="bonuses-tiles text-xl [&>li]:mb-20">
@@ -439,7 +584,20 @@ get_header();
 
     <section class="about-swistak">
       <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
-        <h3 class="mb-8 font-bold text-4xl text-center"><?php the_field('about_swistak_title') ?></h3>
+        <div class="title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-8 font-bold text-4xl text-center"><?php the_field('about_swistak_title') ?></h3>
+        </div>
         <div class="2col flex flex-col-reverse md:flex-row basis gap-10">
           <div class="desc basis-3/4 mx-auto mb-12 text-left text-lg font-normal [&>p]:mb-5">
             <?php the_field('about_swistak_text'); ?>
@@ -491,7 +649,20 @@ get_header();
       <div class="container mx-auto px-5 md:px-0 pb-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle mb-8 font-bold text-[34px] leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
+          </div>
         </div>
         <div class="swiper max-w-full mb-20 overflow-visible" data-js="swiper-tiles-mobile">
           <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
@@ -516,7 +687,20 @@ get_header();
     <section class="whats-next">
       <div class="container max-w-[750px] mx-auto px-5 md:px-0 pb-20">
         <div class="title text-center mb-8">
-          <h3 class="mb-5 font-semibold text-3xl"><?php the_field('whats_next_title'); ?></h3>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="mb-5 font-semibold text-3xl"><?php the_field('whats_next_title'); ?></h3>
+          </div>
           <div class="desc [&>p]:text-2xl">
             <?php the_field('whats_next_desc'); ?>
           </div>
@@ -558,7 +742,20 @@ get_header();
       <div class="container mx-auto px-5 md:px-0 pb-20">
         <div class="title mb-10 text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('faq_title'); ?></h3>
-          <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('faq_subtitle'); ?></p>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--center">
+              <div class="ks-decoration__wave ks-decoration__wave--small">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('faq_subtitle'); ?></p>
+          </div>
         </div>
         <div class="questions-container [&>.question-container]:mb-4">
           <?php
