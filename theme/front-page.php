@@ -278,7 +278,7 @@ get_header();
       </div>
     </section>
 
-    <section class="about-specifics">
+    <section class="about-specifics mb-20 bg-[#F7F7F7]">
       <div class="container max-w-[850px] px-5 md:px-0 py-20">
         <div class="title text-center">
           <div class="title-content mb-16 relative">
@@ -422,7 +422,7 @@ get_header();
       </div>
     </section>
 
-    <section id="dla-kogo" class="will-it-work">
+    <section id="dla-kogo" class="will-it-work bg-[#F7F7F7]">
       <div class="container mx-auto px-5 md:px-0 py-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('will_it_work_title'); ?></h3>
@@ -526,7 +526,7 @@ get_header();
       </div>
     </section>
 
-    <section id="bonusy" class="bonuses">
+    <section id="bonusy" class="bonuses mb-20 bg-[#F7F7F7]">
       <div class="container max-w-[850px] mx-auto px-5 md:px-0 py-20">
         <div class="title mb-10 text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('bonuses_title'); ?></h3>
@@ -645,7 +645,7 @@ get_header();
       </div>
     </section>
 
-    <section class="decision-time overflow-hidden">
+    <section class="decision-time py-14 mb-20 overflow-hidden bg-[#F7F7F7]">
       <div class="container mx-auto px-5 md:px-0 pb-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
@@ -671,7 +671,7 @@ get_header();
               while (have_rows('decision_time_swiper')) : the_row();
                 $decision_time_swiper_slide_content = get_sub_field('decision_time_swpier_slide_content');
             ?>
-                <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary transition duration-300 relative [&>p]:mb-5">
+                <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
                   <?php echo $decision_time_swiper_slide_content; ?>
                 </div>
             <?php
