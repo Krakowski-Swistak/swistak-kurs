@@ -13,6 +13,7 @@ import Swiper from 'swiper';
 document.addEventListener('DOMContentLoaded', () => {
 	initDropdowns();
 	initMobileSwipers();
+	initMobileSwipersHorizontal();
 });
 
 function initDropdowns() {
@@ -69,6 +70,10 @@ button.addEventListener('click', () => {
 	toggleMenuContainer();
 });
 
+// ------------------------------------------------------------------------------
+
+// Swiper
+
 function initMobileSwipers() {
 	const swiperContainers = document.querySelectorAll(
 		'[data-js="swiper-tiles-mobile"]'
@@ -94,6 +99,32 @@ function initMobileSwipers() {
 					spaceBetween: 35,
 					enabled: true,
 				},
+				1280: {
+					slidesPerView: 'auto',
+					spaceBetween: 0,
+					enabled: false,
+				},
+			},
+		});
+	});
+}
+
+function initMobileSwipersHorizontal() {
+	const swiperContainers2 = document.querySelectorAll(
+		'[data-js="swiper-tiles-mobile-horizontal"]'
+	);
+	swiperContainers2.forEach((el) => {
+		new Swiper(el, {
+			spaceBetween: 20,
+			slidesPerView: 1.2,
+			enabled: true,
+			breakpoints: {
+				560: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+					enabled: true,
+				},
+
 				1280: {
 					slidesPerView: 'auto',
 					spaceBetween: 0,

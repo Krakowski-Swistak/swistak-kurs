@@ -13,7 +13,7 @@ get_header();
   <main id="main" class="site-main">
     <section class="hero">
       <div class="mx-auto h-[450px] md:h-[600px] max-w-full bg-primary flex flex-col items-center justify-center">
-        <div class="container max-w-[940px] flex flex-col items-center justify-center">
+        <div class="container max-w-[1024px] flex flex-col items-center justify-center">
           <h1 class="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold text-white tracking-wide	!leading-[50px] md:!leading-[70px]">
             <?php the_field('hero_text'); ?>
           </h1>
@@ -22,7 +22,7 @@ get_header();
     </section>
 
     <section class="introduction">
-      <div class="container px-5 md:px-0 py-20">
+      <div class="container py-20">
         <div class="text-content mx-auto mb-16 max-w-[700px]">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -48,16 +48,16 @@ get_header();
     </section>
 
     <section class="swiper1 mb-20 overflow-hidden">
-      <div class="max-w-full w-full md:container mx-auto">
+      <div class="max-w-full w-full lg:container mx-auto">
         <div class="swiper px-5 max-w-full" data-js="swiper-tiles-mobile">
-          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+          <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
             <?php
             if (have_rows('swiper1')) :
               while (have_rows('swiper1')) : the_row();
                 $image = get_sub_field('tile_icon');
                 $tile_text = get_sub_field('tile_text');
             ?>
-                <div class="swiper-slide w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
+                <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
                   <div class="icon mb-5">
                     <span class="text-[100px]"><?php echo $image; ?></span>
                   </div>
@@ -75,21 +75,34 @@ get_header();
       </div>
     </section>
 
-    <section class="about-author bg-primary overflow-hidden">
-      <div class="container px-5 md:px-0 py-20 flex flex-col-reverse md:flex-row gap-28 justify-center">
-        <div class="about-image rounded-xl overflow-hidden">
+    <section class="about-author bg-primary overflow-visible lg:mt-52">
+      <div class="container py-20 flex flex-col-reverse md:flex-row gap-14 md:gap-28 justify-center">
+        <div class="about-image rounded-xl relative lg:scale-[1.2]">
           <?php $about_author_img = get_field('about_author_img'); ?>
-          <img src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>">
+          <img src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>" class="lg:mt-[-130px] w-full md:w-auto">
         </div>
         <div class="about-text text-white max-w-[450px]">
-          <h3 class="mb-8 text-3xl font-bold leading-10"><?php the_field('about_author_title'); ?></h3>
+          <div class="title-content mb-16 relative">
+            <div class="ks-decoration ks-decoration--left">
+              <div class="ks-decoration__wave ks-decoration__wave--small [&>div]:bg-white">
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              </div>
+            </div>
+            <h3 class="mb-8 text-3xl font-bold leading-10"><?php the_field('about_author_title'); ?></h3>
+          </div>
           <p class="text-lg leading-8"><?php the_field('about_author_desc'); ?></p>
         </div>
       </div>
     </section>
 
     <section class="attention">
-      <div class="container px-5 md:px-0 py-20">
+      <div class="container py-20">
         <div class="text-content mx-auto mb-16 max-w-[700px]">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -117,8 +130,8 @@ get_header();
       </div>
     </section>
 
-    <section class="opinions">
-      <div class="container px-5 md:px-0 pb-20">
+    <section class="opinions overflow-hidden">
+      <div class="container mx-auto pb-20">
         <div class="title-content mb-16 relative">
           <div class="ks-decoration ks-decoration--center">
             <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -133,58 +146,64 @@ get_header();
           </div>
           <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center"><?php the_field('title') ?></h3>
         </div>
-        <div class="tiles-container mx-auto max-w-[850px] flex flex-col gap-24">
-          <?php
-          if (have_rows('opinions')) :
-            while (have_rows('opinions')) : the_row();
-              $image = get_sub_field('image');
-              $quote = get_sub_field('quote');
-              $opinion_text = get_sub_field('opinion_text');
-              $author = get_sub_field('author');
-              $author_desc = get_sub_field('author_desc');
-          ?>
-              <div class="opinion-tile p-5 md:p-12 py-8 md:py-auto rounded-md flex flex-col md:flex-row gap-10 bg-[#00b3a71a] shadow-[12px_12px_0px_0px_rgba(0,179,167,0.3)] md:shadow-[24px_24px_0px_0px_rgba(0,179,167,0.3)]">
+        <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile-horizontal">
+          <div class="swiper-wrapper xl:grid lg:grid-cols-2 lg:gap-10">
+            <?php
+            if (have_rows('opinions')) :
+              while (have_rows('opinions')) : the_row();
+                $image = get_sub_field('image');
+                $quote = get_sub_field('quote');
+                $opinion_text = get_sub_field('opinion_text');
+                $author = get_sub_field('author');
+                $author_desc = get_sub_field('author_desc');
+            ?>
+                <div class="swiper-slide lg:min-w-[450px] h-auto opinion-tile p-5 md:p-12 py-8 md:py-auto rounded-md flex flex-col md:flex-row gap-10 bg-[#00b3a71a] relative">
 
-                <img class="rounded-md" src="<?php echo esc_html($image['url']); ?>" alt="<?php echo esc_html($image['title']); ?>">
-                <div class="opinion-text">
-                  <p class="mb-5 text-2xl font-semibold"><?php echo $quote; ?></p>
-                  <p class="mb-5"><?php echo $opinion_text; ?></p>
-                  <p class="font-semibold text-lg leading-5"><?php echo $author; ?></p>
-                  <p class="text-gray-400 leading-5 font-light"><?php echo $author_desc; ?></p>
+                  <img class="rounded-md w-[250px] h-[250px]" src="<?php echo esc_html($image['url']); ?>" alt="<?php echo esc_html($image['title']); ?>">
+                  <div class="opinion-text">
+                    <p class="mb-5 text-lg font-semibold"><?php echo $quote; ?></p>
+                    <p class="mb-5"><?php echo $opinion_text; ?></p>
+                    <p class="font-semibold text-base leading-5"><?php echo $author; ?></p>
+                    <p class="text-gray-400 leading-5 font-light"><?php echo $author_desc; ?></p>
+                  </div>
                 </div>
-              </div>
-          <?php
-            endwhile;
-          else :
-          endif;
-          ?>
+            <?php
+              endwhile;
+            else :
+            endif;
+            ?>
+          </div>
         </div>
+        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+          <a href="#">..Tez tak chcę!..</a>
+        </button>
       </div>
     </section>
 
-    <section class="text-section">
-      <div class="py-20 font-bold text-center text-2xl">
-        <div class="container max-w-[850px] px-5 md:px-0 title-content mb-16 relative">
-          <div class="ks-decoration ks-decoration--center">
-            <div class="ks-decoration__wave ks-decoration__wave--small">
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
-              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+    <section class="text-section mb-20">
+      <div class="font-bold text-center text-lg lg:text-2xl">
+        <div class="negatives-row py-20 bg-[#F7F7F7]">
+          <div class="container max-w-[850px]">
+            <div class="title">
+              <div class="title-content mb-16 relative">
+                <div class="ks-decoration ks-decoration--center">
+                  <div class="ks-decoration__wave ks-decoration__wave--small">
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+                    <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+                  </div>
+                </div>
+                <h3 class="font-semibold text-2xl">Brzmi znajomo?</h3>
+                <p class="subtitle mb-8 font-bold text-3xl leading-10">„Robię za dużo na raz… i to mnie przytłacza.”</p>
+              </div>
             </div>
-          </div>
-          <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center">..Tez tak chcę!..</h3>
-        </div>
 
-        <div class="negaives-row py-14 mb-20 bg-[#F7F7F7]">
-          <div class="container max-w-[850px] px-5 md:px-0">
-            <p class="text-xl">Brzmi znajomo?</p>
-            <p class="mb-10 text-3xl">"Robię za dużo na raz... i to mnie przytłacza."</p>
-            <p class="">Przez to:</p>
-            <ul class="my-10 leading-10 [&>li]:mb-8">
+            <p class="font-semibold">Przez to:</p>
+            <ul class="mt-10 font-semibold leading-10 [&>li]:mb-8 [&>li]:last:mb-0">
               <li>❌ idziesz wolniej od innych, albo w ogóle stoisz w miejscu, marnując swój potencjał,</li>
               <li>❌ brakuje Ci wolnego czasu na odpoczynek, dla rodziny i na hobby,</li>
               <li>❌ czujesz się zmęczony i przytłoczony ilością zadań na swojej liście rzeczy do zrobienia. </li>
@@ -192,8 +211,8 @@ get_header();
           </div>
         </div>
 
-        <div class="desc mx-auto mb-16 text-left font-normal [&>p]:mb-8">
-          <div class="container max-w-[850px] px-5 md:px-0 text-center">
+        <div class="desc mx-auto my-20 text-left font-normal [&>p]:mb-8">
+          <div class="container max-w-[850px] text-center text-2xl">
             <p class="mb-10">Wkurza Cię to, że nie możesz odpuścić tych mniej ważnych rzeczy, choć wiesz, że Cię hamują.</p>
             <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
             <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
@@ -203,17 +222,17 @@ get_header();
           </div>
         </div>
 
-        <div class="positives-row py-14 bg-[#F7F7F7]">
-          <div class="container max-w-[850px] px-5 md:px-0 text-center">
+        <div class="positives-row py-20 bg-[#F7F7F7]">
+          <div class="container mx-auto max-w-[850px] text-center">
             <h3 class="font-bold text-3xl mb-5">Wyobraź sobie inny scenariusz </h3>
-            <div class="desc2 font-normal text-left [&>p]:mb-8">
-              <p>Wyobraź sobie, że przestałeś robić wszystko, a skupiłeś się na mniejszej liczbie rzeczy. Ale tych ,<span class="font-bold">najważniejszych</span>, które są bardziej spójne z Twoimi talentami.</p>
-              <p>Wycofałeś się z aktywności, które tylko zajmowały Twój czas, ale były zapychaczami. Teraz widzisz większe postępy w najważniejszych dla siebie obszarach. <span class="font-bold">Jesteś wreszcie spokojny, bo wiesz, które rzeczy:</span></p>
+            <div class="desc2 font-normal text-2xl text-left">
+              <p class="mb-8">Wyobraź sobie, że przestałeś robić wszystko, a skupiłeś się na mniejszej liczbie rzeczy. Ale tych ,<span class="font-bold">najważniejszych</span>, które są bardziej spójne z Twoimi talentami.</p>
+              <p class="mb-8">Wycofałeś się z aktywności, które tylko zajmowały Twój czas, ale były zapychaczami. Teraz widzisz większe postępy w najważniejszych dla siebie obszarach. <span class="font-bold">Jesteś wreszcie spokojny, bo wiesz, które rzeczy:</span></p>
               <ul class="mb-8">
                 <li>✔️ zapewnią Ci stabilność i bezpieczeństwo </li>
                 <li>✔️ pomogą Ci zrealizować w pełni Twój potencjał</li>
               </ul>
-              <p>Zamiast stresu i chaosu masz klarowność i spokój, bo wiele spraw Ci się wyjaśniło. Zyskałeś kilka dodatkowych godzin wolnego czasu w tygodniu, które możesz przeznaczać na odpoczynek, dla rodziny i przyjaciół lub na hobby.</p>
+              <p class="mb-8">Zamiast stresu i chaosu masz klarowność i spokój, bo wiele spraw Ci się wyjaśniło. Zyskałeś kilka dodatkowych godzin wolnego czasu w tygodniu, które możesz przeznaczać na odpoczynek, dla rodziny i przyjaciół lub na hobby.</p>
               <h4 class="mb-5 font-bold">Czy taki scenariusz jest w ogóle osiągalny?</h4>
               <p>Tak! Choć większość osób nie wierzy, że w jej realizacji pomoże Ci jedna tabelka w Excelu.</p>
             </div>
@@ -223,8 +242,8 @@ get_header();
       </div>
     </section>
 
-    <section id="zawartosc" class="about-product">
-      <div class="container max-w-[850px] px-5 md:px-0 py-20 text-left text-2xl">
+    <section id="zawartosc" class="about-product mb-20">
+      <div class="container max-w-[1140px] text-left text-lg lg:text-2xl">
         <div class="title-content mb-16 relative">
           <div class="ks-decoration ks-decoration--center">
             <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -237,19 +256,17 @@ get_header();
               <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
             </div>
           </div>
-          <h3 class="mb-4 font-bold text-4xl text-center"><?php the_field('about_product_title'); ?></h3>
+          <h3 class="mb-4 font-bold text-3xl text-center"><?php the_field('about_product_title'); ?></h3>
         </div>
 
-        <div class="about-desc mb-8">
+        <div class="about-desc mb-24">
           <div class="tool-image mb-5">
             <img src="<?php echo (get_field('about_product_img')) ? esc_html(get_field('about_product_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('about_product_img')['title']); ?>">
           </div>
           <?php the_field('about_product_desc'); ?>
-          <!-- <p class="mb-8 font-bold">To narzędzie, które łączy prosty, ale niezwykły arkusz w Excelu z <span class="text-red-600 bg-yellow-100">10</span> krótkimi nagraniami wideo, na których pokażę Ci, jak ją wykorzystać.</p>
-          <p>Skorzystasz z niej w 3 krokach, ale nie obędzie się bez pomyślenia i autorefleksji. <span class="font-bold">W skrócie działa to tak: </span></p> -->
         </div>
 
-        <ul class="about-steps text-xl [&>li]:mb-8">
+        <ul class="about-steps [&>li]:mb-8">
           <?php
           if (have_rows('steps')) :
             while (have_rows('steps')) : the_row();
@@ -259,13 +276,13 @@ get_header();
               $step_img = get_sub_field('step_img');
           ?>
               <li class="md:flex gap-10 basis mb-8">
-                <div class="desc basis-2/3">
+                <div class="desc basis-1/2 self-center">
                   <p class="font-bold mb-5">
                     <span class="text-primary text-3xl"><?php echo $steps_number; ?></span><?php echo $step_title ?>
                   </p>
                   <p><?php echo $step_desc; ?></p>
                 </div>
-                <div class="about-img basis-1/3">
+                <div class="about-img basis-1/2">
                   <img src="<?php echo esc_html(get_sub_field('step_img')['url']); ?>" alt="<?php echo esc_html(get_sub_field('step_img')['title']); ?>">
                 </div>
               </li>
@@ -278,8 +295,8 @@ get_header();
       </div>
     </section>
 
-    <section class="about-specifics mb-20 bg-[#F7F7F7]">
-      <div class="container max-w-[850px] px-5 md:px-0 py-20">
+    <section class="about-specifics lg:mb-20 bg-[#F7F7F7]">
+      <div class="container max-w-[850px] py-20">
         <div class="title text-center">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -293,12 +310,12 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="font-semibold text-3xl"><?php the_field('about_secifics_title'); ?></h3>
+            <h3 class="font-bold text-3xl"><?php the_field('about_secifics_title'); ?></h3>
           </div>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('about_secifics_subtitle'); ?></p>
-          <p class="subtitle2 font-semibold text-3xl"><?php the_field('about_secifics_subtitle2'); ?></p>
+          <p class="subtitle mb-8 font-medium text-2xl leading-10"><?php the_field('about_secifics_subtitle'); ?></p>
+          <p class="subtitle2 font-medium text-2xl"><?php the_field('about_secifics_subtitle2'); ?></p>
         </div>
-        <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-10 [&>li]:mb-8">
+        <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-10 [&>li]:mb-8">
           <?php
           if (have_rows('specifics_list')) :
             while (have_rows('specifics_list')) : the_row();
@@ -311,14 +328,14 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#"><?php the_field('specifics_btn_text'); ?></php></a>
         </button>
       </div>
     </section>
 
     <section class="why">
-      <div class="container max-w-[850px] mb-10 px-5 md:px-0 py-12 bg-[#00b3a71a] md:border-[2px] md:border-gray-300 rounded-xl">
+      <div class="container mx-auto max-w-[850px] mb-10 py-20 bg-[#00b3a71a] rounded-xl">
         <div class="title text-center">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -332,11 +349,11 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-2 font-semibold text-3xl"><?php the_field('why_title'); ?></h3>
+            <h3 class="mb-2 font-bold text-3xl"><?php the_field('why_title'); ?></h3>
           </div>
-          <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('why_subtitle'); ?></p>
+          <p class="subtitle mb-8 font-medium text-2xl leading-10"><?php the_field('why_subtitle'); ?></p>
         </div>
-        <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
+        <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
           <?php
           if (have_rows('why_list')) :
             while (have_rows('why_list')) : the_row();
@@ -353,7 +370,7 @@ get_header();
     </section>
 
     <section class="see-more">
-      <div class="container max-w-[850px] px-5 md:px-0 py-20">
+      <div class="container max-w-[850px] py-20 text-lg lg:text-2xl">
         <div class="title mb-5 text-center">
           <h3 class="mb-2 font-semibold text-3xl"><?php the_field('see_more_title'); ?></h3>
           <div class="title-content mb-16 relative">
@@ -368,23 +385,23 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('see_more_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('see_more_subtitle'); ?></p>
           </div>
-          <div class="subtitle text-2xl leading-10"><?php the_field('see_more_desc'); ?></div>
+          <div class="subtitle leading-10"><?php the_field('see_more_desc'); ?></div>
         </div>
         <div class="laptop-image mb-8">
           <img src="<?php echo (get_field('see_more_screenshot')) ? esc_html(get_field('see_more_screenshot')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('see_more_screenshot')['title']); ?>">
         </div>
-        <p class="subtitle text-2xl leading-10 text-center"><?php the_field('see_more_img_desc'); ?></p>
+        <p class="subtitle leading-10 text-center"><?php the_field('see_more_img_desc'); ?></p>
       </div>
     </section>
 
     <section class="career-path-opinions-swiper mb-20 overflow-hidden">
       <div class="max-w-full px-5 w-full md:container mx-auto">
-        <h3 class="mb-24 font-bold text-4xl text-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
+        <h3 class="mb-24 font-bold text-3xl text-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
 
         <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile">
-          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+          <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
             <?php
             if (have_rows('career_path_opinions_swiper')) :
               while (have_rows('career_path_opinions_swiper')) : the_row();
@@ -392,7 +409,7 @@ get_header();
                 $opinion_text = get_sub_field('career_path_opinions_swiper_text');
                 $author_name = get_sub_field('career_path_opinions_swiper_author_name');
             ?>
-                <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
+                <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
                   <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                     <div class="opinion-author-image mx-auto max-w-[150px] relative">
                       <img src="<?php echo esc_html($author_img['url']); ?>" alt="<?php echo esc_html($author_img['title']); ?>">
@@ -416,16 +433,16 @@ get_header();
           </div>
         </div>
 
-        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#"><?php the_field('career_path_opinions_btn_text'); ?></a>
         </button>
       </div>
     </section>
 
     <section id="dla-kogo" class="will-it-work bg-[#F7F7F7]">
-      <div class="container mx-auto px-5 md:px-0 py-20">
+      <div class="container mx-auto py-20">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('will_it_work_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('will_it_work_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -438,7 +455,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('will_it_work_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('will_it_work_subtitle'); ?></p>
           </div>
         </div>
         <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
@@ -454,7 +471,7 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto mb-10 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+        <button class="mx-auto mb-24 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#"><?php the_field('will_it_work_btn_text'); ?></a>
         </button>
 
@@ -476,9 +493,9 @@ get_header();
     </section>
 
     <section id="gwarancja" class="guarantee">
-      <div class="container max-w-[850px] mx-auto px-5 md:px-0 py-20">
+      <div class="container mx-auto max-w-[850px] py-20">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('guarantee_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('guarantee_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -491,7 +508,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-[34px] leading-10"><?php the_field('guarantee_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('guarantee_subtitle'); ?></p>
           </div>
         </div>
         <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
@@ -504,32 +521,32 @@ get_header();
     </section>
 
     <section class="prices">
-      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
-        <h3 class="mb-8 font-bold text-4xl text-center"><?php the_field('prices_title'); ?></h3>
-        <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
+      <div class="container max-w-[850px] mx-auto pb-20">
+        <div class="desc mb-20 p-10 mx-auto text-left text-2xl font-normal [&>p]:mb-8 border-[2px] border-primary rounded-xl">
+          <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('prices_title'); ?></h3>
           <p><?php the_field('prices_desc'); ?></p>
-          <div class="price text-green-800 text-center text-4xl font-bold">
+          <div class="price text-green-800 text-center text-3xl font-bold">
             <p>Cena promocyjna: 147 zł</p>
           </div>
           <p class="text-center">
             Jednorazowa inwestycja
           </p>
-          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+          <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
             <a href="#">..Dodaj do koszyka (147 zł)..</a>
           </button>
         </div>
 
-        <h3 class="mb-8 font-bold text-4xl text-center"><?php the_field('prices_title2'); ?></h3>
-        <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
+        <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('prices_title2'); ?></h3>
+        <div class="desc mx-auto text-left text-2xl font-normal">
           <?php the_field('prices_desc2'); ?>
         </div>
       </div>
     </section>
 
     <section id="bonusy" class="bonuses mb-20 bg-[#F7F7F7]">
-      <div class="container max-w-[850px] mx-auto px-5 md:px-0 py-20">
+      <div class="container max-w-[850px] mx-auto py-20">
         <div class="title mb-10 text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('bonuses_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('bonuses_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -542,7 +559,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('bonuses_subtitle'); ?></p>
+            <p class="subtitle font-bold text-3xl leading-10"><?php the_field('bonuses_subtitle'); ?></p>
           </div>
         </div>
 
@@ -576,14 +593,14 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
           <a href="#"><?php the_field('bonuses_btn') ?></a>
         </button>
       </div>
     </section>
 
-    <section class="about-swistak">
-      <div class="container max-w-[850px] mx-auto px-5 md:px-0 pb-20">
+    <section class="about-swistak overflow-x-hidden">
+      <div class="container mx-auto pb-20 ">
         <div class="title-content mb-16 relative">
           <div class="ks-decoration ks-decoration--center">
             <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -596,9 +613,9 @@ get_header();
               <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
             </div>
           </div>
-          <h3 class="mb-8 font-bold text-4xl text-center"><?php the_field('about_swistak_title') ?></h3>
+          <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('about_swistak_title') ?></h3>
         </div>
-        <div class="2col flex flex-col-reverse md:flex-row basis gap-10">
+        <div class="mx-auto max-w-[850px] flex flex-col-reverse md:flex-row basis gap-12">
           <div class="desc basis-3/4 mx-auto mb-12 text-left text-lg font-normal [&>p]:mb-5">
             <?php the_field('about_swistak_text'); ?>
           </div>
@@ -607,10 +624,10 @@ get_header();
             <p class="img-desc text-lg italic">„Przestań robić wszystko– zacznij wybierać mądrze!”</p>
           </div>
         </div>
-        <div class="about-swistak-opinions max-w-full px-5 w-full md:container mx-auto overflow-x-hidden">
-          <h3 class="mb-24 font-bold text-4xl text-center">Oto garść opinii od moich zadowolonych klientek i klientów (łącznie otrzymałem ponad 216+ pozytywnych rekomendacji na LinkedIn):</h3>
-          <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile">
-            <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+        <div class="about-swistak-opinions w-full">
+          <h3 class="mb-24 font-bold text-3xl text-center">Oto garść opinii od moich zadowolonych klientek i klientów (łącznie otrzymałem ponad 216+ pozytywnych rekomendacji na LinkedIn):</h3>
+          <div class="swiper max-w-full overflow-visible" data-js="swiper-tiles-mobile">
+            <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
               <?php
               if (have_rows('career_path_opinions_swiper')) :
                 while (have_rows('career_path_opinions_swiper')) : the_row();
@@ -618,7 +635,7 @@ get_header();
                   $opinion_text = get_sub_field('career_path_opinions_swiper_text');
                   $author_name = get_sub_field('career_path_opinions_swiper_author_name');
               ?>
-                  <div class="swiper-slide w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
+                  <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
                     <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
                       <div class="opinion-author-image mx-auto max-w-[150px] relative">
                         <img src="<?php echo esc_html($author_img['url']); ?>" alt="<?php echo esc_html($author_img['title']); ?>">
@@ -645,8 +662,8 @@ get_header();
       </div>
     </section>
 
-    <section class="decision-time py-14 mb-20 overflow-hidden bg-[#F7F7F7]">
-      <div class="container mx-auto px-5 md:px-0 pb-20">
+    <section class="decision-time py-20 overflow-hidden">
+      <div class="container mx-auto">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
           <div class="title-content mb-16 relative">
@@ -661,17 +678,17 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-[34px] leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
+            <p class="subtitle mb-8 font-bold text-3xl leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
           </div>
         </div>
-        <div class="swiper max-w-full mb-20 overflow-visible" data-js="swiper-tiles-mobile">
-          <div class="swiper-wrapper md:grid md:grid-cols-3 md:gap-10">
+        <div class="swiper mb-20 overflow-visible" data-js="swiper-tiles-mobile">
+          <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
             <?php
             if (have_rows('decision_time_swiper')) :
               while (have_rows('decision_time_swiper')) : the_row();
                 $decision_time_swiper_slide_content = get_sub_field('decision_time_swpier_slide_content');
             ?>
-                <div class="swiper-slide w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
+                <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
                   <?php echo $decision_time_swiper_slide_content; ?>
                 </div>
             <?php
@@ -685,7 +702,7 @@ get_header();
     </section>
 
     <section class="whats-next">
-      <div class="container max-w-[750px] mx-auto px-5 md:px-0 pb-20">
+      <div class="container max-w-[1024px] mx-auto pb-20">
         <div class="title text-center mb-8">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -708,8 +725,7 @@ get_header();
         <div class="cta p-10 text-center font-bold text-3xl border-[2px] border-primary rounded-xl">
           <?php the_field('whats_next_cta'); ?>
         </div>
-        <div class="arrow-down mx-auto w-fit text-[60px] text-primary">&#8681;</div>
-        <div class="arrow-down mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
+        <div class="arrow-down my-10 mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
         <div class="cta2 p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
           <p class="mb-5"><?php the_field('whats_next_cta2_title'); ?></p>
           <img src="<?php echo (get_field('whats_next_cta2_img')) ? esc_html(get_field('whats_next_cta2_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('whats_next_cta2_img')['title']); ?>">
@@ -725,8 +741,8 @@ get_header();
     </section>
 
     <section class="order-benefits">
-      <div class="container mx-auto px-5 md:px-0 pb-20">
-        <div class="2col mb-10 rounded-xl border-[2px] border-primary p-6 md:flex basis justify-center items-center text-center">
+      <div class="container mx-auto max-w-[1024px] pb-20">
+        <div class="container mx-auto mb-10 rounded-xl border-[2px] border-primary p-6 md:flex basis justify-center items-center text-center">
           <div class="col mb-8 basis-1/2 text-xl">
             <?php the_field('order_benefits1'); ?>
           </div>
@@ -738,10 +754,10 @@ get_header();
       </div>
     </section>
 
-    <section id="faq" class="faq">
-      <div class="container mx-auto px-5 md:px-0 pb-20">
+    <section id="faq" class="faq bg-[#F7F7F7] py-20">
+      <div class="container mx-auto">
         <div class="title mb-10 text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('faq_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('faq_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -754,7 +770,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle font-bold text-[34px] leading-10"><?php the_field('faq_subtitle'); ?></p>
+            <p class="subtitle font-bold text-3xl leading-10"><?php the_field('faq_subtitle'); ?></p>
           </div>
         </div>
         <div class="questions-container [&>.question-container]:mb-4">
