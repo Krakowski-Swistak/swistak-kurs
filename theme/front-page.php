@@ -367,7 +367,7 @@ get_header();
     <section class="see-more">
       <div class="container max-w-[850px] py-20 text-lg lg:text-2xl">
         <div class="title mb-5 text-center">
-          <h3 class="mb-2 font-semibold text-3xl"><?php the_field('see_more_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('see_more_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -660,7 +660,7 @@ get_header();
     <section class="decision-time py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-3xl">Czas na Twoją decyzję.</h3>
+          <h3 class="mb-2 font-semibold text-2xl">Czas na Twoją decyzję.</h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
