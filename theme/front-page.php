@@ -79,7 +79,7 @@ get_header();
       <div class="container py-20 flex flex-col-reverse md:flex-row gap-14 md:gap-28 justify-center">
         <div class="about-image rounded-xl relative lg:scale-[1.2]">
           <?php $about_author_img = get_field('about_author_img'); ?>
-          <img src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>" class="lg:mt-[-130px] w-full md:w-auto">
+          <img src="<?php echo ($about_author_img) ? esc_html($about_author_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo ($about_author_img) ? esc_html($about_author_img['title']) : 'logo'; ?>" class="lg:mt-[-130px] w-full md:w-auto rounded-xl">
         </div>
         <div class="about-text text-white max-w-[450px]">
           <div class="title-content mb-16 relative">
@@ -539,7 +539,7 @@ get_header();
     </section>
 
     <section id="bonusy" class="bonuses mb-20 bg-[#F7F7F7]">
-      <div class="container max-w-[850px] mx-auto py-20">
+      <div class="container max-w-[1140px] mx-auto py-20">
         <div class="title mb-10 text-center">
           <h3 class="mb-2 font-semibold text-2xl"><?php the_field('bonuses_title'); ?></h3>
           <div class="title-content mb-16 relative">
@@ -568,7 +568,7 @@ get_header();
               $bonuses_list_item_img = get_sub_field('bonuses_list_item_img');
           ?>
               <li class="flex flex-col-reverse md:flex-row gap-10 basis">
-                <div class="basis-2/3">
+                <div class="basis-1/2">
                   <div class="product-desc mb-5">
                     <p class="font-bold mb-2"><?php echo $bonuses_list_item_title; ?></p>
                     <p class="desc"><?php echo $bonuses_list_item_desc; ?></p>
@@ -578,7 +578,7 @@ get_header();
                     <p>Z narzędziem <span class="text-primary">Twoje Ścieżki Kariery</span>: bezpłatnie😊 </p>
                   </div>
                 </div>
-                <div class="about-img basis-1/3">
+                <div class="about-img basis-1/2">
                   <img src="<?php echo ($bonuses_list_item_img) ? esc_html($bonuses_list_item_img['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html($bonuses_list_item_img['title']); ?>">
                 </div>
               </li>
