@@ -147,7 +147,7 @@ get_header();
           <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center"><?php the_field('title') ?></h3>
         </div>
         <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile-horizontal">
-          <div class="swiper-wrapper xl:grid lg:grid-cols-2 lg:gap-10">
+          <div class="swiper-wrapper">
             <?php
             if (have_rows('opinions')) :
               while (have_rows('opinions')) : the_row();
@@ -175,7 +175,7 @@ get_header();
           </div>
         </div>
         <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#">..Tez tak chcę!..</a>
+          <a href="#"><?php the_field('swiper1_btn_text'); ?></a>
         </button>
       </div>
     </section>
@@ -197,44 +197,39 @@ get_header();
                     <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
                   </div>
                 </div>
-                <h3 class="font-semibold text-2xl">Brzmi znajomo?</h3>
-                <p class="subtitle mb-8 font-bold text-3xl leading-10">„Robię za dużo na raz… i to mnie przytłacza.”</p>
+                <h3 class="font-semibold text-2xl"><?php the_field('text_section_title'); ?></h3>
+                <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('text_section_subtitle'); ?></p>
               </div>
             </div>
 
-            <p class="font-semibold">Przez to:</p>
+            <p class="font-semibold"><?php the_field('text_above_negative_list'); ?></p>
             <ul class="mt-10 font-semibold leading-10 [&>li]:mb-8 [&>li]:last:mb-0">
-              <li>❌ idziesz wolniej od innych, albo w ogóle stoisz w miejscu, marnując swój potencjał,</li>
-              <li>❌ brakuje Ci wolnego czasu na odpoczynek, dla rodziny i na hobby,</li>
-              <li>❌ czujesz się zmęczony i przytłoczony ilością zadań na swojej liście rzeczy do zrobienia. </li>
+              <?php
+              if (have_rows('negatives_list')) :
+                while (have_rows('negatives_list')) : the_row();
+                  $negative_item = get_sub_field('negative_item');
+              ?>
+                  <li><?php echo $negative_item; ?></li>
+              <?php
+                endwhile;
+              else :
+              endif;
+              ?>
             </ul>
           </div>
         </div>
 
         <div class="desc mx-auto my-20 text-left font-normal [&>p]:mb-8">
           <div class="container max-w-[850px] text-center text-2xl">
-            <p class="mb-10">Wkurza Cię to, że nie możesz odpuścić tych mniej ważnych rzeczy, choć wiesz, że Cię hamują.</p>
-            <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
-            <p class="mb-10">Ale najgorsze jest to, że odbija się to na Twoim samopoczuciu, zdrowiu i relacjach. Czasami masz po prostu ochotę rzucić to wszystko i wyjechać w Bieszczady.</p>
-            <p>Nie masz pewności, co warto dalej robić, a co lepiej sobie odpuścić.</p>
-            <p class="font-bold">A gdyby tak istniało proste w użyciu narzędzie, które da Ci taką pewność?
-            </p>
+            <p><?php the_field('text_section_description'); ?></p>
           </div>
         </div>
 
         <div class="positives-row py-20 bg-[#F7F7F7]">
           <div class="container mx-auto max-w-[850px] text-center">
-            <h3 class="font-bold text-3xl mb-5">Wyobraź sobie inny scenariusz </h3>
+            <h3 class="font-bold text-3xl mb-5"><?php the_field('positives_title'); ?></h3>
             <div class="desc2 font-normal text-2xl text-left">
-              <p class="mb-8">Wyobraź sobie, że przestałeś robić wszystko, a skupiłeś się na mniejszej liczbie rzeczy. Ale tych ,<span class="font-bold">najważniejszych</span>, które są bardziej spójne z Twoimi talentami.</p>
-              <p class="mb-8">Wycofałeś się z aktywności, które tylko zajmowały Twój czas, ale były zapychaczami. Teraz widzisz większe postępy w najważniejszych dla siebie obszarach. <span class="font-bold">Jesteś wreszcie spokojny, bo wiesz, które rzeczy:</span></p>
-              <ul class="mb-8">
-                <li>✔️ zapewnią Ci stabilność i bezpieczeństwo </li>
-                <li>✔️ pomogą Ci zrealizować w pełni Twój potencjał</li>
-              </ul>
-              <p class="mb-8">Zamiast stresu i chaosu masz klarowność i spokój, bo wiele spraw Ci się wyjaśniło. Zyskałeś kilka dodatkowych godzin wolnego czasu w tygodniu, które możesz przeznaczać na odpoczynek, dla rodziny i przyjaciół lub na hobby.</p>
-              <h4 class="mb-5 font-bold">Czy taki scenariusz jest w ogóle osiągalny?</h4>
-              <p>Tak! Choć większość osób nie wierzy, że w jej realizacji pomoże Ci jedna tabelka w Excelu.</p>
+              <p><?php the_field('positives_description'); ?></p>
             </div>
           </div>
         </div>

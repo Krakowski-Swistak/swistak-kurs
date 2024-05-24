@@ -110,6 +110,7 @@ function initMobileSwipers() {
 }
 
 function initMobileSwipersHorizontal() {
+	console.log('test2');
 	const swiperContainers2 = document.querySelectorAll(
 		'[data-js="swiper-tiles-mobile-horizontal"]'
 	);
@@ -124,11 +125,10 @@ function initMobileSwipersHorizontal() {
 					spaceBetween: 20,
 					enabled: true,
 				},
-
 				1280: {
-					slidesPerView: 'auto',
-					spaceBetween: 0,
-					enabled: false,
+					slidesPerView: 1.7,
+					spaceBetween: 20,
+					enabled: true,
 				},
 			},
 		});
