@@ -36,7 +36,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('title_above_tiles'); ?></h3>
+            <h3 class="mb-8 text-center text-2xl lg:text-3xl font-bold leading-10"><?php the_field('title_above_tiles'); ?></h3>
           </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
@@ -94,7 +94,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-8 text-3xl font-bold leading-10"><?php the_field('about_author_title'); ?></h3>
+            <h3 class="mb-8 text-2xl lg:text-3xl font-bold leading-10"><?php the_field('about_author_title'); ?></h3>
           </div>
           <p class="text-lg leading-8"><?php the_field('about_author_desc'); ?></p>
         </div>
@@ -116,12 +116,12 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('attention_title'); ?></h3>
+            <h3 class="mb-8 text-center text-2xl lg:text-3xl font-bold leading-10"><?php the_field('attention_title'); ?></h3>
           </div>
           <div class="text-lg text-left mb-5"><?php the_field('attention_desc'); ?></div>
         </div>
         <div class="excel-table-tile mx-auto mb-16 max-w-[700px]">
-          <p class="mb-8 text-center text-3xl font-bold leading-10"><?php the_field('image_title'); ?></p>
+          <p class="mb-8 text-center text-2xl lg:text-3xl font-bold leading-10"><?php the_field('image_title'); ?></p>
           <img src="<?php echo (get_field('screenshot')) ? esc_html(get_field('screenshot')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('screenshot')['title']); ?>">
           <div class="desc mt-10 text-lg">
             <?php the_field('desc') ?>
@@ -144,7 +144,7 @@ get_header();
               <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
             </div>
           </div>
-          <h3 class="mb-12 mx-auto max-w-[850px] text-3xl font-bold text-center"><?php the_field('title') ?></h3>
+          <h3 class="mb-12 mx-auto max-w-[850px] text-2xl lg:text-3xl font-bold text-center"><?php the_field('title') ?></h3>
         </div>
         <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile-horizontal">
           <div class="swiper-wrapper">
@@ -197,8 +197,8 @@ get_header();
                     <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
                   </div>
                 </div>
-                <h3 class="font-semibold text-2xl"><?php the_field('text_section_title'); ?></h3>
-                <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('text_section_subtitle'); ?></p>
+                <h3 class="font-semibold text-[20px] lg:text-2xl"><?php the_field('text_section_title'); ?></h3>
+                <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9"><?php the_field('text_section_subtitle'); ?></p>
               </div>
             </div>
 
@@ -220,15 +220,15 @@ get_header();
         </div>
 
         <div class="desc mx-auto my-20 text-left font-normal [&>p]:mb-8">
-          <div class="container max-w-[850px] text-center text-2xl">
+          <div class="container max-w-[850px] text-center text-lg lg:text-2xl">
             <p><?php the_field('text_section_description'); ?></p>
           </div>
         </div>
 
         <div class="positives-row py-20 bg-[#F7F7F7]">
           <div class="container mx-auto max-w-[850px] text-center">
-            <h3 class="font-bold text-3xl mb-5"><?php the_field('positives_title'); ?></h3>
-            <div class="desc2 font-normal text-2xl text-left">
+            <h3 class="font-bold text-2xl lg:text-3xl mb-5"><?php the_field('positives_title'); ?></h3>
+            <div class="desc2 font-normal text-lg lg:text-2xl text-left">
               <p><?php the_field('positives_description'); ?></p>
             </div>
           </div>
@@ -251,7 +251,7 @@ get_header();
               <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
             </div>
           </div>
-          <h3 class="mb-4 font-bold text-3xl text-center"><?php the_field('about_product_title'); ?></h3>
+          <h3 class="mb-4 font-bold text-2xl lg:text-3xl text-center"><?php the_field('about_product_title'); ?></h3>
         </div>
 
         <div class="about-desc mb-24">
@@ -305,10 +305,10 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="font-bold text-3xl"><?php the_field('about_secifics_title'); ?></h3>
+            <h3 class="font-bold text-2xl lg:text-3xl"><?php the_field('about_secifics_title'); ?></h3>
           </div>
-          <p class="subtitle mb-8 font-medium text-2xl leading-10"><?php the_field('about_secifics_subtitle'); ?></p>
-          <p class="subtitle2 font-medium text-2xl"><?php the_field('about_secifics_subtitle2'); ?></p>
+          <p class="subtitle mb-8 font-medium text-xl lg:text-2xl leading-10"><?php the_field('about_secifics_subtitle'); ?></p>
+          <p class="subtitle2 font-medium text-xl lg:text-2xl"><?php the_field('about_secifics_subtitle2'); ?></p>
         </div>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-10 [&>li]:mb-8">
           <?php
@@ -344,9 +344,9 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-2 font-bold text-3xl"><?php the_field('why_title'); ?></h3>
+            <h3 class="mb-2 font-bold text-2xl lg:text-3xl"><?php the_field('why_title'); ?></h3>
           </div>
-          <p class="subtitle mb-8 font-medium text-2xl leading-10"><?php the_field('why_subtitle'); ?></p>
+          <p class="subtitle mb-8 font-medium text-xl lg:text-2xl leading-10"><?php the_field('why_subtitle'); ?></p>
         </div>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
           <?php
@@ -367,7 +367,7 @@ get_header();
     <section class="see-more">
       <div class="container max-w-[850px] py-20 text-lg lg:text-2xl">
         <div class="title mb-5 text-center">
-          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('see_more_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('see_more_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -380,7 +380,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('see_more_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9"><?php the_field('see_more_subtitle'); ?></p>
           </div>
           <div class="subtitle leading-10"><?php the_field('see_more_desc'); ?></div>
         </div>
@@ -393,7 +393,7 @@ get_header();
 
     <section class="career-path-opinions-swiper mb-20 overflow-hidden">
       <div class="max-w-full px-5 w-full md:container mx-auto">
-        <h3 class="mb-24 font-bold text-3xl text-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
+        <h3 class="mb-24 font-bold text-2xl lg:text-3xltext-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
 
         <div class="swiper mb-20 max-w-full overflow-visible" data-js="swiper-tiles-mobile">
           <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
@@ -437,7 +437,7 @@ get_header();
     <section id="dla-kogo" class="will-it-work bg-[#F7F7F7]">
       <div class="container mx-auto py-20">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('will_it_work_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('will_it_work_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -450,10 +450,10 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('will_it_work_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9"><?php the_field('will_it_work_subtitle'); ?></p>
           </div>
         </div>
-        <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
+        <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
           <?php
           if (have_rows('will_it_work_list')) :
             while (have_rows('will_it_work_list')) : the_row();
@@ -470,8 +470,8 @@ get_header();
           <a href="#"><?php the_field('will_it_work_btn_text'); ?></a>
         </button>
 
-        <h3 class="mb-2 font-semibold text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
-        <ul class="my-10 mx-auto max-w-[700px] text-2xl leading-9 [&>li]:mb-8">
+        <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
+        <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
           <?php
           if (have_rows('will_it_work_list2')) :
             while (have_rows('will_it_work_list2')) : the_row();
@@ -490,7 +490,7 @@ get_header();
     <section id="gwarancja" class="guarantee">
       <div class="container mx-auto max-w-[850px] py-20">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('guarantee_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('guarantee_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -503,10 +503,10 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-3xl leading-10"><?php the_field('guarantee_subtitle'); ?></p>
+            <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9"><?php the_field('guarantee_subtitle'); ?></p>
           </div>
         </div>
-        <div class="desc mx-auto mb-16 text-left text-2xl font-normal [&>p]:mb-8">
+        <div class="desc mx-auto mb-16 text-left text-lg lg:text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
           <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
             <a href="#"><?php the_field('guarantee_btn'); ?></a>
@@ -518,12 +518,12 @@ get_header();
     <section class="prices">
       <div class="container max-w-[850px] mx-auto pb-20">
         <div class="desc mb-20 p-10 mx-auto text-left text-2xl font-normal [&>p]:mb-8 border-[2px] border-primary rounded-xl">
-          <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('prices_title'); ?></h3>
+          <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title'); ?></h3>
           <p><?php the_field('prices_desc'); ?></p>
-          <div class="price text-green-800 text-center text-3xl font-bold">
+          <div class="price text-green-800 text-center text-2xl lg:text-3xl font-bold">
             <p>Cena promocyjna: 147 zł</p>
           </div>
-          <p class="text-center">
+          <p class="text-center text-lg lg:text-2xl">
             Jednorazowa inwestycja
           </p>
           <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
@@ -531,8 +531,8 @@ get_header();
           </button>
         </div>
 
-        <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('prices_title2'); ?></h3>
-        <div class="desc mx-auto text-left text-2xl font-normal">
+        <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title2'); ?></h3>
+        <div class="desc mx-auto text-left text-lg lg:text-2xl font-normal">
           <?php the_field('prices_desc2'); ?>
         </div>
       </div>
@@ -541,7 +541,7 @@ get_header();
     <section id="bonusy" class="bonuses mb-20 bg-[#F7F7F7]">
       <div class="container max-w-[1140px] mx-auto py-20">
         <div class="title mb-10 text-center">
-          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('bonuses_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('bonuses_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -554,11 +554,11 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle font-bold text-3xl leading-10"><?php the_field('bonuses_subtitle'); ?></p>
+            <p class="subtitle font-bold text-2xl lg:text-3xl leading-9"><?php the_field('bonuses_subtitle'); ?></p>
           </div>
         </div>
 
-        <ul class="bonuses-tiles text-xl [&>li]:mb-20">
+        <ul class="bonuses-tiles text-lg lg:text-xl [&>li]:mb-20">
           <?php
           if (have_rows('bonuses_list')) :
             while (have_rows('bonuses_list')) : the_row();
@@ -608,7 +608,7 @@ get_header();
               <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
             </div>
           </div>
-          <h3 class="mb-8 font-bold text-3xl text-center"><?php the_field('about_swistak_title') ?></h3>
+          <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('about_swistak_title') ?></h3>
         </div>
         <div class="mx-auto max-w-[850px] flex flex-col-reverse md:flex-row basis gap-12">
           <div class="desc basis-3/4 mx-auto mb-12 text-left text-lg font-normal [&>p]:mb-5">
@@ -616,11 +616,11 @@ get_header();
           </div>
           <div class="img basis-1/4">
             <img src="<?php echo (get_field('about_swistak_img')) ? esc_html(get_field('about_swistak_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('about_swistak_img')['title']); ?>">
-            <p class="img-desc text-lg italic">„Przestań robić wszystko– zacznij wybierać mądrze!”</p>
+            <p class="img-desc text-lg italic"><?php the_field('about_author_img_desc'); ?></p>
           </div>
         </div>
         <div class="about-swistak-opinions w-full">
-          <h3 class="mb-24 font-bold text-3xl text-center">Oto garść opinii od moich zadowolonych klientek i klientów (łącznie otrzymałem ponad 216+ pozytywnych rekomendacji na LinkedIn):</h3>
+          <h3 class="mb-24 font-bold text-2xl lg:text-3xl text-center"><?php the_field('about_author_title_above_swiper'); ?></h3>
           <div class="swiper max-w-full overflow-visible" data-js="swiper-tiles-mobile">
             <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
               <?php
@@ -660,7 +660,7 @@ get_header();
     <section class="decision-time py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="title text-center">
-          <h3 class="mb-2 font-semibold text-2xl">Czas na Twoją decyzję.</h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl">Czas na Twoją decyzję.</h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -673,7 +673,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle mb-8 font-bold text-3xl leading-10">Jaką z tych 3 ścieżek wybierasz?</p>
+            <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9">Jaką z tych 3 ścieżek wybierasz?</p>
           </div>
         </div>
         <div class="swiper mb-20 overflow-visible" data-js="swiper-tiles-mobile">
@@ -683,7 +683,7 @@ get_header();
               while (have_rows('decision_time_swiper')) : the_row();
                 $decision_time_swiper_slide_content = get_sub_field('decision_time_swpier_slide_content');
             ?>
-                <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
+                <div class="swiper-slide max-w-full h-auto rounded-2xl p-8 lg:p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
                   <?php echo $decision_time_swiper_slide_content; ?>
                 </div>
             <?php
@@ -711,20 +711,20 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <h3 class="mb-5 font-semibold text-3xl"><?php the_field('whats_next_title'); ?></h3>
+            <h3 class="mb-5 font-semibold text-2xl lg:text-3xl"><?php the_field('whats_next_title'); ?></h3>
           </div>
-          <div class="desc [&>p]:text-2xl">
+          <div class="desc [&>p]:text-lg [&>p]:lg:text-2xl">
             <?php the_field('whats_next_desc'); ?>
           </div>
         </div>
-        <div class="cta p-10 text-center font-bold text-3xl border-[2px] border-primary rounded-xl">
+        <div class="cta p-5 lg:p-10 text-center font-bold text-2xl lg:text-3xl border-[2px] border-primary rounded-xl">
           <?php the_field('whats_next_cta'); ?>
         </div>
         <div class="arrow-down my-10 mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
-        <div class="cta2 p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
-          <p class="mb-5"><?php the_field('whats_next_cta2_title'); ?></p>
+        <div class="cta2 p-5 lg:p-10 text-center font-bold text-2xl border-[2px] border-primary rounded-xl">
+          <p class="mb-5 text-2xl lg:text-3xl"><?php the_field('whats_next_cta2_title'); ?></p>
           <img src="<?php echo (get_field('whats_next_cta2_img')) ? esc_html(get_field('whats_next_cta2_img')['url']) : get_template_directory_uri() . '/assets/img/swistak-logo-default.svg'; ?>" alt="<?php echo esc_html(get_field('whats_next_cta2_img')['title']); ?>">
-          <div class="my-10 text-left text-[24px]">
+          <div class="my-10 text-left [&>ul>li]:mb-3 text-lg lg:text-2xl">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
 
@@ -737,22 +737,22 @@ get_header();
 
     <section class="order-benefits">
       <div class="container mx-auto max-w-[1024px] pb-20">
-        <div class="container mx-auto mb-10 rounded-xl border-[2px] border-primary p-6 md:flex basis justify-center items-center text-center">
-          <div class="col mb-8 basis-1/2 text-xl">
+        <div class="container mx-auto mb-10 rounded-xl border-[2px] border-primary p-5 lg:p-6 md:flex basis justify-center items-center text-center">
+          <div class="col mb-8 basis-1/2 text-lg lg:text-xl">
             <?php the_field('order_benefits1'); ?>
           </div>
           <div class="col basis-1/2 text-xl">
             <?php the_field('order_benefits2'); ?>
           </div>
         </div>
-        <p class="mx-auto w-fit text-xl"><?php the_field('order_benefits_email_help'); ?></p>
+        <p class="mx-auto w-fit text-lg lg:text-xl"><?php the_field('order_benefits_email_help'); ?></p>
       </div>
     </section>
 
     <section id="faq" class="faq bg-[#F7F7F7] py-20">
       <div class="container mx-auto">
         <div class="title mb-10 text-center">
-          <h3 class="mb-2 font-semibold text-2xl"><?php the_field('faq_title'); ?></h3>
+          <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('faq_title'); ?></h3>
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
               <div class="ks-decoration__wave ks-decoration__wave--small">
@@ -765,7 +765,7 @@ get_header();
                 <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
               </div>
             </div>
-            <p class="subtitle font-bold text-3xl leading-10"><?php the_field('faq_subtitle'); ?></p>
+            <p class="subtitle font-bold text-2xl lg:text-3xl leading-9"><?php the_field('faq_subtitle'); ?></p>
           </div>
         </div>
         <div class="questions-container [&>.question-container]:mb-4">
@@ -775,7 +775,7 @@ get_header();
               $question_text = get_sub_field('question_text');
               $answer = get_sub_field('answer');
           ?>
-              <div class="question-container text-xl md:text-2xl px-5 md:px-8 py-5 border-[2px] border-primary rounded-xl" data-js="dropdown">
+              <div class="question-container text-lg md:text-2xl px-5 md:px-8 py-5 border-[2px] border-primary rounded-xl" data-js="dropdown">
                 <div class="question cursor-pointer group flex justify-between items-center" aria-expanded="false" data-js="dropdown-toggle">
                   <h4 class="font-semibold leading-7 group-hover:text-primary transition-all duration-300"><?php echo $question_text; ?></h4>
                   <div class="faq-arrow rotate-90 group-aria-expanded:rotate-[270deg] transition duration-300">
