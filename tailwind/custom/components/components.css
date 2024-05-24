@@ -23,15 +23,15 @@
 }
 
 /**
- * Layout styles for centered content areas
- *
- * If you are controlling the width of your content area with styles applied
- * to its container, you can delete the following styles whose selectors begin
- * with `.page-content >` and `.entry-content >`. For more details, please see
- * the following:
- *
- * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
- */
+	* Layout styles for centered content areas
+	*
+	* If you are controlling the width of your content area with styles applied
+	* to its container, you can delete the following styles whose selectors begin
+	* with `.page-content >` and `.entry-content >`. For more details, please see
+	* the following:
+	*
+	* https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
+	*/
 html {
 	@apply !m-0 scroll-smooth;
 }
