@@ -204,3 +204,13 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-fields.php';
+
+function generateAddToCartButton($prod_id,$btn_text,$additional_classes = ' '){
+	$html = `<form action="` .  esc_url( apply_filters( 'tutor_course_add_to_cart_form_action', get_permalink($prod_id ) ) ) . `" method="post" enctype="multipart/form-data">
+          <button type="submit" name="add-to-cart" value="` . esc_attr( $prod_id ) . `" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 `. $additional_classes . esc_attr( $required_loggedin_class ) .`">
+            <span class="btn-icon tutor-icon-cart-filled"></span>
+            <span> ` . $btn_text . `</span>
+          </button>
+        </form>` ;
+	echo $html;
+}

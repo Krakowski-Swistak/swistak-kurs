@@ -7,6 +7,7 @@
  */
 
 get_header();
+$prod_id = 203;
 ?>
 
 <div id="primary" class="content-area">
@@ -40,9 +41,7 @@ get_header();
           </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
-        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('button_introduction_title'); ?></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('button_introduction_title'),'mb-5') ?>
         <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
@@ -174,9 +173,7 @@ get_header();
             ?>
           </div>
         </div>
-        <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('swiper1_btn_text'); ?></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('swiper1_btn_text'),'mb-5') ?>
       </div>
     </section>
 
@@ -323,9 +320,7 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('specifics_btn_text'); ?></php></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('specifics_btn_text')); ?>
       </div>
     </section>
 
@@ -427,10 +422,7 @@ get_header();
             ?>
           </div>
         </div>
-
-        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('career_path_opinions_btn_text'); ?></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('career_path_opinions_btn_text')); ?>
       </div>
     </section>
 
@@ -466,9 +458,7 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto mb-24 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('will_it_work_btn_text'); ?></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('will_it_work_btn_text'),'mb-24'); ?>
 
         <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
@@ -508,9 +498,7 @@ get_header();
         </div>
         <div class="desc mx-auto mb-16 text-left text-lg lg:text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
-          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-            <a href="#"><?php the_field('guarantee_btn'); ?></a>
-          </button>
+          <?php generateAddToCartButton($prod_id,the_field('guarantee_btn'),'mb-5'); ?>
         </div>
       </div>
     </section>
@@ -526,9 +514,10 @@ get_header();
           <p class="text-center text-lg lg:text-2xl">
             Jednorazowa inwestycja
           </p>
-          <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-            <a href="#">..Dodaj do koszyka (147 zł)..</a>
-          </button>
+          <?php 
+            $cart_text = __('Add to cart') . ' (' . wc_get_product($prod_id)->get_price() . ')';
+            generateAddToCartButton($prod_id,$cart_text); 
+          ?>
         </div>
 
         <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title2'); ?></h3>
@@ -588,9 +577,7 @@ get_header();
           endif;
           ?>
         </ul>
-        <button class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-          <a href="#"><?php the_field('bonuses_btn') ?></a>
-        </button>
+        <?php generateAddToCartButton($prod_id,the_field('bonuses_btn')); ?>
       </div>
     </section>
 
@@ -727,10 +714,7 @@ get_header();
           <div class="my-10 text-left [&>ul>li]:mb-3 text-lg lg:text-2xl">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
-
-          <button class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-            <a href="#"><?php the_field('whats_next_btn'); ?></a>
-          </button>
+          <?php generateAddToCartButton($prod_id,the_field('whats_next_btn'),'mb-5'); ?>
         </div>
       </div>
     </section>
