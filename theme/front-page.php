@@ -518,7 +518,7 @@ $prod_id = 200;
             $product = wc_get_product( $prod_id );
             $product_price = $product->get_price();
 
-            $cart_text = __('Add to cart') . ' (' . $product_price . ')';
+            $cart_text = __('Add to cart') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
             generateAddToCartButton($prod_id,$cart_text); 
           ?>
         </div>
