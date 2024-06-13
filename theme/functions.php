@@ -39,7 +39,7 @@ if (!defined('SWISTAK_KURS_TYPOGRAPHY_CLASSES')) {
 	 */
 	define(
 		'SWISTAK_KURS_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-none prose-a:text-primary container'
+		'prose prose-neutral prose-a:text-primary container'
 	);
 }
 

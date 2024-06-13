@@ -126,3 +126,7 @@ html {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
+
+.wp-block-woocommerce-checkout{
+	@apply !max-w-none
+}
