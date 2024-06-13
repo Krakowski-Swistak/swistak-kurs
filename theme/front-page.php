@@ -516,7 +516,7 @@ $prod_id = 200;
           </p>
           <?php 
             $product = wc_get_product( $prod_id );
-            $product_price = $_product->get_price();
+            $product_price = $product->get_price();
 
             $cart_text = __('Add to cart') . ' (' . $product_price . ')';
             generateAddToCartButton($prod_id,$cart_text); 
