@@ -7,14 +7,7 @@
  */
 
 get_header();
-$prod_id = 200;
-// $prod_id = 203;
-$myvals = get_post_meta(203);
-
-foreach($myvals as $key=>$val)
-{
-    echo $key . ' : ' . $val[0] . '<br/>';
-}
+$course_id = 203;
 ?>
 
 <div id="primary" class="content-area">
@@ -48,7 +41,7 @@ foreach($myvals as $key=>$val)
           </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
-        <?php generateAddToCartButton($prod_id,get_field('button_introduction_title'),'mb-5') ?>
+        <?php generateAddToCartButton($course_id,get_field('button_introduction_title'),'mb-5') ?>
         <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
@@ -180,7 +173,7 @@ foreach($myvals as $key=>$val)
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($prod_id,get_field('swiper1_btn_text'),'mb-5') ?>
+        <?php generateAddToCartButton($course_id,get_field('swiper1_btn_text'),'mb-5') ?>
       </div>
     </section>
 
@@ -327,7 +320,7 @@ foreach($myvals as $key=>$val)
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($prod_id,get_field('specifics_btn_text')); ?>
+        <?php generateAddToCartButton($course_id,get_field('specifics_btn_text')); ?>
       </div>
     </section>
 
@@ -429,7 +422,7 @@ foreach($myvals as $key=>$val)
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($prod_id,get_field('career_path_opinions_btn_text')); ?>
+        <?php generateAddToCartButton($course_id,get_field('career_path_opinions_btn_text')); ?>
       </div>
     </section>
 
@@ -465,7 +458,7 @@ foreach($myvals as $key=>$val)
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($prod_id,get_field('will_it_work_btn_text'),'mb-24'); ?>
+        <?php generateAddToCartButton($course_id,get_field('will_it_work_btn_text'),'mb-24'); ?>
 
         <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
@@ -505,7 +498,7 @@ foreach($myvals as $key=>$val)
         </div>
         <div class="desc mx-auto mb-16 text-left text-lg lg:text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
-          <?php generateAddToCartButton($prod_id,get_field('guarantee_btn'),'mb-5'); ?>
+          <?php generateAddToCartButton($course_id,get_field('guarantee_btn'),'mb-5'); ?>
         </div>
       </div>
     </section>
@@ -522,11 +515,12 @@ foreach($myvals as $key=>$val)
             Jednorazowa inwestycja
           </p>
           <?php 
-            $product = wc_get_product( $prod_id );
+            $course_prod_id = get_post_meta($course_id,'_tutor_course_product_id');
+            $product = wc_get_product( $course_prod_id );
             $product_price = $product->get_price();
 
             $cart_text = __('Add to cart','swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
-            generateAddToCartButton($prod_id,$cart_text); 
+            generateAddToCartButton($course_id,$cart_text); 
           ?>
         </div>
 
@@ -587,7 +581,7 @@ foreach($myvals as $key=>$val)
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($prod_id,get_field('bonuses_btn')); ?>
+        <?php generateAddToCartButton($course_id,get_field('bonuses_btn')); ?>
       </div>
     </section>
 
@@ -724,7 +718,7 @@ foreach($myvals as $key=>$val)
           <div class="my-10 text-left [&>ul>li]:mb-3 text-lg lg:text-2xl">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
-          <?php generateAddToCartButton($prod_id,get_field('whats_next_btn'),'mb-5'); ?>
+          <?php generateAddToCartButton($course_id,get_field('whats_next_btn'),'mb-5'); ?>
         </div>
       </div>
     </section>

@@ -205,11 +205,13 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-fields.php';
 
-function generateAddToCartButton($prod_id,$btn_text,$additional_classes = ' '){
-	if (ks_customer_already_bought_product($prod_id)) {
-		$html = '<a href="' . get_permalink($prod_id ) . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"> ' . $btn_text . '</a>' ;
+function generateAddToCartButton($course_id,$btn_text,$additional_classes = ' '){
+	$course_prod_id = get_post_meta($course_id,'_tutor_course_product_id');
+
+	if (ks_customer_already_bought_product($course_prod_id)) {
+		$html = '<a href="' . get_permalink($course_id) . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"> ' . $btn_text . '</a>' ;
 	}else{
-		$html = '<form action="' . get_permalink($prod_id ) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>' ;
+		$html = '<form action="' . get_permalink($course_prod_id ) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $course_prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>' ;
 	}
 	echo $html;
 }
