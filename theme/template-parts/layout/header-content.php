@@ -48,6 +48,13 @@
 					)
 				);
 				?>
+				<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" class="px-3 py-1 text-white text-lg font-medium rounded-2xl bg-primary hover:bg-[#008077] transition duration-200">
+					<?php if (is_user_logged_in()) : ?>
+						<?php esc_html_e('My account', 'swistak-kurs'); ?>
+					<?php else : ?>
+						<?php esc_html_e('Log in', 'swistak-kurs'); ?>
+					<?php endif; ?>
+				</a>
 			</nav><!-- #site-navigation -->
 		</div>
 	</div>
