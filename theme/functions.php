@@ -223,7 +223,3 @@ function ks_customer_already_bought_product($prod_id) {
 	  return true; 
 	} 
 }
-
-@ini_set( 'upload_max_size' , '256M' );
-@ini_set( 'post_max_size', '256M');
-@ini_set( 'max_execution_time', '300' );
