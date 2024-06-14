@@ -206,6 +206,18 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-fields.php';
 
 function generateAddToCartButton($prod_id,$btn_text,$additional_classes = ' '){
-	$html = '<form action="' . get_permalink($prod_id ) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>' ;
+	if (ks_customer_already_bought_product($prod_id)) {
+		$html = '<a href="' . get_permalink($prod_id ) . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"> ' . $btn_text . '</a>' ;
+	}else{
+		$html = '<form action="' . get_permalink($prod_id ) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>' ;
+	}
 	echo $html;
 }
+
+function ks_customer_already_bought_product($prod_id) { 
+	$product = wc_get_product( $prod_id );
+	if ( !is_user_logged_in() || !$product ) return false; 
+	if ( wc_customer_bought_product( '', get_current_user_id(), $prod_id ) ) {  
+	  return true; 
+	} 
+   }
