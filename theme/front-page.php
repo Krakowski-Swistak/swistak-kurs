@@ -9,7 +9,12 @@
 get_header();
 $prod_id = 200;
 // $prod_id = 203;
-print_r(get_post_meta($post_id));
+$myvals = get_post_meta($post_id);
+
+foreach($myvals as $key=>$val)
+{
+    echo $key . ' : ' . $val[0] . '<br/>';
+}
 ?>
 
 <div id="primary" class="content-area">
