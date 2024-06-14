@@ -130,3 +130,7 @@ html {
 .wp-block-woocommerce-checkout{
 	@apply !max-w-none
 }
+
+.woocommerce .input-text{
+	@apply py-3 px-4 border rounded-2xl border-primary focus:border-[#008077] transition duration-200
+}
