@@ -222,4 +222,6 @@ function ks_customer_already_bought_product($prod_id) {
 	if ( wc_customer_bought_product( '', get_current_user_id(), $prod_id ) ) {  
 	  return true; 
 	} 
-   }
+}
+
+@ini_set( 'upload_max_size' , '128M' );
