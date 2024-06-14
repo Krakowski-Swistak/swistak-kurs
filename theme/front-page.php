@@ -7,8 +7,9 @@
  */
 
 get_header();
-// $prod_id = 200;
-$prod_id = 203;
+$prod_id = 200;
+// $prod_id = 203;
+echo get_post_meta($post_id);
 ?>
 
 <div id="primary" class="content-area">
