@@ -9,7 +9,7 @@
 get_header();
 $prod_id = 200;
 // $prod_id = 203;
-$myvals = get_post_meta($post_id);
+$myvals = get_post_meta(203);
 
 foreach($myvals as $key=>$val)
 {
