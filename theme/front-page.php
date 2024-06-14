@@ -515,7 +515,7 @@ $course_id = 203;
             Jednorazowa inwestycja
           </p>
           <?php 
-            $course_prod_id = get_post_meta($course_id,'_tutor_course_product_id');
+            $course_prod_id = get_post_meta($course_id,'_tutor_course_product_id')[0];
             $product = wc_get_product( $course_prod_id );
             $product_price = $product->get_price();
 
