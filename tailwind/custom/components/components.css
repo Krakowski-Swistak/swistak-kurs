@@ -134,3 +134,10 @@ html {
 .woocommerce .input-text{
 	@apply py-3 px-4 border rounded-2xl border-primary focus:border-[#008077] transition duration-200
 }
+
+.woocommerce-form-login__submit,
+.woocommerce-form-register__submit,
+.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button{
+	@apply !px-5 !py-3  !text-white !text-lg !font-medium !rounded-2xl !bg-primary hover:!bg-[#008077] !transition !duration-200
+}
