@@ -648,7 +648,7 @@ $course_id = 203;
       </div>
     </section>
 
-    <section class="decision-time py-20 overflow-hidden">
+    <section class="decision-time pt-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl">Czas na Twoją decyzję.</h3>
@@ -687,8 +687,8 @@ $course_id = 203;
       </div>
     </section>
 
-    <section class="whats-next">
-      <div class="container max-w-[1024px] mx-auto pb-20">
+    <section id="odbierz-dostep" class="whats-next py-20">
+      <div class="container max-w-[1024px] mx-auto">
         <div class="title text-center mb-8">
           <div class="title-content mb-16 relative">
             <div class="ks-decoration ks-decoration--center">
@@ -708,7 +708,7 @@ $course_id = 203;
             <?php the_field('whats_next_desc'); ?>
           </div>
         </div>
-        <div id="odbierz-dostep" class="cta p-5 lg:p-10 text-center font-bold text-2xl lg:text-3xl border-[2px] border-primary rounded-xl">
+        <div class="cta p-5 lg:p-10 text-center font-bold text-2xl lg:text-3xl border-[2px] border-primary rounded-xl">
           <?php the_field('whats_next_cta'); ?>
         </div>
         <div class="arrow-down my-10 mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
