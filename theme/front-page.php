@@ -708,7 +708,7 @@ $course_id = 203;
             <?php the_field('whats_next_desc'); ?>
           </div>
         </div>
-        <div class="cta p-5 lg:p-10 text-center font-bold text-2xl lg:text-3xl border-[2px] border-primary rounded-xl">
+        <div id="odbierz-dostep" class="cta p-5 lg:p-10 text-center font-bold text-2xl lg:text-3xl border-[2px] border-primary rounded-xl">
           <?php the_field('whats_next_cta'); ?>
         </div>
         <div class="arrow-down my-10 mx-auto w-fit text-[60px] text-primary rotate-90">&#x27A4;</div>
