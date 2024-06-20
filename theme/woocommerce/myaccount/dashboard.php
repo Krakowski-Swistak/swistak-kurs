@@ -57,6 +57,8 @@ $allowed_html = array(
   ?>
 </p>
 
+<?php do_shortcode('[enrolled-course]') ?>
+
 <?php
 /**
  * My Account dashboard.
