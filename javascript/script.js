@@ -14,7 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	initDropdowns();
 	initMobileSwipers();
 	initMobileSwipersHorizontal();
+	initCartUpdate();
 });
+
+function initCartUpdate() {
+	const DELAY = 400;
+	const cartForm = document.querySelector('form.woocommerce-cart-form');
+	const updateBtn = document.querySelector('button[name="update_cart"]');
+
+	if (!cartForm || !updateBtn) return;
+
+	let timeout;
+
+	cartForm.addEventListener('change', (e) => {
+		if (e.target.matches('input.qty')) {
+			if (timeout !== undefined) {
+				clearTimeout(timeout);
+			}
+			timeout = setTimeout(() => {
+				updateBtn.click();
+			}, DELAY);
+		}
+	});
+}
 
 function initDropdowns() {
 	const dropdowns = document.querySelectorAll('[data-js="dropdown"]');
