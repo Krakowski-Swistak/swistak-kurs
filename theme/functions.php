@@ -287,7 +287,7 @@ function shortcode_tutor_enrolled_course( $atts ) {
 
 		wp_reset_postdata();
     else:
-        echo "<div class='tutor-mycourse-wrap'><div class='tutor-mycourse-content'>".__('You haven\'t purchased any course', 'tutor')."</div></div>";
+        echo "<div class='tutor-mycourse-wrap'><div class='p-3 tutor-mycourse-content'>".__('You haven\'t purchased any course', 'tutor')."</div></div>";
 	endif;
 
 	?>

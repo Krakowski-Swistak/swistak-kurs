@@ -28,7 +28,7 @@ do_action('woocommerce_before_account_navigation');
   <div class="nav-container px-5 md:px-8 py-9 border border-[#888] rounded-[15px] ">
     <ul class="!list-none !pl-0">
       <?php foreach (wc_get_account_menu_items() as $endpoint => $label) : ?>
-        <li class="py-1 [$.is-active_a]:text-primary <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
+        <li class="py-1 [&.is-active_a]:text-primary <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
           <a href="<?php echo esc_url(wc_get_account_endpoint_url($endpoint)); ?>" class="text-lg transition duration-200 hover:text-primary"><?php echo esc_html($label); ?></a>
         </li>
       <?php endforeach; ?>
