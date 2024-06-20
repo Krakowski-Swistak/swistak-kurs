@@ -145,3 +145,15 @@ html {
 .wc-block-components-totals-footer-item-tax{
 	@apply !mt-1 text-right
 }
+
+.woocommerce-message{
+	@apply !border-t-primary
+}
+.woocommerce-message::before{
+	@apply !text-primary
+}
+
+.button.wc-forward,
+.woocommerce-account .woocommerce-button{
+	@apply !px-5 !py-3 !text-primary hover:!text-white !font-medium !rounded-2xl !border-solid !border-2 !border-primary !bg-transparent hover:!bg-primary transition duration-200
+}
