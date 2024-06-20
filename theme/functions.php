@@ -241,9 +241,9 @@ add_action( 'init', 'tutor_enrolled_course_register_shortcodes' );
 function shortcode_tutor_enrolled_course( $atts ) {
     ?>
 
-<h3><?php _e('Enrolled Courses', 'tutor'); ?>:</h3>
+<h3 class="text-xl md:text-2xl font-semibold mt-10 mb-5 text-foreground"><?php _e('Enrolled Courses', 'tutor'); ?></h3>
 
-<div class="tutor-dashboard-content-inner flex flex-wrap gap-5">
+<div class="tutor-dashboard-content-inner flex flex-wrap gap-5 not-prose ">
 
 	<?php
 	$my_courses = tutor_utils()->get_enrolled_courses_by_user(get_current_user_id(), array('private', 'publish'));
@@ -259,7 +259,7 @@ function shortcode_tutor_enrolled_course( $atts ) {
              * @since 1.8.10
             */
             $post = $my_courses->post;
-            $custom_url = home_url($post->post_type.'/'.$post->post_name);
+            $custom_url = get_permalink($post);
 			?>
             <a href="<?php echo esc_url($custom_url);?>" class="flex flex-col rounded-2xl overflow-hidden hover:border-primary transition duration-200 border border-[#dcdfe5] max-w-96 not-prose">
                 <img src="<?php echo esc_url($tutor_course_img); ?>" class="aspect-[4/3] object-cover w-full !m-0">
