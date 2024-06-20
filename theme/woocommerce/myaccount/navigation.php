@@ -24,11 +24,11 @@ do_action('woocommerce_before_account_navigation');
 ?>
 
 
-<nav class="woocommerce-MyAccount-navigation pt-10 lg:pb-10 !w-full float-none lg:float-left lg:!w-[30%] ">
+<nav class="not-prose woocommerce-MyAccount-navigation pt-10 lg:pb-10 !w-full float-none lg:float-left lg:!w-[30%] ">
   <div class="nav-container px-5 md:px-8 py-9 border border-[#888] rounded-[15px] ">
     <ul class="!list-none !pl-0">
       <?php foreach (wc_get_account_menu_items() as $endpoint => $label) : ?>
-        <li class="py-1 <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
+        <li class="py-1 [$.is-active_a]:text-primary <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
           <a href="<?php echo esc_url(wc_get_account_endpoint_url($endpoint)); ?>" class="text-lg transition duration-200 hover:text-primary"><?php echo esc_html($label); ?></a>
         </li>
       <?php endforeach; ?>

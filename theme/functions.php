@@ -241,7 +241,7 @@ add_action( 'init', 'tutor_enrolled_course_register_shortcodes' );
 function shortcode_tutor_enrolled_course( $atts ) {
     ?>
 
-<h3><?php _e('Enrolled Courses', 'tutor'); ?></h3>
+<h3><?php _e('Enrolled Courses', 'tutor'); ?>:</h3>
 
 <div class="tutor-dashboard-content-inner flex flex-wrap gap-5">
 
@@ -261,10 +261,10 @@ function shortcode_tutor_enrolled_course( $atts ) {
             $post = $my_courses->post;
             $custom_url = home_url($post->post_type.'/'.$post->post_name);
 			?>
-            <a href="<?php echo esc_url($custom_url);?>" class="flex flex-col rounded-2xl border border-[#dcdfe5] max-w-96">
-                <img src="<?php echo esc_url($tutor_course_img); ?>" class="aspect-[4/3] object-cover w-full">
+            <a href="<?php echo esc_url($custom_url);?>" class="flex flex-col rounded-2xl overflow-hidden hover:border-primary transition duration-200 border border-[#dcdfe5] max-w-96 not-prose">
+                <img src="<?php echo esc_url($tutor_course_img); ?>" class="aspect-[4/3] object-cover w-full !m-0">
                 <div class="tutor-mycourse-content p-5 flex flex-col">
-                    <h3><?php the_title(); ?></h3>
+                    <h3 class="font-semibold text-primary text-lg md:text-xl"><?php the_title(); ?></h3>
                     
                     <div class="tutor-meta tutor-course-metadata">
 		                <?php
@@ -274,7 +274,7 @@ function shortcode_tutor_enrolled_course( $atts ) {
                         <p>
 							<?php
 								_e('Completed Lessons:', 'tutor');
-								echo "<span>$completed_lessons / $total_lessons</span>";
+								echo "<span> $completed_lessons/$total_lessons</span>";
 							?>
 						</p>
                     </div>

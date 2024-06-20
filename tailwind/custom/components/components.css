@@ -158,7 +158,9 @@ html {
 	@apply !px-5 !py-3 !text-primary hover:!text-white !font-medium !rounded-2xl !border-solid !border-2 !border-primary !bg-transparent hover:!bg-primary transition duration-200
 }
 
-.woocommerce-account .entry-title,
+.woocommerce-account .entry-title{
+	@apply !container
+}
 .woocommerce-account .woocommerce{
 	@apply max-w-none
 }
