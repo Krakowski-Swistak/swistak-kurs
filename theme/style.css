@@ -2173,16 +2173,16 @@ html{
   line-height: 2.25rem;
 }
 
-.text-\[100px\]{
-  font-size: 100px;
-}
-
 .text-\[20px\]{
   font-size: 20px;
 }
 
 .text-\[60px\]{
   font-size: 60px;
+}
+
+.text-\[80px\]{
+  font-size: 80px;
 }
 
 .text-base{
@@ -2652,6 +2652,10 @@ html{
     margin-bottom: 5rem;
   }
 
+  .lg\:mb-5{
+    margin-bottom: 1.25rem;
+  }
+
   .lg\:mt-52{
     margin-top: 13rem;
   }
@@ -2715,6 +2719,10 @@ html{
   .lg\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[100px\]{
+    font-size: 100px;
   }
 
   .lg\:text-xl{
