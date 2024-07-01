@@ -288,7 +288,21 @@ $course_id = 203;
     </section>
 
     <section id="youtube" class="youtube mb-20">
-      <div class="container max-w-[1140px]">
+      <div class="container mx-auto max-w-[1140px]">
+        <div class="title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-4 font-bold text-2xl lg:text-3xl text-center"><?php the_field('youtube_title'); ?></h3>
+        </div>
         <?php the_field('video'); ?>
       </div>
     </section>
