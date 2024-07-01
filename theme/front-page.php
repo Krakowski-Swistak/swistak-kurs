@@ -667,8 +667,8 @@ $course_id = 203;
             <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9">Jaką z tych 3 ścieżek wybierasz?</p>
           </div>
         </div>
-        <div class="swiper mb-20 overflow-visible" data-js="swiper-tiles-mobile">
-          <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
+        <div class="swiper mb-20 overflow-visible">
+          <div class="swiper-wrapper grid-cols-1 lg:grid lg:grid-cols-3 lg:gap-10">
             <?php
             if (have_rows('decision_time_swiper')) :
               while (have_rows('decision_time_swiper')) : the_row();
