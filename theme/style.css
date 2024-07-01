@@ -2757,6 +2757,16 @@ html{
   margin-right: auto;
 }
 
+.\[\&\>iframe\]\:w-full>iframe{
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .\[\&\>iframe\]\:md\:w-\[640px\]>iframe{
+    width: 640px;
+  }
+}
+
 .\[\&\>li\]\:mb-20>li{
   margin-bottom: 5rem;
 }

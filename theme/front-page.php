@@ -288,7 +288,7 @@ $course_id = 203;
     </section>
 
     <section id="youtube" class="youtube mb-20">
-      <div class="container mx-auto max-w-[1140px] [&>iframe]:mx-auto">
+      <div class="container mx-auto max-w-[1140px] [&>iframe]:mx-auto [&>iframe]:w-full [&>iframe]:md:w-[640px]">
         <div class="title-content mb-16 relative">
           <div class="ks-decoration ks-decoration--center">
             <div class="ks-decoration__wave ks-decoration__wave--small">
