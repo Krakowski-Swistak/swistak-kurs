@@ -478,7 +478,7 @@ $course_id = 203;
     </section>
 
     <section id="gwarancja" class="guarantee">
-      <div class="container mx-auto max-w-[850px] py-20">
+      <div class="container mx-auto max-w-[850px] pt-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('guarantee_title'); ?></h3>
           <div class="title-content mb-16 relative">
@@ -503,7 +503,7 @@ $course_id = 203;
       </div>
     </section>
 
-    <section id="prices" class="prices">
+    <section id="prices" class="prices pt-16">
       <div class="container max-w-[850px] mx-auto pb-20">
         <div class="desc mb-20 p-10 mx-auto text-left text-2xl font-normal [&>p]:mb-8 border-[2px] border-primary rounded-xl">
           <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title'); ?></h3>
