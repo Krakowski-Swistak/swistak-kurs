@@ -668,7 +668,7 @@ $course_id = 203;
           </div>
         </div>
         <div class="mb-20 overflow-visible">
-          <div class="grid-cols-1 lg:grid lg:grid-cols-3 gap-10">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <?php
             if (have_rows('decision_time_swiper')) :
               while (have_rows('decision_time_swiper')) : the_row();
