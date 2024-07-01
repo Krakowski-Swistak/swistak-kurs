@@ -58,7 +58,7 @@ $course_id = 203;
             ?>
                 <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-3 lg:p-10 flex flex-col items-center justify-center">
                   <div class="icon lg:mb-5">
-                    <span class="text-[100px]"><?php echo $image; ?></span>
+                    <span class="text-[80px] lg:text-[100px]"><?php echo $image; ?></span>
                   </div>
                   <div class="text-content text-center">
                     <p><?php echo $tile_text; ?></p>
