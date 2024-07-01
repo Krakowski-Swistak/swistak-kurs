@@ -667,14 +667,14 @@ $course_id = 203;
             <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9">Jaką z tych 3 ścieżek wybierasz?</p>
           </div>
         </div>
-        <div class="swiper mb-20 overflow-visible">
-          <div class="swiper-wrapper grid-cols-1 lg:grid lg:grid-cols-3 lg:gap-10">
+        <div class="mb-20 overflow-visible">
+          <div class="grid-cols-1 lg:grid lg:grid-cols-3 gap-10">
             <?php
             if (have_rows('decision_time_swiper')) :
               while (have_rows('decision_time_swiper')) : the_row();
                 $decision_time_swiper_slide_content = get_sub_field('decision_time_swpier_slide_content');
             ?>
-                <div class="swiper-slide max-w-full h-auto rounded-2xl p-8 lg:p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
+                <div class="max-w-full h-auto rounded-2xl p-8 lg:p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
                   <?php echo $decision_time_swiper_slide_content; ?>
                 </div>
             <?php
