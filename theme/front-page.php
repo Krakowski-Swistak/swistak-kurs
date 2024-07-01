@@ -56,8 +56,8 @@ $course_id = 203;
                 $image = get_sub_field('tile_icon');
                 $tile_text = get_sub_field('tile_text');
             ?>
-                <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
-                  <div class="icon mb-5">
+                <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-3 lg:p-10 flex flex-col items-center justify-center">
+                  <div class="icon lg:mb-5">
                     <span class="text-[100px]"><?php echo $image; ?></span>
                   </div>
                   <div class="text-content text-center">
