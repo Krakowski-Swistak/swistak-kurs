@@ -41,7 +41,7 @@ $course_id = 203;
           </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
-        <a href="#prices" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
@@ -173,7 +173,7 @@ $course_id = 203;
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($course_id, get_field('swiper1_btn_text'), 'mb-5') ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -320,7 +320,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id, get_field('specifics_btn_text')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -422,7 +422,7 @@ $course_id = 203;
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($course_id, get_field('career_path_opinions_btn_text')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -458,7 +458,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id, get_field('will_it_work_btn_text'), 'mb-24'); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
 
         <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
@@ -498,12 +498,12 @@ $course_id = 203;
         </div>
         <div class="desc mx-auto mb-16 text-left text-lg lg:text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
-          <?php generateAddToCartButton($course_id, get_field('guarantee_btn'), 'mb-5'); ?>
+          <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         </div>
       </div>
     </section>
 
-    <section class="prices">
+    <section id="prices" class="prices">
       <div class="container max-w-[850px] mx-auto pb-20">
         <div class="desc mb-20 p-10 mx-auto text-left text-2xl font-normal [&>p]:mb-8 border-[2px] border-primary rounded-xl">
           <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title'); ?></h3>
@@ -581,7 +581,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id, get_field('bonuses_btn')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -718,7 +718,7 @@ $course_id = 203;
           <div class="my-10 text-left [&>ul>li]:mb-3 text-lg lg:text-2xl">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
-          <?php generateAddToCartButton($course_id, get_field('whats_next_btn'), 'mb-5'); ?>
+          <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         </div>
       </div>
     </section>
