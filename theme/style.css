@@ -1729,6 +1729,10 @@ html{
   display: table;
 }
 
+.grid{
+  display: grid;
+}
+
 .\!hidden{
   display: none !important;
 }
