@@ -287,6 +287,12 @@ $course_id = 203;
       </div>
     </section>
 
+    <section id="youtube" class="youtube mb-20">
+      <div class="container max-w-[1140px]">
+        <?php the_field('video'); ?>
+      </div>
+    </section>
+
     <section class="about-specifics lg:mb-20 bg-[#F7F7F7]">
       <div class="container max-w-[850px] py-20">
         <div class="title text-center">
