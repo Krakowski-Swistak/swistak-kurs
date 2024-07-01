@@ -458,7 +458,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
+        <a href="#prices" class="mx-auto mb-20 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
 
         <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
