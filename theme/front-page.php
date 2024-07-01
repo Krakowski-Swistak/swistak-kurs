@@ -478,7 +478,7 @@ $course_id = 203;
     </section>
 
     <section id="gwarancja" class="guarantee">
-      <div class="container mx-auto max-w-[850px] pt-20">
+      <div class="container mx-auto max-w-[850px] py-20">
         <div class="title text-center">
           <h3 class="mb-2 font-semibold text-[20px] lg:text-2xl"><?php the_field('guarantee_title'); ?></h3>
           <div class="title-content mb-16 relative">
