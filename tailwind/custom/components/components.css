@@ -164,7 +164,9 @@ html {
 .woocommerce-account .woocommerce{
 	@apply max-w-none
 }
-
+.wc-block-components-panel__button{
+	@apply !pointer-events-none
+}
 .wc-block-components-panel__button svg{
 	@apply !hidden
 }
@@ -173,6 +175,6 @@ html {
 }
 
 .wc-block-components-text-input input,
-.input.components-combobox-control__input{
+input.components-combobox-control__input{
 	@apply !border-[#cfc8d8] !rounded-2xl
 }
