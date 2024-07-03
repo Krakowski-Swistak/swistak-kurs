@@ -41,7 +41,7 @@ $course_id = 203;
           </div>
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
-        <?php generateAddToCartButton($course_id,get_field('button_introduction_title'),'mb-5') ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
@@ -56,9 +56,9 @@ $course_id = 203;
                 $image = get_sub_field('tile_icon');
                 $tile_text = get_sub_field('tile_text');
             ?>
-                <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-10 flex flex-col items-center justify-center">
-                  <div class="icon mb-5">
-                    <span class="text-[100px]"><?php echo $image; ?></span>
+                <div class="swiper-slide max-w-full h-auto border border-primary rounded-2xl p-3 lg:p-10 flex flex-col items-center justify-center">
+                  <div class="icon lg:mb-5">
+                    <span class="text-[80px] lg:text-[100px]"><?php echo $image; ?></span>
                   </div>
                   <div class="text-content text-center">
                     <p><?php echo $tile_text; ?></p>
@@ -173,7 +173,7 @@ $course_id = 203;
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($course_id,get_field('swiper1_btn_text'),'mb-5') ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -287,6 +287,26 @@ $course_id = 203;
       </div>
     </section>
 
+    <section id="youtube" class="youtube mb-20">
+      <div class="container mx-auto max-w-[1140px] [&>iframe]:mx-auto [&>iframe]:w-full [&>iframe]:md:w-[640px]">
+        <div class="title-content mb-16 relative">
+          <div class="ks-decoration ks-decoration--center">
+            <div class="ks-decoration__wave ks-decoration__wave--small">
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div>
+              <div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div>
+            </div>
+          </div>
+          <h3 class="mb-4 font-bold text-2xl lg:text-3xl text-center"><?php the_field('youtube_title'); ?></h3>
+        </div>
+        <?php the_field('video'); ?>
+      </div>
+    </section>
+
     <section class="about-specifics lg:mb-20 bg-[#F7F7F7]">
       <div class="container max-w-[850px] py-20">
         <div class="title text-center">
@@ -320,7 +340,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id,get_field('specifics_btn_text')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -422,7 +442,7 @@ $course_id = 203;
             ?>
           </div>
         </div>
-        <?php generateAddToCartButton($course_id,get_field('career_path_opinions_btn_text')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -458,7 +478,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id,get_field('will_it_work_btn_text'),'mb-24'); ?>
+        <a href="#prices" class="mx-auto mb-20 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
 
         <h3 class="mb-2 font-semibold text-2xl lg:text-3xl text-center"><?php the_field('will_it_work_title2'); ?></h3>
         <ul class="my-10 mx-auto max-w-[700px] text-lg lg:text-2xl leading-9 [&>li]:mb-8">
@@ -498,12 +518,12 @@ $course_id = 203;
         </div>
         <div class="desc mx-auto mb-16 text-left text-lg lg:text-2xl font-normal [&>p]:mb-8">
           <?php the_field('guarantee_desc'); ?>
-          <?php generateAddToCartButton($course_id,get_field('guarantee_btn'),'mb-5'); ?>
+          <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         </div>
       </div>
     </section>
 
-    <section class="prices">
+    <section id="prices" class="prices pt-16">
       <div class="container max-w-[850px] mx-auto pb-20">
         <div class="desc mb-20 p-10 mx-auto text-left text-2xl font-normal [&>p]:mb-8 border-[2px] border-primary rounded-xl">
           <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title'); ?></h3>
@@ -514,13 +534,13 @@ $course_id = 203;
           <p class="text-center text-lg lg:text-2xl">
             Jednorazowa inwestycja
           </p>
-          <?php 
-            $course_prod_id = get_post_meta($course_id,'_tutor_course_product_id')[0];
-            $product = wc_get_product( $course_prod_id );
-            $product_price = $product->get_price();
+          <?php
+          $course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
+          $product = wc_get_product($course_prod_id);
+          $product_price = $product->get_price();
 
-            $cart_text = __('Add to cart','swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
-            generateAddToCartButton($course_id,$cart_text); 
+          $cart_text = __('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
+          generateAddToCartButton($course_id, $cart_text);
           ?>
         </div>
 
@@ -581,7 +601,7 @@ $course_id = 203;
           endif;
           ?>
         </ul>
-        <?php generateAddToCartButton($course_id,get_field('bonuses_btn')); ?>
+        <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
       </div>
     </section>
 
@@ -667,14 +687,14 @@ $course_id = 203;
             <p class="subtitle mb-8 font-bold text-2xl lg:text-3xl leading-9">Jaką z tych 3 ścieżek wybierasz?</p>
           </div>
         </div>
-        <div class="swiper mb-20 overflow-visible" data-js="swiper-tiles-mobile">
-          <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
+        <div class="mb-20 overflow-visible">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <?php
             if (have_rows('decision_time_swiper')) :
               while (have_rows('decision_time_swiper')) : the_row();
                 $decision_time_swiper_slide_content = get_sub_field('decision_time_swpier_slide_content');
             ?>
-                <div class="swiper-slide max-w-full h-auto rounded-2xl p-8 lg:p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
+                <div class="max-w-full h-auto rounded-2xl p-8 lg:p-10 shadow-lg border-[1px] border-gray-200 hover:border-primary hover:bg-white transition duration-300 relative [&>p]:mb-5">
                   <?php echo $decision_time_swiper_slide_content; ?>
                 </div>
             <?php
@@ -718,7 +738,7 @@ $course_id = 203;
           <div class="my-10 text-left [&>ul>li]:mb-3 text-lg lg:text-2xl">
             <?php esc_html(the_field('whats_next_cta2_list')); ?>
           </div>
-          <?php generateAddToCartButton($course_id,get_field('whats_next_btn'),'mb-5'); ?>
+          <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
         </div>
       </div>
     </section>
