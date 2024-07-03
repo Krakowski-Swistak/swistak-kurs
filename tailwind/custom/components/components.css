@@ -178,3 +178,14 @@ html {
 input.components-combobox-control__input{
 	@apply !border-[#cfc8d8] !rounded-2xl
 }
+
+.wc-block-components-form .wc-block-components-text-input label,
+.wc-block-components-text-input label,
+.wc-block-components-combobox .wc-block-components-combobox-control label.components-base-control__label,
+.wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control label.components-base-control__label{
+	@apply !text-sm !translate-y-6
+}
+
+.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill+label, .wc-block-components-form .wc-block-components-text-input.is-active label, .wc-block-components-text-input input:-webkit-autofill+label, .wc-block-components-text-input.is-active label{
+	@apply !translate-y-2
+}
