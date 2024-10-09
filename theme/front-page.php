@@ -518,7 +518,7 @@ $prod_id = 200;
           $product = wc_get_product($prod_id);
           $product_price = $_product->get_price();
 
-          $cart_text = esc_html_e('Add to cart2', 'swistak-kurs') . ' (' . $product_price . ')';
+          $cart_text = esc_html_e('Add to cart', 'woocommerce') . ' (' . $product_price . ')';
           generateAddToCartButton($prod_id, $cart_text);
           ?>
         </div>
