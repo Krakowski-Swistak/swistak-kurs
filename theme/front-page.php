@@ -541,6 +541,8 @@ $course_id = 203;
 
           $cart_text = esc_html_e('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
           generateAddToCartButton($course_id, $cart_text);
+          $html = '<form action="' . get_permalink($course_prod_id) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $course_prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 ' . $additional_classes . '"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>';
+          echo $html;
           ?>
         </div>
 
