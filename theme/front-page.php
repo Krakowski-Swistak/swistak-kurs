@@ -509,7 +509,7 @@ $prod_id = 200;
           <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title'); ?></h3>
           <p><?php the_field('prices_desc'); ?></p>
           <div class="price text-green-800 text-center text-2xl lg:text-3xl font-bold">
-            <p>Cena promocyjna: 148 zł</p>
+            <p>Cena promocyjna: 147 zł</p>
           </div>
           <p class="text-center text-lg lg:text-2xl">
             Jednorazowa inwestycja
