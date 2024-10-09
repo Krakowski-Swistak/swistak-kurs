@@ -539,7 +539,7 @@ $course_id = 203;
           $product = wc_get_product($course_prod_id);
           $product_price = $product->get_price();
 
-          $cart_text = 'Dodaj do koszyka' . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
+          $cart_text = esc_html_e('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
           generateAddToCartButton($course_id, $cart_text);
           ?>
         </div>
