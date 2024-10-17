@@ -205,23 +205,25 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-fields.php';
 
-function generateAddToCartButton($course_id,$btn_text,$additional_classes = ' '){
-	$course_prod_id = get_post_meta($course_id,'_tutor_course_product_id')[0];
+function generateAddToCartButton($course_id, $btn_text, $additional_classes = ' ')
+{
+	$course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
 
 	if (ks_customer_already_ordered_product($course_prod_id)) {
-		$html = '<a href="' . get_permalink($course_id) . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"> ' . $btn_text . '</a>' ;
-	}else{
-		$html = '<form action="' . get_permalink($course_prod_id ) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $course_prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 '. $additional_classes .'"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>' ;
+		$html = '<a href="' . get_permalink($course_id) . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 ' . $additional_classes . '"> ' . $btn_text . '</a>';
+	} else {
+		$html = '<form action="' . get_permalink($course_prod_id) . '" method="post" enctype="multipart/form-data"><button type="submit" name="add-to-cart" value="' . $course_prod_id . '" class="mx-auto block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200 ' . $additional_classes . '"><span class="btn-icon tutor-icon-cart-filled"></span><span> ' . $btn_text . '</span></button></form>';
 	}
 	echo $html;
 }
 
-function ks_customer_already_bought_product($prod_id) { 
-	$product = wc_get_product( $prod_id );
-	if ( !is_user_logged_in() || !$product ) return false; 
-	if ( wc_customer_bought_product( '', get_current_user_id(), $prod_id ) ) {  
-	  return true; 
-	} 
+function ks_customer_already_bought_product($prod_id)
+{
+	$product = wc_get_product($prod_id);
+	if (!is_user_logged_in() || !$product) return false;
+	if (wc_customer_bought_product('', get_current_user_id(), $prod_id)) {
+		return true;
+	}
 }
 
 function ks_customer_already_ordered_product( $prod_id ) {
@@ -249,73 +251,75 @@ function ks_customer_already_ordered_product( $prod_id ) {
 
 
 /**
-* Enrolled Course Shortcode
-*/
+ * Enrolled Course Shortcode
+ */
 
-function tutor_enrolled_course_register_shortcodes() {
-    add_shortcode( 'enrolled-course', 'shortcode_tutor_enrolled_course' );
+function tutor_enrolled_course_register_shortcodes()
+{
+	add_shortcode('enrolled-course', 'shortcode_tutor_enrolled_course');
 }
-add_action( 'init', 'tutor_enrolled_course_register_shortcodes' );
+add_action('init', 'tutor_enrolled_course_register_shortcodes');
 
 /**
  * Shortcode Callback
  */
 
-function shortcode_tutor_enrolled_course( $atts ) {
-    ?>
+function shortcode_tutor_enrolled_course($atts)
+{
+?>
 
-<h3 class="text-xl md:text-2xl font-semibold mt-10 mb-5 text-foreground"><?php _e('Enrolled Courses', 'tutor'); ?></h3>
+	<h3 class="text-xl md:text-2xl font-semibold mt-10 mb-5 text-foreground"><?php _e('Enrolled Courses', 'tutor'); ?></h3>
 
-<div class="tutor-dashboard-content-inner flex flex-wrap gap-5 not-prose ">
+	<div class="tutor-dashboard-content-inner flex flex-wrap gap-5 not-prose ">
 
-	<?php
-	$my_courses = tutor_utils()->get_enrolled_courses_by_user(get_current_user_id(), array('private', 'publish'));
+		<?php
+		$my_courses = tutor_utils()->get_enrolled_courses_by_user(get_current_user_id(), array('private', 'publish'));
 
-	if ($my_courses && $my_courses->have_posts()):
-		while ($my_courses->have_posts()):
-			$my_courses->the_post();
-			$tutor_course_img = get_tutor_course_thumbnail_src();
-            /**
-             * wp 5.7.1 showing plain permalink for private post
-             * since tutor do not work with plain permalink
-             * url is set to post_type/slug (courses/course-slug)
-             * @since 1.8.10
-            */
-            $post = $my_courses->post;
-            $custom_url = get_permalink($post);
-			?>
-            <a href="<?php echo esc_url($custom_url);?>" class="flex flex-col rounded-2xl overflow-hidden hover:border-primary transition duration-200 border border-[#dcdfe5] max-w-96 not-prose">
-                <img src="<?php echo esc_url($tutor_course_img); ?>" class="aspect-[4/3] object-cover w-full !m-0">
-                <div class="tutor-mycourse-content p-5 flex flex-col">
-                    <h3 class="font-semibold text-primary text-lg md:text-xl"><?php the_title(); ?></h3>
-                    
-                    <div class="tutor-meta tutor-course-metadata">
-		                <?php
-                            $total_lessons = tutor_utils()->get_lesson_count_by_course();
-                            $completed_lessons = tutor_utils()->get_completed_lesson_count_by_course();
-		                ?>
-                        <p>
+		if ($my_courses && $my_courses->have_posts()):
+			while ($my_courses->have_posts()):
+				$my_courses->the_post();
+				$tutor_course_img = get_tutor_course_thumbnail_src();
+				/**
+				 * wp 5.7.1 showing plain permalink for private post
+				 * since tutor do not work with plain permalink
+				 * url is set to post_type/slug (courses/course-slug)
+				 * @since 1.8.10
+				 */
+				$post = $my_courses->post;
+				$custom_url = get_permalink($post);
+		?>
+				<a href="<?php echo esc_url($custom_url); ?>" class="flex flex-col rounded-2xl overflow-hidden hover:border-primary transition duration-200 border border-[#dcdfe5] max-w-96 not-prose">
+					<img src="<?php echo esc_url($tutor_course_img); ?>" class="aspect-[4/3] object-cover w-full !m-0">
+					<div class="tutor-mycourse-content p-5 flex flex-col">
+						<h3 class="font-semibold text-primary text-lg md:text-xl"><?php the_title(); ?></h3>
+
+						<div class="tutor-meta tutor-course-metadata">
 							<?php
+							$total_lessons = tutor_utils()->get_lesson_count_by_course();
+							$completed_lessons = tutor_utils()->get_completed_lesson_count_by_course();
+							?>
+							<p>
+								<?php
 								_e('Completed Lessons:', 'tutor');
 								echo "<span> $completed_lessons/$total_lessons</span>";
-							?>
-						</p>
-                    </div>
-                </div>
+								?>
+							</p>
+						</div>
+					</div>
 
-            </a>
+				</a>
 
-			<?php
-		endwhile;
+		<?php
+			endwhile;
 
-		wp_reset_postdata();
-    else:
-        echo "<div class='tutor-mycourse-wrap'><div class='p-3 tutor-mycourse-content'>".__('You haven\'t purchased any course', 'swistak-kurs')."</div></div>";
-	endif;
+			wp_reset_postdata();
+		else:
+			echo "<div class='tutor-mycourse-wrap'><div class='p-3 tutor-mycourse-content'>" . __('You haven\'t purchased any course', 'swistak-kurs') . "</div></div>";
+		endif;
 
-	?>
+		?>
 
-</div>
+	</div>
 <?php }
 
 add_filter( 'woocommerce_checkout_fields', 'customize_checkout_fields' );
