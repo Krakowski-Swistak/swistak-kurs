@@ -202,3 +202,63 @@ input.components-combobox-control__input{
 .wp-block-woocommerce-checkout-order-summary-block{
 	@apply bg-[#F7F7F7] rounded-2xl
 }
+
+.woocommerce-input-wrapper .select2-container .select2-selection--single{
+	@apply h-[49px] rounded-2xl border-primary focus:border-[#008077] transition duration-200
+}
+.woocommerce-input-wrapper .select2-container.select2-container--open .select2-selection--single{
+	@apply border-[#008077]
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	@apply py-3 px-4
+}
+.select2-dropdown{
+	@apply !border-[#008077]
+}
+.select2-search__field{
+	@apply rounded-lg
+}
+
+.select2-selection__arrow{
+	@apply !top-2.5 !right-2
+}
+
+.woocommerce .checkout .col2-set .col-2{
+	@apply md:sticky md:top-[100px]
+}
+
+.woocommerce-checkout #payment div.payment_box{
+	@apply !bg-[#00b3a71a]
+}
+
+.woocommerce-checkout #payment div.payment_box::before{
+	@apply !border-b-[#00b3a71a]
+}
+
+.woocommerce-checkout-review-order-table .order-total{
+	@apply text-2xl
+}
+.woocommerce-checkout-review-order-table .includes_tax{
+	@apply !text-xs
+}
+
+.woocommerce-checkout-review-order-table{
+	@apply !border-none !border-collapse !m-0
+}
+
+.woocommerce table.shop_table td,
+.woocommerce-cart .cart-collaterals .cart_totals tr th,
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table tfoot,
+.woocommerce table.shop_table thead{
+		border: none !important;
+}
+
+.woocommerce table.shop_table tr.order-total{
+	border-top: 1px solid #d4d4d4 !important
+}
+
+.woocommerce-checkout #payment ul.payment_methods li img{
+	@apply max-h-10
+}
