@@ -42,7 +42,7 @@ $prod_id = 200;
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
         <?php generateAddToCartButton($prod_id, get_field('button_introduction_title'), 'mb-5') ?>
-        <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
+        <a href="#prices" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
 
