@@ -52,7 +52,7 @@ add_action('acf/include_fields', function () {
 
 	acf_add_local_field_group(array(
 		'key' => 'group_663ba2824b754',
-		'title' => '100. Pytania i odpowiedzi',
+		'title' => '99. Pytania i odpowiedzi',
 		'fields' => array(
 			array(
 				'key' => 'field_663ba28212483',
@@ -1404,7 +1404,7 @@ add_action('acf/include_fields', function () {
 		'show_in_rest' => 0,
 	));
 
-	acf_add_local_field_group(array(
+	acf_add_local_field_group( array(
 		'key' => 'group_663b8aec8c418',
 		'title' => '91. Zobacz jak to wygląda od środka',
 		'fields' => array(
@@ -1492,6 +1492,8 @@ add_action('acf/include_fields', function () {
 				'max_size' => '',
 				'mime_types' => '',
 				'preview_size' => 'medium',
+				'uploader' => '',
+				'acfe_thumbnail' => 0,
 			),
 			array(
 				'key' => 'field_663b8b3573384',
@@ -1527,6 +1529,7 @@ add_action('acf/include_fields', function () {
 					'class' => '',
 					'id' => '',
 				),
+				'acfe_repeater_stylised_button' => 0,
 				'layout' => 'table',
 				'pagination' => 0,
 				'min' => 0,
@@ -1560,10 +1563,12 @@ add_action('acf/include_fields', function () {
 						'mime_types' => '',
 						'preview_size' => 'medium',
 						'parent_repeater' => 'field_663b8cfd8c9c1',
+						'uploader' => '',
+						'acfe_thumbnail' => 0,
 					),
 					array(
 						'key' => 'field_663b8d898c9c3',
-						'label' => 'Tekst opinii',
+						'label' => 'Treść opinii',
 						'name' => 'career_path_opinions_swiper_text',
 						'aria-label' => '',
 						'type' => 'text',
@@ -1577,6 +1582,7 @@ add_action('acf/include_fields', function () {
 						),
 						'default_value' => '',
 						'maxlength' => '',
+						'allow_in_bindings' => 1,
 						'placeholder' => '',
 						'prepend' => '',
 						'append' => '',
@@ -1598,6 +1604,28 @@ add_action('acf/include_fields', function () {
 						),
 						'default_value' => '',
 						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'parent_repeater' => 'field_663b8cfd8c9c1',
+					),
+					array(
+						'key' => 'field_67920d020a44c',
+						'label' => 'Opis autora',
+						'name' => 'career_path_opinions_swiper_author_desc',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'maxlength' => '',
+						'allow_in_bindings' => 0,
 						'placeholder' => '',
 						'prepend' => '',
 						'append' => '',
@@ -1644,7 +1672,12 @@ add_action('acf/include_fields', function () {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-	));
+		'acfe_display_title' => '',
+		'acfe_autosync' => '',
+		'acfe_form' => 0,
+		'acfe_meta' => '',
+		'acfe_note' => '',
+	) );
 
 	acf_add_local_field_group(array(
 		'key' => 'group_663b8f0813724',
