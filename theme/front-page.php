@@ -418,6 +418,7 @@ $course_id = 364;
                 $author_img = get_sub_field('career_path_opinions_swiper_img');
                 $opinion_text = get_sub_field('career_path_opinions_swiper_text');
                 $author_name = get_sub_field('career_path_opinions_swiper_author_name');
+                $author_desc = get_sub_field('career_path_opinions_swiper_author_desc');
             ?>
                 <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
                   <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
@@ -432,7 +433,8 @@ $course_id = 364;
                   </div>
                   <div class="text-content text-center">
                     <p class="mb-5 font-light"><?php echo $opinion_text; ?></p>
-                    <p class="author font-semibold text-lg"><?php echo $author_name; ?></p>
+                    <p class="author font-semibold text-lg mb-2.5"><?php echo $author_name; ?></p>
+                    <p class="text-gray-400 leading-5 font-light text-xs"><?php echo $author_desc; ?></p>
                   </div>
                 </div>
             <?php
