@@ -2159,6 +2159,10 @@ input.components-combobox-control__input{
   border-radius: 0.75rem;
 }
 
+.rounded-\[\]{
+  border-radius: ;
+}
+
 .\!border-2{
   border-width: 2px !important;
 }
@@ -2266,6 +2270,10 @@ input.components-combobox-control__input{
 
 .p-8{
   padding: 2rem;
+}
+
+.p-\[8px_16px\]{
+  padding: 8px 16px;
 }
 
 .\!px-5{

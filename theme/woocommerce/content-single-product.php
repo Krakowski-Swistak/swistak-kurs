@@ -58,7 +58,7 @@ if (post_password_required()) {
 				</div>
 			</aside>
 		</div>
-		<a href="<?php echo get_home_url(); ?>" class="padding-[8px_16px] border-[1px] border-primary">POWRÓT DO STRONY GŁÓWNEJ</a>
+		<a href="<?php echo get_home_url(); ?>" class="p-[8px_16px] rounded-2xl border-[1px] border-primary hover:bg-primary hover:text-white transition duration-200">POWRÓT DO STRONY GŁÓWNEJ</a>
 	</div>
 </div>
 
