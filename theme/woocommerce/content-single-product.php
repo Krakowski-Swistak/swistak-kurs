@@ -33,21 +33,28 @@ if (post_password_required()) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
-	<?php the_title('<h1 class="text-5xl md:text-[46px] leading-tight text-center text-bold text-white font-extrabold">', '</h1>'); ?>
-	<?php echo $product->get_title() ?>
-	<?php echo $product->get_price_html(); ?>
-	<?php swistak_kurs_post_thumbnail(); ?>
-	<?php the_content(); ?>
-
 	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
 		<div class="w-full">
-			<div id="description" class="bg-red-700">
-				description
+			<div>
+				<?php the_title('<h1 class="mb-10 text-[32px] font-semibold">', '</h1>'); ?>
+				<div class="price-wrapper">
+					<?php echo $product->get_price_html(); ?>
+				</div>
+				<?php swistak_kurs_post_thumbnail(); ?>
+				<?php the_content(); ?>
 			</div>
 		</div>
 		<aside class="md:basis-1/2 lg:basis-1/3 md:grow-0 md:shrink-0 relative">
-			<div class="md:sticky top-[115px]">
-				sticky content
+			<div class="lg:sticky top-[115px]">
+				Add to cart
+				<?php
+				$course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
+				$product = wc_get_product($course_prod_id);
+				$product_price = $product->get_price();
+
+				$cart_text = __('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
+				generateAddToCartButton($course_id, $cart_text);
+				?>
 			</div>
 		</aside>
 	</div>
