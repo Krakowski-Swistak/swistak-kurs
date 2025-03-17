@@ -26,6 +26,9 @@ module.exports = {
 		},
 		extend: {
 			screens: {
+				lg: '1180px',
+				xl: '1380px',
+				'2xl': '1680px',
 				'3xl': '1920px',
 			},
 			fontFamily: {
