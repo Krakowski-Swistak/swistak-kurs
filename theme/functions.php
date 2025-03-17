@@ -381,3 +381,8 @@ function check_and_redirect_if_not_enrolled()
 	}
 }
 add_action('template_redirect', 'check_and_redirect_if_not_enrolled');
+
+function swistak_kurs_add_woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
