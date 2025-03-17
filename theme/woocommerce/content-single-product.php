@@ -46,7 +46,7 @@ if (post_password_required()) {
 				</div>
 			</div>
 			<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
-				<div class="w-full p-6 border-[1px] border-[#DDE3EE] lg:sticky top-[96px] text-[#22272F]">
+				<div class="w-full p-6 border-[1px] border-[#DDE3EE] rounded-[2px] lg:sticky top-[96px] text-[#22272F]">
 					<p class="mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE] text-[21px] font-medium">Informacje:</p>
 
 					<div class="type-wrapper flex justify-between mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE] text-[14px] font-semibold">
@@ -91,9 +91,20 @@ if (post_password_required()) {
 						</div>
 						<span class="text-[#6C7689] text-[13px]">+ 23% VAT</span>
 					</div>
+
 					<?php
 					$product = wc_get_product(get_the_ID());
-					echo "<a href='" . $product->add_to_cart_url() . "' class='mx-auto mb-5 block w-full bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200'>ZAMAWIAM</a>";
+					?>
+					<a href="<?php echo $product->add_to_cart_url() ?>">
+						ZAMAWIAM
+						<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<rect x="5" y="7" width="14" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</a>
+
+					<?php
+					echo "<a href='" . $product->add_to_cart_url() . "' class='mx-auto text-center block w-full bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200'>ZAMAWIAM</a>";
 					?>
 				</div>
 			</aside>
