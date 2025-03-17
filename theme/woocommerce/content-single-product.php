@@ -17,7 +17,7 @@
  */
 
 defined('ABSPATH') || exit;
-
+$course_id = 364;
 global $product;
 
 /**
@@ -39,12 +39,13 @@ if (post_password_required()) {
 				<?php the_title('<h1 class="mb-10 text-[32px] font-semibold">', '</h1>'); ?>
 				<div class="price-wrapper">
 					<?php echo $product->get_price_html(); ?>
+					<?php echo $product->get_price(); ?>
 				</div>
 				<?php swistak_kurs_post_thumbnail(); ?>
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<aside class="md:basis-1/2 lg:basis-1/3 md:grow-0 md:shrink-0 relative">
+		<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
 			<div class="lg:sticky top-[115px]">
 				Add to cart
 				<?php
