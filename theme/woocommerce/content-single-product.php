@@ -47,9 +47,9 @@ if (post_password_required()) {
 			</div>
 			<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
 				<div class="w-full p-6 border-[1px] border-[#DDE3EE] lg:sticky top-[96px] text-[#22272F] font-medium">
-					<p class="pb-6 border-[1px] border-b-[#DDE3EE] text-[21px]">Informacje:</p>
+					<p class="mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE] text-[21px]">Informacje:</p>
 
-					<div class="type-wrapper flex justify-between">
+					<div class="type-wrapper flex justify-between mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE]">
 						<p class="text-[14px] font-medium">
 							<span>
 								<svg class="inline-block mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
