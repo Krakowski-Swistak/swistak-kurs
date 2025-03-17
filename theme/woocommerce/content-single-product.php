@@ -49,6 +49,9 @@ if (post_password_required()) {
 				Add to cart
 				<?php
 				custom_add_to_cart_button();
+
+				$product = wc_get_product(get_the_ID());
+				echo "<a href='" . $product->add_to_cart_url() . "'>add to cart</a>";
 				?>
 			</div>
 		</aside>
