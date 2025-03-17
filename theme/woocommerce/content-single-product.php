@@ -33,16 +33,16 @@ if (post_password_required()) {
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
 	<div class="container mx-auto">
+		<a href="<?php echo get_home_url(); ?>" class="mb-4 p-[8px_16px] rounded-2xl border-[1px] border-primary hover:bg-primary hover:text-white transition duration-300">POWRÓT DO STRONY GŁÓWNEJ</a>
+		<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
+
 		<div class="mb-9 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
 			<div class="w-full">
-				<div>
-					<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
-					<div class="mb-16">
-						<?php swistak_kurs_post_thumbnail(); ?>
-					</div>
-					<div class="font-light [&>h2]:mb-[16px] [&>h2]:text-[#22272F] [&>h2]:text-[21px] [&>h2]:font-medium [&>ul]:list-disc [&>ul]:ml-[18px]">
-						<?php the_content(); ?>
-					</div>
+				<div class="mb-16">
+					<?php swistak_kurs_post_thumbnail(); ?>
+				</div>
+				<div class="font-light [&>h2]:mb-[16px] [&>h2]:text-[#22272F] [&>h2]:text-[21px] [&>h2]:font-medium [&>ul]:list-disc [&>ul]:ml-[18px]">
+					<?php the_content(); ?>
 				</div>
 			</div>
 			<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">

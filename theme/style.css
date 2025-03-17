@@ -1782,16 +1782,12 @@ input.components-combobox-control__input{
   top: 0px;
 }
 
-.top-\[115px\]{
-  top: 115px;
+.top-\[96px\]{
+  top: 96px;
 }
 
 .top-full{
   top: 100%;
-}
-
-.top-\[96px\]{
-  top: 96px;
 }
 
 .z-10{
@@ -1815,6 +1811,11 @@ input.components-combobox-control__input{
   margin-right: auto;
 }
 
+.my-0{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -1823,11 +1824,6 @@ input.components-combobox-control__input{
 .my-20{
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-
-.my-0{
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .mb-10{
@@ -1866,28 +1862,28 @@ input.components-combobox-control__input{
   margin-bottom: 1.25rem;
 }
 
-.mb-8{
-  margin-bottom: 2rem;
-}
-
-.mb-\[9px\]{
-  margin-bottom: 9px;
-}
-
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .mb-9{
   margin-bottom: 2.25rem;
 }
 
+.mb-\[9px\]{
+  margin-bottom: 9px;
+}
+
 .mr-2{
   margin-right: 0.5rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .block{
@@ -2140,6 +2136,10 @@ input.components-combobox-control__input{
   border-radius: 15px;
 }
 
+.rounded-\[2px\]{
+  border-radius: 2px;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -2150,10 +2150,6 @@ input.components-combobox-control__input{
 
 .rounded-xl{
   border-radius: 0.75rem;
-}
-
-.rounded-\[2px\]{
-  border-radius: 2px;
 }
 
 .\!border-2{
@@ -2199,6 +2195,11 @@ input.components-combobox-control__input{
   border-color: rgb(136 136 136 / var(--tw-border-opacity));
 }
 
+.border-\[\#DDE3EE\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(221 227 238 / var(--tw-border-opacity));
+}
+
 .border-\[\#dcdfe5\]{
   --tw-border-opacity: 1;
   border-color: rgb(220 223 229 / var(--tw-border-opacity));
@@ -2212,11 +2213,6 @@ input.components-combobox-control__input{
 .border-primary{
   --tw-border-opacity: 1;
   border-color: rgb(0 179 167 / var(--tw-border-opacity));
-}
-
-.border-\[\#DDE3EE\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(221 227 238 / var(--tw-border-opacity));
 }
 
 .border-b-\[\#DDE3EE\]{
@@ -2275,12 +2271,12 @@ input.components-combobox-control__input{
   padding: 1.25rem;
 }
 
-.p-8{
-  padding: 2rem;
-}
-
 .p-6{
   padding: 1.5rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .p-\[8px_16px\]{
@@ -2355,6 +2351,10 @@ input.components-combobox-control__input{
   padding-bottom: 5rem;
 }
 
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -2369,10 +2369,6 @@ input.components-combobox-control__input{
 
 .pt-36{
   padding-top: 9rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .text-left{
@@ -2398,12 +2394,28 @@ input.components-combobox-control__input{
   line-height: 2.25rem;
 }
 
+.text-\[13px\]{
+  font-size: 13px;
+}
+
+.text-\[14px\]{
+  font-size: 14px;
+}
+
 .text-\[20px\]{
   font-size: 20px;
 }
 
+.text-\[21px\]{
+  font-size: 21px;
+}
+
 .text-\[32px\]{
   font-size: 32px;
+}
+
+.text-\[36px\]{
+  font-size: 36px;
 }
 
 .text-\[60px\]{
@@ -2431,22 +2443,6 @@ input.components-combobox-control__input{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[13px\]{
-  font-size: 13px;
-}
-
-.text-\[14px\]{
-  font-size: 14px;
-}
-
-.text-\[21px\]{
-  font-size: 21px;
-}
-
-.text-\[36px\]{
-  font-size: 36px;
 }
 
 .\!font-medium{
@@ -2519,6 +2515,21 @@ input.components-combobox-control__input{
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
+.text-\[\#22272F\]{
+  --tw-text-opacity: 1;
+  color: rgb(34 39 47 / var(--tw-text-opacity));
+}
+
+.text-\[\#3B424F\]{
+  --tw-text-opacity: 1;
+  color: rgb(59 66 79 / var(--tw-text-opacity));
+}
+
+.text-\[\#6C7689\]{
+  --tw-text-opacity: 1;
+  color: rgb(108 118 137 / var(--tw-text-opacity));
+}
+
 .text-foreground{
   --tw-text-opacity: 1;
   color: rgb(22 22 22 / var(--tw-text-opacity));
@@ -2547,21 +2558,6 @@ input.components-combobox-control__input{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#22272F\]{
-  --tw-text-opacity: 1;
-  color: rgb(34 39 47 / var(--tw-text-opacity));
-}
-
-.text-\[\#3B424F\]{
-  --tw-text-opacity: 1;
-  color: rgb(59 66 79 / var(--tw-text-opacity));
-}
-
-.text-\[\#6C7689\]{
-  --tw-text-opacity: 1;
-  color: rgb(108 118 137 / var(--tw-text-opacity));
 }
 
 .opacity-0{
