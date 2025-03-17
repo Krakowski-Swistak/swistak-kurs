@@ -33,6 +33,24 @@ if (post_password_required()) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
+	<?php the_title('<h1 class="text-5xl md:text-[46px] leading-tight text-center text-bold text-white font-extrabold">', '</h1>'); ?>
+	<?php echo $product->get_title() ?>
+	<?php echo $product->get_price_html(); ?>
+	<?php echo $product->get_content(); ?>
+	<?php echo the_content(); ?>
+
+	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
+		<div class="w-full">
+			<div id="description" class="">
+				description
+			</div>
+		</div>
+		<aside class="md:basis-1/2 lg:basis-1/3 md:grow-0 md:shrink-0 relative">
+			<div class="md:sticky top-[115px]">
+				sticky content
+			</div>
+		</aside>
+	</div>
 
 	<?php
 	/**
