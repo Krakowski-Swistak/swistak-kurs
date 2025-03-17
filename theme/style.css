@@ -1921,6 +1921,10 @@ input.components-combobox-control__input{
   margin-bottom: 1.5rem;
 }
 
+.ml-\[9px\]{
+  margin-left: 9px;
+}
+
 .block{
   display: block;
 }
@@ -2481,6 +2485,14 @@ input.components-combobox-control__input{
   font-size: 14px;
 }
 
+.text-\[36px\]{
+  font-size: 36px;
+}
+
+.text-\[13px\]{
+  font-size: 13px;
+}
+
 .\!font-medium{
   font-weight: 500 !important;
 }
@@ -2589,6 +2601,11 @@ input.components-combobox-control__input{
 .text-\[\#22272F\]{
   --tw-text-opacity: 1;
   color: rgb(34 39 47 / var(--tw-text-opacity));
+}
+
+.text-\[\#6C7689\]{
+  --tw-text-opacity: 1;
+  color: rgb(108 118 137 / var(--tw-text-opacity));
 }
 
 .opacity-0{
