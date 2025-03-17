@@ -36,23 +36,20 @@ if (post_password_required()) {
 		<div class="w-full">
 			<div>
 				<?php the_title('<h1 class="mb-10 text-[32px] font-semibold">', '</h1>'); ?>
-				<div class="price-wrapper">
-					<?php echo $product->get_price_html(); ?>
-					<?php echo $product->get_price(); ?>
-				</div>
 				<?php swistak_kurs_post_thumbnail(); ?>
 				<?php the_content(); ?>
 			</div>
 		</div>
 		<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
 			<div class="lg:sticky top-[115px]">
-				Add to cart
+				<p>Informacje</p>
 				<?php
-				custom_add_to_cart_button();
-
 				$product = wc_get_product(get_the_ID());
 				echo "<a href='" . $product->add_to_cart_url() . "'>add to cart</a>";
 				?>
+				<div class="price-wrapper">
+					<?php echo $product->get_price_html(); ?>
+				</div>
 			</div>
 		</aside>
 	</div>

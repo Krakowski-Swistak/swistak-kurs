@@ -2210,11 +2210,6 @@ input.components-combobox-control__input{
   background-color: rgb(0 179 167 / var(--tw-bg-opacity));
 }
 
-.bg-red-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2348,13 +2343,12 @@ input.components-combobox-control__input{
   line-height: 2.25rem;
 }
 
-.text-5xl{
-  font-size: 2.625rem;
-  line-height: 2.625rem;
-}
-
 .text-\[20px\]{
   font-size: 20px;
+}
+
+.text-\[32px\]{
+  font-size: 32px;
 }
 
 .text-\[60px\]{
@@ -2438,10 +2432,6 @@ input.components-combobox-control__input{
 
 .leading-9{
   line-height: 2.25rem;
-}
-
-.leading-tight{
-  line-height: 1.25;
 }
 
 .tracking-wide{
@@ -2739,10 +2729,6 @@ input.components-combobox-control__input{
     position: static;
   }
 
-  .md\:sticky{
-    position: sticky;
-  }
-
   .md\:mb-20{
     margin-bottom: 5rem;
   }
@@ -2791,10 +2777,6 @@ input.components-combobox-control__input{
     flex-grow: 0;
   }
 
-  .md\:basis-1\/2{
-    flex-basis: 50%;
-  }
-
   .md\:flex-row{
     flex-direction: row;
   }
@@ -2834,10 +2816,6 @@ input.components-combobox-control__input{
     line-height: 2.625rem;
   }
 
-  .md\:text-\[46px\]{
-    font-size: 46px;
-  }
-
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2857,6 +2835,10 @@ input.components-combobox-control__input{
 }
 
 @media (min-width: 1180px){
+  .lg\:sticky{
+    position: sticky;
+  }
+
   .lg\:float-right{
     float: right;
   }
