@@ -93,7 +93,7 @@ if (post_password_required()) {
 					</div>
 					<?php
 					$product = wc_get_product(get_the_ID());
-					echo "<a href='" . $product->add_to_cart_url() . "' class='mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200'>add to cart</a>";
+					echo "<a href='" . $product->add_to_cart_url() . "' class='mx-auto mb-5 block w-full bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200'>ZAMAWIAM</a>";
 					?>
 				</div>
 			</aside>
