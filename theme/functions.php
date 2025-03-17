@@ -226,27 +226,28 @@ function ks_customer_already_bought_product($prod_id)
 	}
 }
 
-function ks_customer_already_ordered_product( $prod_id ) {
-    $product = wc_get_product( $prod_id );
-    if ( !is_user_logged_in() || !$product ) return false;
-    
-    $user_id = get_current_user_id();
-    $args = array(
-        'customer_id' => $user_id,
-        'limit'       => -1,
-    );
-    
-    $orders = wc_get_orders( $args );
-    
-    foreach ( $orders as $order ) {
-        foreach ( $order->get_items() as $item ) {
-            if ( $item->get_product_id() == $prod_id ) {
-                return true;
-            }
-        }
-    }
-    
-    return false;
+function ks_customer_already_ordered_product($prod_id)
+{
+	$product = wc_get_product($prod_id);
+	if (!is_user_logged_in() || !$product) return false;
+
+	$user_id = get_current_user_id();
+	$args = array(
+		'customer_id' => $user_id,
+		'limit'       => -1,
+	);
+
+	$orders = wc_get_orders($args);
+
+	foreach ($orders as $order) {
+		foreach ($order->get_items() as $item) {
+			if ($item->get_product_id() == $prod_id) {
+				return true;
+			}
+		}
+	}
+
+	return false;
 }
 
 
@@ -322,57 +323,61 @@ function shortcode_tutor_enrolled_course($atts)
 	</div>
 <?php }
 
-add_filter( 'woocommerce_checkout_fields', 'customize_checkout_fields' );
+add_filter('woocommerce_checkout_fields', 'customize_checkout_fields');
 
-function customize_checkout_fields( $fields ) {
+function customize_checkout_fields($fields)
+{
 	unset($fields['billing']['billing_address_2']);
 	unset($fields['order']['order_comments']);
-	$fields['billing']['billing_postcode']['class'] = array('form-row-first','address-field');
-	$fields['billing']['billing_city']['class'] = array('form-row-last','address-field');
-    $fields['billing']['billing_phone']['required'] = false;
-    
-    return $fields;
+	$fields['billing']['billing_postcode']['class'] = array('form-row-first', 'address-field');
+	$fields['billing']['billing_city']['class'] = array('form-row-last', 'address-field');
+	$fields['billing']['billing_phone']['required'] = false;
+
+	return $fields;
 };
 
-add_filter( 'woocommerce_default_address_fields', 'override_default_locale_fields' );
+add_filter('woocommerce_default_address_fields', 'override_default_locale_fields');
 
-function override_default_locale_fields( $fields ) {
-	$fields['postcode']['class'] = array('form-row-first','address-field');
-	$fields['city']['class'] = array('form-row-last','address-field');
-    
-    return $fields;
+function override_default_locale_fields($fields)
+{
+	$fields['postcode']['class'] = array('form-row-first', 'address-field');
+	$fields['city']['class'] = array('form-row-last', 'address-field');
+
+	return $fields;
 };
 
-remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
-add_action( 'woocommerce_after_order_notes', 'woocommerce_order_review', 10 );
+remove_action('woocommerce_checkout_order_review', 'woocommerce_order_review', 10);
+add_action('woocommerce_after_order_notes', 'woocommerce_order_review', 10);
 
-function has_ordered_but_not_enrolled( $user_id, $course_id ) {
-    $product_id = tutor_utils()->get_course_product_id( $course_id );
+function has_ordered_but_not_enrolled($user_id, $course_id)
+{
+	$product_id = tutor_utils()->get_course_product_id($course_id);
 
-    if ( ks_customer_already_ordered_product( $product_id ) ) {
-        $is_enrolled = tutor_utils()->is_enrolled( $course_id, $user_id );
+	if (ks_customer_already_ordered_product($product_id)) {
+		$is_enrolled = tutor_utils()->is_enrolled($course_id, $user_id);
 
-        if ( ! $is_enrolled ) {
-            return true;
-        }
-    }
-    
-    return false;
+		if (! $is_enrolled) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
-function check_and_redirect_if_not_enrolled() {
-    if ( is_user_logged_in() ) {
-        global $post;
-        
-        if ( is_singular('courses') ) {
-            $user_id = get_current_user_id();    
-            $course_id = $post->ID;
+function check_and_redirect_if_not_enrolled()
+{
+	if (is_user_logged_in()) {
+		global $post;
 
-            if ( has_ordered_but_not_enrolled( $user_id, $course_id ) ) {
-                wp_redirect( wc_get_page_permalink( 'myaccount' ) );
-                exit;
-            }
-        }
-    }
+		if (is_singular('courses')) {
+			$user_id = get_current_user_id();
+			$course_id = $post->ID;
+
+			if (has_ordered_but_not_enrolled($user_id, $course_id)) {
+				wp_redirect(wc_get_page_permalink('myaccount'));
+				exit;
+			}
+		}
+	}
 }
-add_action( 'template_redirect', 'check_and_redirect_if_not_enrolled' );
+add_action('template_redirect', 'check_and_redirect_if_not_enrolled');

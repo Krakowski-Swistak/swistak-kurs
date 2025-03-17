@@ -7,12 +7,12 @@
  */
 
 get_header();
-$course_id = 203;
+$course_id = 364;
 ?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
-    <section class="hero test2">
+    <section class="hero test3">
       <div class="mx-auto h-[450px] md:h-[600px] max-w-full bg-primary flex flex-col items-center justify-center">
         <div class="container max-w-[1024px] flex flex-col items-center justify-center">
           <h1 class="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold text-white tracking-wide	!leading-[50px] md:!leading-[70px]">
@@ -42,7 +42,7 @@ $course_id = 203;
           <div class="text-lg text-center"><?php the_field('subtitle_above_tiles'); ?></div>
         </div>
         <a href="#prices" class="mx-auto mb-5 block w-fit bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">Odbierz dostęp teraz</a>
-        <a href="#more" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
+        <a href="#prices" class="mx-auto block w-fit text-lg hover:text-primary transition duration-200">..Dowiedz się więcej..</a>
       </div>
     </section>
 
@@ -418,6 +418,7 @@ $course_id = 203;
                 $author_img = get_sub_field('career_path_opinions_swiper_img');
                 $opinion_text = get_sub_field('career_path_opinions_swiper_text');
                 $author_name = get_sub_field('career_path_opinions_swiper_author_name');
+                $author_desc = get_sub_field('career_path_opinions_swiper_author_desc');
             ?>
                 <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
                   <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
@@ -432,7 +433,8 @@ $course_id = 203;
                   </div>
                   <div class="text-content text-center">
                     <p class="mb-5 font-light"><?php echo $opinion_text; ?></p>
-                    <p class="author font-semibold text-lg"><?php echo $author_name; ?></p>
+                    <p class="author font-semibold text-lg mb-2.5"><?php echo $author_name; ?></p>
+                    <p class="text-gray-400 leading-5 font-light text-xs"><?php echo $author_desc; ?></p>
                   </div>
                 </div>
             <?php
@@ -539,7 +541,7 @@ $course_id = 203;
           $product = wc_get_product($course_prod_id);
           $product_price = $product->get_price();
 
-          $cart_text = esc_html_e('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
+          $cart_text = __('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
           generateAddToCartButton($course_id, $cart_text);
           ?>
         </div>
@@ -640,6 +642,7 @@ $course_id = 203;
                   $author_img = get_sub_field('career_path_opinions_swiper_img');
                   $opinion_text = get_sub_field('career_path_opinions_swiper_text');
                   $author_name = get_sub_field('career_path_opinions_swiper_author_name');
+                  $author_desc = get_sub_field('career_path_opinions_swiper_author_desc');
               ?>
                   <div class="swiper-slide max-w-full h-auto rounded-2xl p-10 pt-36 shadow-xl border-[1px] border-gray-200 hover:border-primary transition duration-300 relative">
                     <div class="z-10 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-40%]">
@@ -654,7 +657,8 @@ $course_id = 203;
                     </div>
                     <div class="text-content text-center">
                       <p class="mb-5 font-light"><?php echo $opinion_text; ?></p>
-                      <p class="author font-semibold text-lg"><?php echo $author_name; ?></p>
+                      <p class="author font-semibold text-lg mb-2.5"><?php echo $author_name; ?></p>
+                      <p class="text-gray-400 leading-5 font-light text-xs"><?php echo $author_desc; ?></p>
                     </div>
                   </div>
               <?php
