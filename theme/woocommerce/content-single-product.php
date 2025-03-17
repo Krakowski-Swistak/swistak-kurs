@@ -17,7 +17,6 @@
  */
 
 defined('ABSPATH') || exit;
-$course_id = 364;
 global $product;
 
 /**
@@ -49,13 +48,7 @@ if (post_password_required()) {
 			<div class="lg:sticky top-[115px]">
 				Add to cart
 				<?php
-				print_r(get_post_meta($course_id, '_tutor_course_product_id')[0])
-				$course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
-				$product = wc_get_product($course_prod_id);
-				$product_price = $product->get_price();
-
-				$cart_text = __('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
-				generateAddToCartButton($course_id, $cart_text);
+				custom_add_to_cart_button();
 				?>
 			</div>
 		</aside>
