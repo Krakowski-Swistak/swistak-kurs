@@ -1906,6 +1906,10 @@ input.components-combobox-control__input{
   margin-bottom: 2.25rem;
 }
 
+.mb-\[16px\]{
+  margin-bottom: 16px;
+}
+
 .mb-\[9px\]{
   margin-bottom: 9px;
 }
@@ -1916,14 +1920,6 @@ input.components-combobox-control__input{
 
 .mt-10{
   margin-top: 2.5rem;
-}
-
-.mb-\[16PX\]{
-  margin-bottom: 16PX;
-}
-
-.mb-\[16px\]{
-  margin-bottom: 16px;
 }
 
 .mt-5{
