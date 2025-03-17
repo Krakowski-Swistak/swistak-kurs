@@ -41,7 +41,7 @@ if (post_password_required()) {
 
 	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
 		<div class="w-full">
-			<div id="description" class="">
+			<div id="description" class="bg-red-700">
 				description
 			</div>
 		</div>
