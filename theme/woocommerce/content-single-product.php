@@ -34,7 +34,7 @@ if (post_password_required()) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
 	<div class="container mx-auto">
 		<a href="<?php echo get_home_url(); ?>" class="mb-4 p-[8px_16px] rounded-2xl border-[1px] border-primary hover:bg-primary hover:text-white transition duration-300">POWRÓT DO STRONY GŁÓWNEJ</a>
-		<div class="mb-[16PX]"></div>
+		<div class="mb-[16px]"></div>
 		<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
 
 		<div class="mb-9 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
