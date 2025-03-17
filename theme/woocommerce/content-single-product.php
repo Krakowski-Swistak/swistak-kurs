@@ -32,7 +32,7 @@ if (post_password_required()) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
-	<div class="container mx-auto">
+	<div class="container mx-auto mt-5">
 		<a href="<?php echo get_home_url(); ?>" class="mb-4 p-[8px_16px] rounded-2xl border-[1px] border-primary hover:bg-primary hover:text-white transition duration-300">POWRÓT DO STRONY GŁÓWNEJ</a>
 		<div class="mb-[16px]"></div>
 		<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
