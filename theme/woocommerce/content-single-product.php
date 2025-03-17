@@ -36,6 +36,7 @@ if (post_password_required()) {
 	<?php the_title('<h1 class="text-5xl md:text-[46px] leading-tight text-center text-bold text-white font-extrabold">', '</h1>'); ?>
 	<?php echo $product->get_title() ?>
 	<?php echo $product->get_price_html(); ?>
+	<?php swistak_kurs_post_thumbnail(); ?>
 	<?php the_content(); ?>
 
 	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
