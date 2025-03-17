@@ -17,7 +17,6 @@
  */
 
 defined('ABSPATH') || exit;
-
 global $product;
 
 /**
@@ -33,7 +32,28 @@ if (post_password_required()) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
-	<?php echo 'content-single-product'; ?>
+	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
+		<div class="w-full">
+			<div>
+				<?php the_title('<h1 class="mb-10 text-[32px] font-semibold">', '</h1>'); ?>
+				<?php swistak_kurs_post_thumbnail(); ?>
+				<?php the_content(); ?>
+			</div>
+		</div>
+		<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
+			<div class="lg:sticky top-[115px]">
+				<p>Informacje</p>
+				<?php
+				$product = wc_get_product(get_the_ID());
+				echo "<a href='" . $product->add_to_cart_url() . "'>add to cart</a>";
+				?>
+				<div class="price-wrapper">
+					<?php echo $product->get_price_html(); ?>
+				</div>
+			</div>
+		</aside>
+	</div>
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -59,25 +79,16 @@ if (post_password_required()) {
 		?>
 	</div>
 
-	<div class="title">
-		<?php
-		// * @hooked woocommerce_template_single_title - 5
-		?>
-	</div>
-
-	<div class="image">
-		<?php
-		// * @hooked woocommerce_show_product_images - 20
-		?>
-	</div>
-
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
+	 * @hooked woocommerce_output_product_data_tabs - 10
+	 * @hooked woocommerce_upsell_display - 15
+	 * @hooked woocommerce_output_related_products - 20
 	 */
-	// do_action('woocommerce_after_single_product_summary');
+	do_action('woocommerce_after_single_product_summary');
 	?>
 </div>
 
-<!-- <?php do_action('woocommerce_after_single_product'); ?> -->
+<?php do_action('woocommerce_after_single_product'); ?>
