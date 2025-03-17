@@ -19,13 +19,6 @@
 defined('ABSPATH') || exit;
 global $product;
 
-/**
- * Hook: woocommerce_before_single_product.
- *
- * @hooked woocommerce_output_all_notices - 10
- */
-do_action('woocommerce_before_single_product');
-
 if (post_password_required()) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
@@ -36,6 +29,7 @@ if (post_password_required()) {
 		<div class="mb-9 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
 			<div class="w-full">
 				<div>
+					<a href="<?php echo get_home_url(); ?>" class="p-[8px_16px] rounded-2xl border-[1px] border-primary hover:bg-primary hover:text-white transition duration-300">POWRÓT DO STRONY GŁÓWNEJ</a>
 					<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
 					<div class="mb-16">
 						<?php swistak_kurs_post_thumbnail(); ?>
