@@ -35,9 +35,13 @@ if (post_password_required()) {
 	<div class="container mb-20 flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-6 lg:gap-10">
 		<div class="w-full">
 			<div>
-				<?php the_title('<h1 class="mb-10 text-[32px] font-semibold">', '</h1>'); ?>
-				<?php swistak_kurs_post_thumbnail(); ?>
-				<?php the_content(); ?>
+				<?php the_title('<h1 class="mb-10 text-[32px] font-medium text-[#3B424F]">', '</h1>'); ?>
+				<div class="mb-16">
+					<?php swistak_kurs_post_thumbnail(); ?>
+				</div>
+				<div class="[&_h2]:mb-[16px] [&_h2]:text-[#22272F] [&_h2]:text-[21px]">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 		<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
@@ -61,33 +65,6 @@ if (post_password_required()) {
 	 * @hooked woocommerce_show_product_images - 20
 	 */
 	do_action('woocommerce_before_single_product_summary');
-	?>
-
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action('woocommerce_single_product_summary');
-		?>
-	</div>
-
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action('woocommerce_after_single_product_summary');
 	?>
 </div>
 
