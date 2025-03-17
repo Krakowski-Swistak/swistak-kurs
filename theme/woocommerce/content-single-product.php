@@ -49,6 +49,7 @@ if (post_password_required()) {
 			<div class="lg:sticky top-[115px]">
 				Add to cart
 				<?php
+				print_r(get_post_meta($course_id, '_tutor_course_product_id')[0])
 				$course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
 				$product = wc_get_product($course_prod_id);
 				$product_price = $product->get_price();
