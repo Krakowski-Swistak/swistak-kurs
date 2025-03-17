@@ -46,16 +46,23 @@ if (post_password_required()) {
 				</div>
 			</div>
 			<aside class="lg:basis-1/3 md:grow-0 md:shrink-0 relative">
-				<div class="w-full p-6 border-[#DDE3EE] lg:sticky top-[96px] text-[#22272F]">
-					<p class="pb-6 border-b-[#DDE3EE] text-[21px]">Informacje:</p>
+				<div class="w-full p-6 border-[1px] border-[#DDE3EE] lg:sticky top-[96px] text-[#22272F] font-medium">
+					<p class="pb-6 border-[1px] border-b-[#DDE3EE] text-[21px]">Informacje:</p>
+
+					<div class="type-wrapper flex justify-between">
+						<p class="text-[14px] font-medium">
+							<span>
+								<svg class="inline-block mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21ZM5 10V19H19V10H5ZM5 5V8H19V5H5Z" fill="#22272F" />
+								</svg>
+							</span>
+							RODZAJ
+						</p>
+						<p>Szkolenie online</p>
+					</div>
+
 					<div class="price-wrapper">
 						<?php echo $product->get_price_html(); ?>
-					</div>
-					<div class="type-wrapper flex justify-between">
-						<p class="text-[14px] font-medium"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21ZM5 10V19H19V10H5ZM5 5V8H19V5H5Z" fill="#22272F" />
-								</svg></span>RODZAJ</p>
-						<p>Szkolenie online</p>
 					</div>
 					<?php
 					$product = wc_get_product(get_the_ID());
@@ -68,4 +75,4 @@ if (post_password_required()) {
 	</div>
 </div>
 
-<?php do_action('woocommerce_after_single_product'); ?>
+<!-- <?php do_action('woocommerce_after_single_product'); ?> -->

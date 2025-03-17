@@ -1909,8 +1909,20 @@ input.components-combobox-control__input{
   margin-bottom: 2.25rem;
 }
 
+.mr-\[\]{
+  margin-right: ;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
+}
+
 .block{
   display: block;
+}
+
+.inline-block{
+  display: inline-block;
 }
 
 .flex{
@@ -2235,6 +2247,11 @@ input.components-combobox-control__input{
 }
 
 .border-b-\[\#DDE3EE\]{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(221 227 238 / var(--tw-border-opacity));
+}
+
+.border-b-\[rgb\(221\2c 227\2c 238\)\]{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(221 227 238 / var(--tw-border-opacity));
 }
