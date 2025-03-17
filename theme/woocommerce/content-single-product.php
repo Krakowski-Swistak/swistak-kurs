@@ -39,7 +39,7 @@ if (post_password_required()) {
 				<div class="mb-16">
 					<?php swistak_kurs_post_thumbnail(); ?>
 				</div>
-				<div class="[&>h2]:mb-[16px] [&>h2]:text-[#22272F] [&>h2]:text-[21px]">
+				<div class="[&>h2]:mb-[16px] [&>h2]:text-[#22272F] [&>h2]:text-[21px] [&>h2]:font-medium [&>ul]:list-disc" style="li:marker:#132787;">
 					<?php the_content(); ?>
 				</div>
 			</div>
