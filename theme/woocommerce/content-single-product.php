@@ -61,13 +61,23 @@ if (post_password_required()) {
 
 	<div class="title">
 		<?php
-		// * @hooked woocommerce_template_single_title - 5
+		/**
+		 * Hook: woocommerce_single_product_summary.
+		 *
+		 * @hooked woocommerce_template_single_title - 5
+		 */
+		do_action('woocommerce_single_product_summary');
 		?>
 	</div>
 
 	<div class="image">
 		<?php
-		// * @hooked woocommerce_show_product_images - 20
+		/**
+		 * Hook: woocommerce_before_single_product_summary.
+		 *
+		 * @hooked woocommerce_show_product_images - 20
+		 */
+		do_action('woocommerce_before_single_product_summary');
 		?>
 	</div>
 
