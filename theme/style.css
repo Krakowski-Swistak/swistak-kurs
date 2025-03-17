@@ -2981,6 +2981,11 @@ input.components-combobox-control__input{
     float: left;
   }
 
+  .lg\:my-20{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .lg\:mb-20{
     margin-bottom: 5rem;
   }
