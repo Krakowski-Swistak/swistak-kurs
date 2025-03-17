@@ -12,7 +12,7 @@ $course_id = 364;
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
-    <section class="hero test">
+    <section class="hero">
       <div class="mx-auto h-[450px] md:h-[600px] max-w-full bg-primary flex flex-col items-center justify-center">
         <div class="container max-w-[1024px] flex flex-col items-center justify-center">
           <h1 class="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold text-white tracking-wide	!leading-[50px] md:!leading-[70px]">
