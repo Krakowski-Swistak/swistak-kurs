@@ -2960,6 +2960,19 @@ input.components-combobox-control__input{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.\[\&\>h2\]\:mb-\[16px\]>h2{
+  margin-bottom: 16px;
+}
+
+.\[\&\>h2\]\:text-\[21px\]>h2{
+  font-size: 21px;
+}
+
+.\[\&\>h2\]\:text-\[\#22272F\]>h2{
+  --tw-text-opacity: 1;
+  color: rgb(34 39 47 / var(--tw-text-opacity));
+}
+
 .\[\&\>iframe\]\:mx-auto>iframe{
   margin-left: auto;
   margin-right: auto;
@@ -3031,17 +3044,4 @@ input.components-combobox-control__input{
 .\[\&_a\]\:text-primary a{
   --tw-text-opacity: 1;
   color: rgb(0 179 167 / var(--tw-text-opacity));
-}
-
-.\[\&_h2\]\:mb-\[16px\] h2{
-  margin-bottom: 16px;
-}
-
-.\[\&_h2\]\:text-\[21px\] h2{
-  font-size: 21px;
-}
-
-.\[\&_h2\]\:text-\[\#22272F\] h2{
-  --tw-text-opacity: 1;
-  color: rgb(34 39 47 / var(--tw-text-opacity));
 }

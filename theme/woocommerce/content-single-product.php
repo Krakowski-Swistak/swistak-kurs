@@ -39,7 +39,7 @@ if (post_password_required()) {
 				<div class="mb-16">
 					<?php swistak_kurs_post_thumbnail(); ?>
 				</div>
-				<div class="[&_h2]:mb-[16px] [&_h2]:text-[#22272F] [&_h2]:text-[21px]">
+				<div class="[&>h2]:mb-[16px] [&>h2]:text-[#22272F] [&>h2]:text-[21px]">
 					<?php the_content(); ?>
 				</div>
 			</div>
@@ -57,15 +57,6 @@ if (post_password_required()) {
 			</div>
 		</aside>
 	</div>
-
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action('woocommerce_before_single_product_summary');
-	?>
 </div>
 
 <?php do_action('woocommerce_after_single_product'); ?>
