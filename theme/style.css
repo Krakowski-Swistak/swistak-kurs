@@ -1886,6 +1886,14 @@ input.components-combobox-control__input{
   margin-top: 2.5rem;
 }
 
+.mb-\[16px\]{
+  margin-bottom: 16px;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .block{
   display: block;
 }
