@@ -387,3 +387,9 @@ function swistak_kurs_add_woocommerce_support()
 	add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'swistak_kurs_add_woocommerce_support');
+
+function custom_add_to_cart_button()
+{
+	echo '<a href="' . esc_url(get_permalink()) . '?add-to-cart=' . get_the_ID() . '" class="button add_to_cart_button">Add to Cart</a>';
+}
+add_action('woocommerce_after_shop_loop_item', 'custom_add_to_cart_button', 10);
