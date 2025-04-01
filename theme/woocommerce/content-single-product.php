@@ -83,7 +83,7 @@ if (post_password_required()) {
 							</span>
 							CZAS TRWANIA
 						</p>
-						<p class="font-normal">50 min</p>
+						<p class="font-normal"><?php the_field('duration'); ?></p>
 					</div>
 
 					<div class="price-wrapper mb-5 text-[36px] text-primary">
