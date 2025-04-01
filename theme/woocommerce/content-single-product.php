@@ -59,7 +59,7 @@ if (post_password_required()) {
 							</span>
 							RODZAJ
 						</p>
-						<p class="font-normal">Szkolenie online</p>
+						<p class="font-normal"><?php the_field('type'); ?></p>
 					</div>
 
 					<div class="category-wrapper flex justify-between mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE] text-[14px] font-semibold">
@@ -71,7 +71,7 @@ if (post_password_required()) {
 							</span>
 							KATEGORIA
 						</p>
-						<p class="font-normal">Biznes</p>
+						<p class="font-normal"><?php the_field('product_category'); ?></p>
 					</div>
 
 					<div class="duration-wrapper flex justify-between mb-6 pb-6 border-b-[1px] border-b-[#DDE3EE] text-[14px] font-semibold">
