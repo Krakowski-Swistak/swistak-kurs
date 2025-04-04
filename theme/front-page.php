@@ -7,7 +7,7 @@
  */
 
 get_header();
-$course_id = 364;
+$course_id = 203;
 ?>
 
 <div id="primary" class="content-area">
