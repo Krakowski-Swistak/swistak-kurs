@@ -391,17 +391,18 @@ function check_if_product_in_cart($passed, $product_id) {
 }
 
 function check_if_product_is_course() {
-	if (is_product()) {
-		global $post;
-		$product_id = $post->ID;
+	echo $is_product ? 'true':'false';
+	// if (is_product()) {
+	// 	global $post;
+	// 	$product_id = $post->ID;
 
-		$course = tutor_utils()->product_belongs_with_course($product_id);
-		if (!empty($course)) {
-			wp_safe_redirect(get_permalink($courses[0]->post_id));
-			exit;
-		}
+	// 	$course = tutor_utils()->product_belongs_with_course($product_id);
+	// 	if (!empty($course)) {
+	// 		wp_redirect(get_permalink($courses[0]->post_id));
+	// 		exit;
+	// 	}
 
-	}
+	// }
 }
 
 function custom_redirects(){
