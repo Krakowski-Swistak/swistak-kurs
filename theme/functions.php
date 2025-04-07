@@ -394,9 +394,10 @@ function check_if_product_is_course() {
 	if (is_product()) {
 		global $post;
 		$product_id = $post->ID;
-		$course_id = get_post_meta($product_id, '_tutor_course_id', true);
-		if ($course_id) {
-			wp_safe_redirect(get_permalink($course_id));
+
+		$course = tutor_utils()->product_belongs_with_course($product_id);
+		if (!empty($course)) {
+			wp_safe_redirect(get_permalink($course->post_id));
 			exit;
 		}
 	}
