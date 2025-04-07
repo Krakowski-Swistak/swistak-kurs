@@ -371,7 +371,6 @@ function check_and_redirect_if_not_enrolled()
 		}
 	}
 }
-add_action('template_redirect', 'check_and_redirect_if_not_enrolled');
 
 function swistak_kurs_add_woocommerce_support()
 {
@@ -402,4 +401,9 @@ function check_if_product_is_course() {
 		}
 	}
 }
-add_action('template_redirect', 'check_if_product_is_course');
+
+function custom_redirects(){
+	check_and_redirect_if_not_enrolled();
+	check_if_product_is_course();
+};
+add_action('template_redirect', 'custom_redirects');
