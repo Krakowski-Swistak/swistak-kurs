@@ -96,13 +96,16 @@ if (post_password_required()) {
 					<?php
 					$product = wc_get_product(get_the_ID());
 					?>
-					<a href="<?php echo $product->add_to_cart_url() ?>" class="mx-auto text-center block w-full bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
-						ZAMAWIAM
-						<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<rect x="5" y="7" width="14" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-					</a>
+					<?php if(!$ks_customer_already_ordered_product(get_the_ID())): ?>
+						<a href="<?php echo $product->add_to_cart_url() ?>" class="mx-auto text-center block w-full bg-primary px-5 py-4 text-white text-lg font-medium rounded-2xl hover:bg-[#008077] transition duration-200">
+							ZAMAWIAM
+							<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<rect x="5" y="7" width="14" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					<?php endif; ?>
+
 				</div>
 			</aside>
 		</div>
