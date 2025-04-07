@@ -217,15 +217,6 @@ function generateAddToCartButton($course_id, $btn_text, $additional_classes = ' 
 	echo $html;
 }
 
-function ks_customer_already_bought_product($prod_id)
-{
-	$product = wc_get_product($prod_id);
-	if (!is_user_logged_in() || !$product) return false;
-	if (wc_customer_bought_product('', get_current_user_id(), $prod_id)) {
-		return true;
-	}
-}
-
 function ks_customer_already_ordered_product($prod_id)
 {
 	$product = wc_get_product($prod_id);
@@ -388,8 +379,14 @@ function swistak_kurs_add_woocommerce_support()
 }
 add_action('after_setup_theme', 'swistak_kurs_add_woocommerce_support');
 
-function custom_add_to_cart_button()
-{
-	echo '<a href="' . esc_url(get_permalink()) . '?add-to-cart=' . get_the_ID() . '" class="button add_to_cart_button">Add to Cart</a>';
+
+
+add_filter('woocommerce_add_to_cart_validation', 'check_if_product_in_cart', 10, 2);
+
+function check_if_product_in_cart($passed, $product_id) {
+	if (WC()->cart->find_product_in_cart(WC()->cart->generate_cart_id($product_id))) {
+		wp_safe_redirect(wc_get_cart_url());
+		exit;
+	}
+	return $passed;
 }
-add_action('woocommerce_after_shop_loop_item', 'custom_add_to_cart_button', 10);
