@@ -397,22 +397,22 @@ function check_if_product_is_course() {
 
 		$args = array(
 			'post_type' => 'course', 
-			'meta_query' => array(
-				array(
-					'key' => '_tutor_course_product_id',
-					'value' => $product_id,
-					'compare' => '=',
-				),
-			),
+			// 'meta_query' => array(
+			// 	array(
+			// 		'key' => '_tutor_course_product_id',
+			// 		'value' => $product_id,
+			// 		'compare' => '=',
+			// 	),
+			// ),
 			'posts_per_page' => 1
 		);
 	
 		$courses = get_posts($args);
 	echo 'Found courses: ' . print_r($courses, true);
-		if (!empty($courses)) {
-			wp_safe_redirect(get_permalink($courses[0]->ID));
-			exit;
-		}
+		// if (!empty($courses)) {
+		// 	wp_safe_redirect(get_permalink($courses[0]->ID));
+		// 	exit;
+		// }
 
 	}
 }
