@@ -408,7 +408,7 @@ function check_if_product_is_course() {
 		);
 	
 		$courses = get_posts($args);
-	
+	echo 'Found courses: ' . print_r($courses, true);
 		if (!empty($courses)) {
 			wp_safe_redirect(get_permalink($courses[0]->ID));
 			exit;
