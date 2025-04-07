@@ -399,7 +399,7 @@ function check_if_product_is_course() {
 			'post_type' => 'course', 
 			'meta_query' => array(
 				array(
-					'key' => 'tutor_course_product',
+					'key' => '_tutor_course_product_id',
 					'value' => $product_id,
 					'compare' => '=',
 				),
