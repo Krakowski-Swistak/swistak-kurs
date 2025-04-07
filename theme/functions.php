@@ -391,7 +391,7 @@ function check_if_product_in_cart($passed, $product_id) {
 }
 
 function check_if_product_is_course() {
-	echo $is_product ? 'true':'false';
+	echo is_product() ? 'true':'false';
 	// if (is_product()) {
 	// 	global $post;
 	// 	$product_id = $post->ID;
