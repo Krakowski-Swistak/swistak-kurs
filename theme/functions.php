@@ -398,8 +398,8 @@ function check_if_product_is_course() {
 
 		$course = tutor_utils()->product_belongs_with_course($product_id);
 		if (!empty($course)) {
-			echo get_permalink($courses[0]->post_id)
-			// wp_redirect(get_permalink($courses[0]->post_id));
+			echo get_permalink($courses[0]->post_id);
+			// wp_safe_redirect(get_permalink($courses[0]->post_id));
 			exit;
 		}
 	}
