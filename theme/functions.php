@@ -390,8 +390,7 @@ function check_if_product_in_cart($passed, $product_id) {
 	return $passed;
 }
 
-function check_if_product_is_course() {
-	// echo is_product() ? 'true':'false';
+function check_and_redirect_if_product_is_course() {
 	if (is_product()) {
 		global $post;
 		$product_id = $post->ID;
@@ -406,6 +405,6 @@ function check_if_product_is_course() {
 
 function custom_redirects(){
 	check_and_redirect_if_not_enrolled();
-	check_if_product_is_course();
+	check_and_redirect_if_product_is_course();
 };
 add_action('template_redirect', 'custom_redirects');
