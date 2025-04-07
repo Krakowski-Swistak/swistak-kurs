@@ -395,12 +395,12 @@ function check_if_product_is_course() {
 		global $post;
 		$product_id = $post->ID;
 
-		$course_id = tutor_utils()->product_belongs_with_course($product_id);
-		echo 'Found course: ' . $course_id;
-		// if (!empty($courses)) {
-		// 	wp_safe_redirect(get_permalink($courses[0]->ID));
-		// 	exit;
-		// }
+		$courses = tutor_utils()->product_belongs_with_course($product_id);
+		if (!empty($courses)) {
+			echo 'Found course: ' . $courses[0]->ID ;
+			// wp_safe_redirect(get_permalink($courses[0]->ID));
+			// exit;
+		}
 
 	}
 }
