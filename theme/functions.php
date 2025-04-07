@@ -394,19 +394,26 @@ function check_if_product_is_course() {
 	if (is_product()) {
 		global $post;
 		$product_id = $post->ID;
-		$course_id = get_post_meta($product_id, '_tutor_course_id', true);
 
-		$myvals = get_post_meta($product_id);
-
-		foreach($myvals as $key=>$val)
-		{
-			echo $key . ' : ' . $val[0] . '<br/>';
-		}
-		echo  'ID' . $course_id;
-		if ($course_id) {
-			wp_safe_redirect(get_permalink($course_id));
+		$args = array(
+			'post_type' => 'course', 
+			'meta_query' => array(
+				array(
+					'key' => 'tutor_course_product',
+					'value' => $product_id,
+					'compare' => '=',
+				),
+			),
+			'posts_per_page' => 1
+		);
+	
+		$courses = get_posts($args);
+	
+		if (!empty($courses)) {
+			wp_safe_redirect(get_permalink($courses[0]->ID));
 			exit;
 		}
+
 	}
 }
 
