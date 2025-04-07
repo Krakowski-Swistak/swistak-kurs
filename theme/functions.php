@@ -384,6 +384,13 @@ add_action('after_setup_theme', 'swistak_kurs_add_woocommerce_support');
 add_filter('woocommerce_add_to_cart_validation', 'check_if_product_in_cart', 10, 2);
 
 function check_if_product_in_cart($passed, $product_id) {
+	// Debug
+	echo '<pre>';
+	foreach (WC()->cart->get_cart() as $cart_item) {
+		print_r($cart_item['product_id']);
+	}
+	echo '</pre>';
+
 	if (WC()->cart->find_product_in_cart(WC()->cart->generate_cart_id($product_id))) {
 		wp_safe_redirect(wc_get_cart_url());
 		exit;
