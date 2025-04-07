@@ -398,7 +398,7 @@ function check_if_product_is_course() {
 		$course = tutor_utils()->product_belongs_with_course($product_id);
 		print_r($course);
 		if (!empty($course)) {
-			echo 'Found course: ' . $course->ID;
+			echo 'Found course: ' . $course->post_id;
 			// wp_safe_redirect(get_permalink($courses[0]->ID));
 			// exit;
 		}
