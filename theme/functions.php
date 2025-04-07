@@ -391,10 +391,12 @@ function check_if_product_in_cart($passed, $product_id) {
 }
 
 function check_if_product_is_course() {
+	echo 'test';
 	if (is_product()) {
 		global $post;
 		$product_id = $post->ID;
 		$course_id = get_post_meta($product_id, '_tutor_course_id', true);
+		echo $course_id;
 		if ($course_id) {
 			wp_safe_redirect(get_permalink($course_id));
 			exit;
