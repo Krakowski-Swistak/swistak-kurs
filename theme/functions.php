@@ -396,14 +396,14 @@ function check_if_product_is_course() {
 		$product_id = $post->ID;
 
 		$args = array(
-			'post_type' => 'course', 
-			// 'meta_query' => array(
-			// 	array(
-			// 		'key' => '_tutor_course_product_id',
-			// 		'value' => $product_id,
-			// 		'compare' => '=',
-			// 	),
-			// ),
+			'post_type' => 'courses', 
+			'meta_query' => array(
+				array(
+					'key' => '_tutor_course_product_id',
+					'value' => $product_id,
+					'compare' => '=',
+				),
+			),
 			'posts_per_page' => 1
 		);
 	
