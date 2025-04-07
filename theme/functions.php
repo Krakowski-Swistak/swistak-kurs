@@ -395,20 +395,8 @@ function check_if_product_is_course() {
 		global $post;
 		$product_id = $post->ID;
 
-		$args = array(
-			'post_type' => 'courses', 
-			'meta_query' => array(
-				array(
-					'key' => '_tutor_course_product_id',
-					'value' => $product_id,
-					'compare' => '=',
-				),
-			),
-			'posts_per_page' => 1
-		);
-	
-		$courses = get_posts($args);
-	echo 'Found courses: ' . print_r($courses, true);
+		$course_id = tutor_utils()->product_belongs_with_course($product_id);
+		echo 'Found course: ' . $course_id;
 		// if (!empty($courses)) {
 		// 	wp_safe_redirect(get_permalink($courses[0]->ID));
 		// 	exit;
