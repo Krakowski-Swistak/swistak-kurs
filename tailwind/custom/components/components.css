@@ -295,6 +295,7 @@ input.components-combobox-control__input {
 	color: #132787;
 }
 
-.woocommerce-MyAccount-downloads-file{
+
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.woocommerce-MyAccount-downloads-file{
 	@apply !border-primary !border-2;
 }
