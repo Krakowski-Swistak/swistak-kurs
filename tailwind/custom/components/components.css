@@ -294,3 +294,7 @@ input.components-combobox-control__input {
 .single-product li::marker {
 	color: #132787;
 }
+
+.woocommerce-MyAccount-downloads-file{
+	@apply border-primary;
+}
