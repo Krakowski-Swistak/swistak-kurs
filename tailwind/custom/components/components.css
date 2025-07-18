@@ -296,5 +296,5 @@ input.components-combobox-control__input {
 }
 
 .woocommerce-MyAccount-downloads-file{
-	@apply border-primary;
+	@apply !border-primary !border-2;
 }
