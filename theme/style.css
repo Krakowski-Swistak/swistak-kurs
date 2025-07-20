@@ -1732,6 +1732,11 @@ input.components-combobox-control__input{
   max-height: 2.5rem;
 }
 
+.woocommerce-lost-password h1{
+  margin-top: 7rem;
+  text-align: center;
+}
+
 /**
  * This injects Tailwind's utility classes and any utility classes registered
  * by plugins, then adds custom utility classes.
@@ -1882,8 +1887,16 @@ input.components-combobox-control__input{
   margin-bottom: 9px;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
 .mr-2{
   margin-right: 0.5rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .mt-10{
@@ -2005,6 +2018,10 @@ input.components-combobox-control__input{
 
 .max-w-\[700px\]{
   max-width: 700px;
+}
+
+.max-w-\[800px\]{
+  max-width: 800px;
 }
 
 .max-w-\[850px\]{
@@ -2295,6 +2312,11 @@ input.components-combobox-control__input{
   padding: 8px 16px;
 }
 
+.\!px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
 .\!px-5{
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
@@ -2570,6 +2592,10 @@ input.components-combobox-control__input{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!no-underline{
+  text-decoration-line: none !important;
 }
 
 .opacity-0{
@@ -3045,6 +3071,10 @@ input.components-combobox-control__input{
   color: rgb(0 179 167 / var(--tw-text-opacity));
 }
 
+.\[\&\:hover_svg_path\]\:fill-primary:hover svg path{
+  fill: #00b3a7;
+}
+
 .\[\&\>\.question-container\]\:mb-4>.question-container{
   margin-bottom: 1rem;
 }
@@ -3150,4 +3180,10 @@ input.components-combobox-control__input{
 .\[\&_a\]\:text-primary a{
   --tw-text-opacity: 1;
   color: rgb(0 179 167 / var(--tw-text-opacity));
+}
+
+.\[\&_svg_path\]\:transition-all svg path{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

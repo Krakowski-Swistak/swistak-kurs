@@ -262,3 +262,7 @@ input.components-combobox-control__input{
 .woocommerce-checkout #payment ul.payment_methods li img{
 	@apply max-h-10
 }
+
+.woocommerce-lost-password h1{
+	@apply mt-28 text-center;
+}
