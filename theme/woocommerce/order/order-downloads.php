@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									}
 									break;
 								case 'download-file':
-									echo '<a style="padding-left:16px;padding-right:16px;" href="' . esc_url( $download['download_url'] ) . '" class="woocommerce-MyAccount-downloads-file alt !bg-white !no-underline !py-3 !text-primary hover:!text-white !font-medium !rounded-2xl !border-2 !border-primary hover:!bg-primary !transition !duration-200 block">' . esc_html( $download['download_name'] ) . '</a>';
+									echo '<a href="' . esc_url( $download['download_url'] ) . '" class="woocommerce-MyAccount-downloads-file alt !bg-white !no-underline !px-4 !py-3 !text-primary hover:!text-white !font-medium !rounded-2xl !border-2 !border-primary hover:!bg-primary !transition !duration-200 block">' . esc_html( $download['download_name'] ) . '</a>';
 									break;
 								case 'download-remaining':
 									echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : esc_html__( '&infin;', 'woocommerce' );

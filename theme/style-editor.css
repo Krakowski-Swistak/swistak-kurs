@@ -204,25 +204,25 @@ body{
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1180px){
   .container{
-    max-width: 1024px;
+    max-width: 1180px;
     padding-right: 2rem;
     padding-left: 2rem;
   }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1380px){
   .container{
-    max-width: 1280px;
+    max-width: 1380px;
     padding-right: 4rem;
     padding-left: 4rem;
   }
 }
 
-@media (min-width: 1536px){
+@media (min-width: 1680px){
   .container{
-    max-width: 1536px;
+    max-width: 1680px;
     padding-right: 6rem;
     padding-left: 6rem;
   }
@@ -1105,25 +1105,25 @@ html{
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1180px){
   .woocommerce-account .entry-title{
-    max-width: 1024px !important;
+    max-width: 1180px !important;
     padding-right: 2rem !important;
     padding-left: 2rem !important;
   }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1380px){
   .woocommerce-account .entry-title{
-    max-width: 1280px !important;
+    max-width: 1380px !important;
     padding-right: 4rem !important;
     padding-left: 4rem !important;
   }
 }
 
-@media (min-width: 1536px){
+@media (min-width: 1680px){
   .woocommerce-account .entry-title{
-    max-width: 1536px !important;
+    max-width: 1680px !important;
     padding-right: 6rem !important;
     padding-left: 6rem !important;
   }
@@ -1164,16 +1164,40 @@ input.components-combobox-control__input{
 
 .wc-block-components-form .wc-block-components-text-input label,
 .wc-block-components-text-input label,
-.wc-block-components-combobox .wc-block-components-combobox-control label.components-base-control__label,
-.wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control label.components-base-control__label{
+.wc-block-components-combobox
+	.wc-block-components-combobox-control
+	label.components-base-control__label,
+.wc-block-components-form
+	.wc-block-components-combobox
+	.wc-block-components-combobox-control
+	label.components-base-control__label{
   --tw-translate-y: 1.25rem !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 }
 
-.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill+label, .wc-block-components-form .wc-block-components-text-input.is-active label, .wc-block-components-text-input input:-webkit-autofill+label, .wc-block-components-text-input.is-active label,
-.wc-block-components-combobox.is-active .wc-block-components-combobox-control label.components-base-control__label, .wc-block-components-combobox:focus-within .wc-block-components-combobox-control label.components-base-control__label, .wc-block-components-form .wc-block-components-combobox.is-active .wc-block-components-combobox-control label.components-base-control__label, .wc-block-components-form .wc-block-components-combobox:focus-within .wc-block-components-combobox-control label.components-base-control__label{
+.wc-block-components-form
+	.wc-block-components-text-input
+	input:-webkit-autofill
+	+ label,
+.wc-block-components-form .wc-block-components-text-input.is-active label,
+.wc-block-components-text-input input:-webkit-autofill + label,
+.wc-block-components-text-input.is-active label,
+.wc-block-components-combobox.is-active
+	.wc-block-components-combobox-control
+	label.components-base-control__label,
+.wc-block-components-combobox:focus-within
+	.wc-block-components-combobox-control
+	label.components-base-control__label,
+.wc-block-components-form
+	.wc-block-components-combobox.is-active
+	.wc-block-components-combobox-control
+	label.components-base-control__label,
+.wc-block-components-form
+	.wc-block-components-combobox:focus-within
+	.wc-block-components-combobox-control
+	label.components-base-control__label{
   --tw-translate-y: 0.5rem !important;
   --tw-scale-x: 85%;
   --tw-scale-y: 85%;
@@ -1211,12 +1235,16 @@ input.components-combobox-control__input{
   border-color: rgb(0 128 119 / var(--tw-border-opacity));
 }
 
-.woocommerce-input-wrapper .select2-container.select2-container--open .select2-selection--single{
+.woocommerce-input-wrapper
+	.select2-container.select2-container--open
+	.select2-selection--single{
   --tw-border-opacity: 1;
   border-color: rgb(0 128 119 / var(--tw-border-opacity));
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered{
+.select2-container--default
+	.select2-selection--single
+	.select2-selection__rendered{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1rem;
@@ -1273,16 +1301,20 @@ input.components-combobox-control__input{
 .woocommerce table.shop_table tbody th,
 .woocommerce table.shop_table tfoot th,
 .woocommerce table.shop_table tfoot,
-.woocommerce table.shop_table thead{
+.woocommerce table.shop_table thead {
   border: none !important;
 }
 
-.woocommerce table.shop_table tr.order-total{
-  border-top: 1px solid #d4d4d4 !important
+.woocommerce table.shop_table tr.order-total {
+  border-top: 1px solid #d4d4d4 !important;
 }
 
 .woocommerce-checkout #payment ul.payment_methods li img{
   max-height: 2.5rem;
+}
+
+.single-product li::marker {
+  color: #132787;
 }
 
 /**
@@ -1435,8 +1467,16 @@ input.components-combobox-control__input{
   margin-bottom: 9px;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
 .mr-2{
   margin-right: 0.5rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .mt-10{
@@ -1908,6 +1948,11 @@ input.components-combobox-control__input{
   padding-bottom: 2.25rem;
 }
 
+.\!px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
 .\!pl-0{
   padding-left: 0px !important;
 }
@@ -2125,6 +2170,10 @@ input.components-combobox-control__input{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.\!no-underline{
+  text-decoration-line: none !important;
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -2224,25 +2273,25 @@ input.components-combobox-control__input{
     }
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1180px){
     .md\:container{
-      max-width: 1024px;
+      max-width: 1180px;
       padding-right: 2rem;
       padding-left: 2rem;
     }
   }
 
-  @media (min-width: 1280px){
+  @media (min-width: 1380px){
     .md\:container{
-      max-width: 1280px;
+      max-width: 1380px;
       padding-right: 4rem;
       padding-left: 4rem;
     }
   }
 
-  @media (min-width: 1536px){
+  @media (min-width: 1680px){
     .md\:container{
-      max-width: 1536px;
+      max-width: 1680px;
       padding-right: 6rem;
       padding-left: 6rem;
     }
@@ -2257,7 +2306,7 @@ input.components-combobox-control__input{
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1180px){
   .lg\:container{
     width: 100%;
     margin-right: auto;
@@ -2278,25 +2327,25 @@ input.components-combobox-control__input{
     }
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1180px){
     .lg\:container{
-      max-width: 1024px;
+      max-width: 1180px;
       padding-right: 2rem;
       padding-left: 2rem;
     }
   }
 
-  @media (min-width: 1280px){
+  @media (min-width: 1380px){
     .lg\:container{
-      max-width: 1280px;
+      max-width: 1380px;
       padding-right: 4rem;
       padding-left: 4rem;
     }
   }
 
-  @media (min-width: 1536px){
+  @media (min-width: 1680px){
     .lg\:container{
-      max-width: 1536px;
+      max-width: 1680px;
       padding-right: 6rem;
       padding-left: 6rem;
     }
@@ -2481,7 +2530,7 @@ input.components-combobox-control__input{
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1180px){
   .lg\:sticky{
     position: sticky;
   }
@@ -2598,6 +2647,10 @@ input.components-combobox-control__input{
   color: rgb(0 179 167 / var(--tw-text-opacity));
 }
 
+.\[\&\:hover_svg_path\]\:fill-primary:hover svg path{
+  fill: #00b3a7;
+}
+
 .\[\&\>\.question-container\]\:mb-4>.question-container{
   margin-bottom: 1rem;
 }
@@ -2664,7 +2717,7 @@ input.components-combobox-control__input{
   line-height: 1.75rem;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1180px){
   .\[\&\>p\]\:lg\:text-2xl>p{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2703,4 +2756,10 @@ input.components-combobox-control__input{
 .\[\&_a\]\:text-primary a{
   --tw-text-opacity: 1;
   color: rgb(0 179 167 / var(--tw-text-opacity));
+}
+
+.\[\&_svg_path\]\:transition-all svg path{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
