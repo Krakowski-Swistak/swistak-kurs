@@ -1983,6 +1983,10 @@ input.components-combobox-control__input{
   text-align: left;
 }
 
+.\!text-center{
+  text-align: center !important;
+}
+
 .text-center{
   text-align: center;
 }
