@@ -267,7 +267,8 @@ input.components-combobox-control__input{
 	@apply mt-28 text-center;
 }
 
-.tutor-course-details-content ul{
+.tutor-course-details-content ul,
+.tutor-lesson-wrapper ul{
 	@apply list-disc ml-10;
 }
 
@@ -281,6 +282,11 @@ input.components-combobox-control__input{
 }
 
 .checkout_coupon .button,
-.order-again .button{
+.order-again .button,
+.order-actions--heading .button{
 	border: 2px solid #00b3a7!important;
+}
+
+.order-actions--heading .button{
+	@apply !px-5 !py-3 !bg-white !text-primary hover:!text-white !text-lg !font-medium !rounded-2xl !border-2 !border-primary hover:!bg-primary !transition !duration-200;
 }
