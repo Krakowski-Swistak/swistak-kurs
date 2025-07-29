@@ -1829,6 +1829,11 @@ input.components-combobox-control__input{
   margin: 0px !important;
 }
 
+.\!mx-auto{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1925,12 +1930,20 @@ input.components-combobox-control__input{
   margin-top: 1.25rem;
 }
 
+.\!block{
+  display: block !important;
+}
+
 .block{
   display: block;
 }
 
 .inline-block{
   display: inline-block;
+}
+
+.\!flex{
+  display: flex !important;
 }
 
 .flex{
@@ -2008,6 +2021,14 @@ input.components-combobox-control__input{
 
 .w-full{
   width: 100%;
+}
+
+.\!max-w-52{
+  max-width: 13rem !important;
+}
+
+.\!max-w-\[800px\]{
+  max-width: 800px !important;
 }
 
 .max-w-96{
@@ -2101,6 +2122,10 @@ input.components-combobox-control__input{
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.\!flex-col{
+  flex-direction: column !important;
 }
 
 .flex-col{
@@ -2326,6 +2351,11 @@ input.components-combobox-control__input{
   padding: 8px 16px;
 }
 
+.\!px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
 .\!px-5{
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
@@ -2416,6 +2446,10 @@ input.components-combobox-control__input{
 
 .text-left{
   text-align: left;
+}
+
+.\!text-center{
+  text-align: center !important;
 }
 
 .text-center{
@@ -2601,6 +2635,10 @@ input.components-combobox-control__input{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!no-underline{
+  text-decoration-line: none !important;
 }
 
 .opacity-0{
