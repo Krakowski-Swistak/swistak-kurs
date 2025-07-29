@@ -269,7 +269,7 @@ input.components-combobox-control__input{
 
 .tutor-course-details-content ul,
 .tutor-lesson-wrapper ul{
-	@apply list-disc ml-10;
+	@apply list-disc ml-6;
 }
 
 .woocommerce-info{

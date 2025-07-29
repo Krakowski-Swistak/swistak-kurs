@@ -1290,8 +1290,9 @@ input.components-combobox-control__input{
   text-align: center;
 }
 
-.tutor-course-details-content ul{
-  margin-left: 2.5rem;
+.tutor-course-details-content ul,
+.tutor-lesson-wrapper ul{
+  margin-left: 1.5rem;
   list-style-type: disc;
 }
 
