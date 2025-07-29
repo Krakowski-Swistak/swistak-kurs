@@ -1742,6 +1742,14 @@ input.components-combobox-control__input{
   list-style-type: disc;
 }
 
+.woocommerce-info{
+  border-top-color: #00b3a7;
+}
+
+.woocommerce-info::before{
+  content: '\0024D8'!important;
+}
+
 /**
  * This injects Tailwind's utility classes and any utility classes registered
  * by plugins, then adds custom utility classes.
