@@ -266,3 +266,7 @@ input.components-combobox-control__input{
 .woocommerce-lost-password h1{
 	@apply mt-28 text-center;
 }
+
+.tutor-course-details-content{
+	@apply list-disc ml-10;
+}
