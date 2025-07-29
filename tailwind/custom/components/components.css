@@ -280,6 +280,7 @@ input.components-combobox-control__input{
 	color: #00b3a7;
 }
 
-.checkout_coupon .button{
+.checkout_coupon .button,
+.order-again .button{
 	border: 2px solid #00b3a7!important;
 }
