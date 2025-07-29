@@ -267,6 +267,6 @@ input.components-combobox-control__input{
 	@apply mt-28 text-center;
 }
 
-.tutor-course-details-content{
+.tutor-course-details-content ul{
 	@apply list-disc ml-10;
 }
