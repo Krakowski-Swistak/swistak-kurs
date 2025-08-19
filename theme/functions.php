@@ -408,3 +408,5 @@ function custom_redirects(){
 	check_and_redirect_if_product_is_course();
 };
 add_action('template_redirect', 'custom_redirects');
+
+add_filter( 'woocommerce_cart_needs_shipping_address', '__return_false' );
