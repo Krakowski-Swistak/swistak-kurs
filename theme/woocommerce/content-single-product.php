@@ -90,7 +90,8 @@ if (post_password_required()) {
 						<div class="inline-block font-medium">
 							<?php echo $product->get_price_html(); ?>
 						</div>
-						<span class="text-[#6C7689] text-[13px]">+ 23% VAT</span>
+						<span class="text-[#6C7689] text-[13px] whitespace-nowrap">+ 23% VAT</span>
+						<?php echo do_shortcode('[omnibus_price_message]'); ?>
 					</div>
 
 					<?php
