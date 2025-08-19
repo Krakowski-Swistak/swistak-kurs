@@ -22,6 +22,8 @@ if ( ! wp_doing_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment !bg-white border !border-[#888] !rounded-2xl my-10 md:mb-20">
+	<h3 class="px-4"><?php esc_html_e( 'Select payment method', 'swistak-kurs' ); ?></h3>
+	
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
