@@ -632,7 +632,7 @@ $course_id = 364;
             <p class="img-desc text-lg italic"><?php the_field('about_author_img_desc'); ?></p>
           </div>
         </div>
-        <div class="about-swistak-opinions w-full">
+        <div class="about-swistak-opinions w-full hidden">
           <h3 class="mb-24 font-bold text-2xl lg:text-3xl text-center"><?php the_field('about_author_title_above_swiper'); ?></h3>
           <div class="swiper max-w-full overflow-visible" data-js="swiper-tiles-mobile">
             <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-10">
