@@ -406,7 +406,7 @@ $course_id = 364;
       </div>
     </section>
 
-    <section class="career-path-opinions-swiper mb-20 overflow-hidden">
+    <section class="career-path-opinions-swiper mb-20 overflow-hidden hidden">
       <div class="max-w-full px-5 w-full md:container mx-auto">
         <h3 class="mb-24 font-bold text-2xl lg:text-3xltext-center">Osoby, które już skorzystały ze <span class="text-primary">Ścieżek Kariery </span>mówią</h3>
 
