@@ -301,3 +301,6 @@ input.components-combobox-control__input{
 .woocommerce-cart-form .iworks-omnibus{
 	@apply text-xs
 }
+.cart_totals .order-total{
+	@apply text-base lg:text-lg
+}

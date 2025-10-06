@@ -8,6 +8,7 @@
 
 get_header();
 $course_id = 364;
+$bonus_prod_id = 596;
 ?>
 
 <div id="primary" class="content-area">
@@ -537,13 +538,11 @@ $course_id = 364;
             Jednorazowa inwestycja
           </p>
           <?php
-          $course_prod_id = get_post_meta($course_id, '_tutor_course_product_id')[0];
-          $product = wc_get_product($course_prod_id);
-          $product_price = $product->get_price();
 
-          $cart_text = __('Add to cart', 'swistak-kurs') . ' (' . $product_price . ' ' . get_woocommerce_currency_symbol() . ')';
-          generateAddToCartButton($course_id, $cart_text);
+          $cart_text = __('Add to cart', 'swistak-kurs');
+          generateAddToCartButton($bonus_prod_id ,$course_id, $cart_text);
           ?>
+          <p class=" clear-start mt-2 text-xs lg:text-sm text-center"><?= __('Najniższa cena w ciągu ostatnich 30 dni','swistak-kurs') ?></p>
         </div>
 
         <h3 class="mb-8 font-bold text-2xl lg:text-3xl text-center"><?php the_field('prices_title2'); ?></h3>
