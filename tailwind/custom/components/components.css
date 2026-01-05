@@ -304,3 +304,19 @@ input.components-combobox-control__input{
 .cart_totals .order-total{
 	@apply text-base lg:text-lg
 }
+
+.woocommerce-LoopProduct-link.woocommerce-loop-product__link img{
+	@apply aspect-square object-cover
+}
+
+.products .button.add_to_cart_button{
+	@apply !px-5 !py-3 !text-white !text-lg !font-medium !rounded-2xl !bg-primary hover:!bg-[#008077] !transition !duration-200
+}
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price{
+	@apply text-2xl !text-primary font-medium
+}
+
+.woocommerce-products-header__title.page-title{
+	@apply !mx-0
+}
