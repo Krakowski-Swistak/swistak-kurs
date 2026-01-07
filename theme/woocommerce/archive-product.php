@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 
 get_header('shop');
 ?>
-<div class="container">
+<div class="container py-10">
     <?php
     /**
      * Hook: woocommerce_before_main_content.
