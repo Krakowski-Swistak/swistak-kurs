@@ -318,5 +318,5 @@ input.components-combobox-control__input{
 }
 
 .woocommerce-products-header__title.page-title{
-	@apply !mx-0
+	@apply !mx-0 !mt-10
 }
