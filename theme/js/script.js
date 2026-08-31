@@ -70,6 +70,19 @@ button.addEventListener('click', () => {
 	toggleMenuContainer();
 });
 
+function closeMenuContainer() {
+	if (-1 !== container.className.indexOf('toggled')) {
+		toggleMenuContainer();
+	}
+}
+
+const menuItemLinks = container.querySelectorAll('.menu-item a');
+menuItemLinks.forEach((link) => {
+	link.addEventListener('click', () => {
+		closeMenuContainer();
+	});
+});
+
 // ------------------------------------------------------------------------------
 
 // Swiper
@@ -110,7 +123,6 @@ function initMobileSwipers() {
 }
 
 function initMobileSwipersHorizontal() {
-	console.log('test2');
 	const swiperContainers2 = document.querySelectorAll(
 		'[data-js="swiper-tiles-mobile-horizontal"]'
 	);
